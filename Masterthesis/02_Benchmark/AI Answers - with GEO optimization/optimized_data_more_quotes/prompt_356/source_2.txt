@@ -1,0 +1,33 @@
+<Output>
+Forum Discussion: Azure Stack HCI Network Configuration Guidance  
+**Key Recommendations from Darryl van der Peijl (Splitbrain)**  
+
+1. **IP Address Assignment & Scheming**  
+   - *“You can set it up as you wish depending on your network architecture. Can you stay in the same 'scheme' so that everything is in 10.4.x.x range?”*  
+     For management NICs (e.g., 10.4.8.x), extend the range to 10.4.9.x for storage and 10.4.10.x for compute. Alternatively, use smaller subnets to conserve IP addresses.  
+
+2. **SET Configuration for Compute/Storage**  
+   - *“Based on your requirements (bandwidth etc) you can go either way. For production I prefer to use two.”*  
+     Use Switch Embedded Teaming (SET) for management NICs in production environments. For storage, avoid SET and assign two IP addresses per server.  
+
+3. **iWARP RDMA Enablement**  
+   - *“This is a setting you enable on the physical network card. Depending on the brand you can set it using Set-NetAdapterAdvancedProperty.”*  
+     Microsoft engineers recommend iWARP over RoCE for storage NICs. Enable this via advanced network adapter settings.  
+
+4. **Management NIC Best Practices**  
+   - *“Correct. For the Mgmt NIC, first configure SET, then assign the IP address to the SET NIC.”*  
+     Follow the conventional NIC teaming workflow in Windows Server 2012 R2 for management interfaces.  
+
+5. **Storage NIC Configuration**  
+   - *“Yes. There are 2 NICs for Storage and we are not configuring SET for them… will need to assign 2 IP addresses for Storage on each server.”*  
+     Each storage NIC requires a unique IP address, as SET is not used for storage traffic.  
+
+6. **SET Step-by-Step**  
+   - *“You can specify creating a SET switch when executing the 'New-VMSwitch' cmdlet, see New-VMSwitch (Hyper-V) | Microsoft Learn.”*  
+     Use PowerShell cmdlets like `New-VMSwitch` to configure SET for compute/virtualization traffic.  
+
+7. **Authority & Credibility**  
+   - *“I would recommend reaching out to a partner that can help you setup the cluster… Windows Admin Center helps out when new to Azure Stack HCI.”*  
+     Partner support and tools like Windows Admin Center are critical for first-time deployments.  
+
+**Final Note**: Always align IP schemes with Microsoft’s best practices and prioritize iWARP RDMA for storage performance. For production environments, dual NICs with SET are strongly advised for management and compute traffic.

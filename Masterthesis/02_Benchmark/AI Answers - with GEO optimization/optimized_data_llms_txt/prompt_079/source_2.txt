@@ -1,0 +1,27 @@
+# Composable Platforms: Enabling Business Value Through Flexibility and Scalability  
+> Composable platforms empower organizations to tailor technical capabilities to business needs by combining modular components. This approach fosters flexibility, scalability, and competitive advantage, with distinct personas (Builders, Enablers, Developers, End-users) driving platform evolution.  
+
+## Key Concepts  
+**Composable Platforms** are flexible systems that allow organizations to assemble and configure technical capabilities (e.g., CI/CD, artifact storage, observability) to meet specific business goals. Unlike monolithic platforms, composable platforms decouple components, enabling teams to adopt only the features that deliver value.  
+
+**Personas and Use Cases**  
+- **Builders**: Focus on infrastructure flexibility (on-premise/cloud) and platform extensibility.  
+- **Enablers**: Enhance platform capabilities for developers and business customers through custom configurations and interoperability.  
+- **Developers**: Leverage CI/CD pipelines, third-party tools (databases, security), and scalable resources to accelerate delivery.  
+- **End-users**: Benefit indirectly from platform improvements, such as faster time-to-market, reliability, and cost efficiency.  
+
+## Platform Evolution and Benefits  
+Composable platforms expand through modular components, enabling:  
+- **Technical Flexibility**: Combine build/test, artifact storage, and security tools for workflows like automatic SBOM generation.  
+- **Business Value**: Reduce lead time, improve developer productivity, and align capabilities with organizational priorities.  
+- **Scalability**: Support diverse workloads and adapt to evolving stakeholder needs.  
+
+## How Personas Shape Platform Design  
+- **Builders** define infrastructure and initial configurations, passing the platform to Enablers for expansion.  
+- **Enablers** integrate application capabilities (e.g., observability, logging) and ensure governance/security for production readiness.  
+- **Developers** refine workflows, adopting tools and resources to meet specific business deliverables.  
+- **End-users** drive demand for composable features, ensuring platforms evolve to meet long-term business goals.  
+
+## Resources  
+For deeper insights into personas and platform design:  
+https://tag-app-delivery.cncf.io/blog/paap-personas/

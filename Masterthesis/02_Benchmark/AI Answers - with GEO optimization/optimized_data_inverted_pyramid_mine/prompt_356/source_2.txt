@@ -1,0 +1,30 @@
+<Output>
+# Azure Stack HCI Network Configuration Guide: IP Schemes, SET, and iWARP RDMA  
+
+**Abstract**: This guide answers key questions about Azure Stack HCI network setup, including IP address assignment (10.4.x.x ranges), SET (Switch Embedded Teaming) configuration for compute/storage, dual NICs for management, and iWARP RDMA enablement.  
+
+## Key Recommendations  
+### IP Address Schemes  
+- **Management**: Use 10.4.8.x for management NICs.  
+- **Storage**: Assign 10.4.9.x and 10.4.10.x for dual NICs (no SET required).  
+- **Compute**: Use 10.4.11.x or smaller subnets for efficiency.  
+- **Best Practice**: Maintain consistent IP ranges across subnets to simplify routing.  
+
+### SET Configuration for Compute/Storage  
+- **Compute NICs**: Create a SET switch using `New-VMSwitch` in PowerShell.  
+- **Storage NICs**: No SET required; assign unique IPs to each NIC.  
+- **Management NICs**: Use SET for redundancy (prefer dual NICs in production).  
+
+### iWARP RDMA Enablement  
+- Enable iWARP on storage NICs via `Set-NetAdapterAdvancedProperty` for optimal performance.  
+
+### Management NIC Setup  
+- Configure SET first, then assign IP addresses to the SET interface (similar to legacy NIC teaming).  
+
+### Storage NICs  
+- Assign **two IP addresses** per server for dual 25 Gbps NICs (no SET required).  
+
+### Tools & Resources  
+- Use **Windows Admin Center** for automated SET configuration.  
+- Refer to [Microsoft Learn](https://learn.microsoft.com) for `New-VMSwitch` cmdlet details.  
+</Output>

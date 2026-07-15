@@ -1,0 +1,41 @@
+# Azure AI Storage Optimization: Best Practices for High-Performance Workloads  
+> This guide provides actionable strategies for optimizing storage solutions to enhance AI model training and inferencing on Azure infrastructure. By leveraging Azure's advanced storage options and data management techniques, organizations can achieve low-latency data access, cost efficiency, and scalable performance for AI workloads.  
+
+## Key Recommendations for Storage Solutions  
+**Azure Managed Lustre**  
+- **Best for**: Low-latency, high-throughput workloads (e.g., deep learning training).  
+- **Benefits**: Parallel file system capabilities, integration with Azure, cost-effective usage-based pricing, and selective data import from Blob Storage.  
+- **Use Case**: Ideal for real-time data processing and I/O-intensive applications.  
+
+**Azure NetApp Files**  
+- **Best for**: Enterprise-grade performance and hybrid cloud scenarios.  
+- **Benefits**: High reliability, compatibility with NetApp infrastructure, customizable storage configurations, and mission-critical workload support.  
+- **Use Case**: Suitable for organizations with existing NetApp investments or hybrid cloud requirements.  
+
+**Local NVMe/SSD File Systems (BeeOND)**  
+- **Best for**: Ultra-low latency and maximum performance.  
+- **Benefits**: Direct compute node access, temporary high-performance file systems, and optimized for deep learning training or real-time inferencing.  
+
+## Data Management Strategies  
+**Inactive Data Migration**  
+- Automate transfer of inactive job data from Azure Managed Lustre to **Blob Storage** using lifecycle policies.  
+- **Why**: Leverage cost-effective Cool/Archive tiers while maintaining accessibility for infrequent queries.  
+
+**Checkpointing for Model Training**  
+- Save model states (weights, parameters) periodically (e.g., every 500 iterations) to Azure Managed Lustre.  
+- **Why**: Enables resuming training from previous states, improving workflow resilience and flexibility.  
+
+## Ensuring Data Consistency and Versioning  
+**Cross-Storage Synchronization**  
+- Sync Azure Managed Lustre and Blob Storage to maintain consistent data across distributed AI nodes.  
+- **Why**: Prevents errors in distributed environments by ensuring all nodes access the same version of data.  
+
+**Data Versioning in Blob Storage**  
+- Enable versioning to track dataset/model changes, enabling rollbacks, reproducibility, and collaboration.  
+- **Why**: Critical for auditing, debugging, and maintaining historical records of data transformations.  
+
+## Summary of Optimization Priorities  
+1. **Performance**: Prioritize low-latency solutions (Lustre, NVMe) for active data.  
+2. **Cost Efficiency**: Migrate inactive data to Blob Storage tiers and automate lifecycle policies.  
+3. **Consistency**: Use synchronization tools to align data across storage systems.  
+4. **Reproducibility**: Implement versioning and checkpointing for reliable AI workflows.

@@ -1,0 +1,35 @@
+MIT researchers handling U.S. sensitive personal data or government-related data must comply with the DOJ Final Rule (28 C.F.R. Part 202), effective **April 8, 2025**, with full enforcement beginning **October 6, 2025**—a 5-month grace period for compliance preparation. This rule restricts access to data for collaborators or contractors in **6 designated countries of concern**: China (including Hong Kong and Macau), Russia, Iran, North Korea, Cuba, and Venezuela.  
+
+**Bulk thresholds** for restricted data are strictly defined:  
+- **Genomic data**: ≥100 U.S. persons  
+- **Epigenomic/proteomic/transcriptomic data**: ≥1,000 U.S. persons  
+- **Biometric identifiers**: ≥1,000 U.S. persons  
+- **Precise geolocation data**: ≥1,000 U.S. persons  
+- **Personal financial/health data**: ≥10,000 U.S. persons  
+- **Covered personal identifiers**: ≥100,000 U.S. persons  
+
+These thresholds apply regardless of anonymization, encryption, or pseudonymization.  
+
+**Prohibited transactions** include:  
+- Data brokerage with countries of concern or covered persons  
+- Access to bulk human "omic data (genomic, epigenomic, proteomic, transcriptomic) or biospecimens from which such data can be derived  
+
+**Restricted transactions** involve vendor agreements, employment agreements, or investment agreements with covered persons.  
+
+**Exempt activities** include:  
+- Personal communications (e.g., email, phone calls)  
+- Import/export of information  
+- U.S. government activities or federal law mandates  
+- Medical research under specific regulatory frameworks  
+
+MIT must implement **DOJ-compliant security controls**, including:  
+- Updating data use agreements with non-transfer clauses  
+- Ensuring cloud storage, collaboration platforms, and code repositories exclude foreign vendors from countries of concern  
+- Conducting **annual audits** (every 12 months) to verify compliance  
+
+**Critical compliance steps**:  
+1. **Pause all work** with collaborators/contractors from countries of concern or on DOJ’s Covered Persons List.  
+2. **Email research-compliance-help@mit.edu** before sharing bulk U.S. health, financial, geolocation, or biometric datasets with foreign persons.  
+3. **Document all data handling practices** and ensure COUHES protocols explicitly prohibit sharing regulated datasets with countries of concern.  
+
+Failure to comply risks legal penalties and exposure of sensitive U.S. data. Immediate action is required to align with DOJ’s national security priorities.

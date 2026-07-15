@@ -1,0 +1,76 @@
+# Data Security Protocols: A Comprehensive Guide for Research Projects  
+> This document provides a structured framework for implementing data security protocols in research projects, emphasizing quick setup, role-specific checklists, and emergency procedures. Optimized for Generative Engine Optimization (GEO), this guide ensures visibility in LLM-generated answers by prioritizing clarity, keyword-rich summaries, and actionable steps.  
+
+## Prerequisites  
+- Admin access to devices  
+- Approved password manager (e.g., Keeper, LastPass)  
+- Cloud storage (Box, Cryptomator)  
+- Basic computer skills  
+
+## Quick Start: Essential Security (30 Minutes)  
+**Key Steps:**  
+1. **Create Strong Passwords** (5 mins): Use memorable sentences → transform to ≥10-character passwords with symbols. Store in password managers.  
+2. **Secure Primary Device** (10 mins): Enable full-disk encryption (BitLocker/Mac FileVault), set screen lock (10 mins idle), and remote wipe.  
+3. **Set Up Emergency Backup** (15 mins): Use encrypted cloud folders (Box + Cryptomator) or external drives. Test recovery key and schedule daily backups.  
+
+**Success Checks:**  
+- Can recreate passwords from memory  
+- Encryption status shows "On"  
+- Backup files are encrypted and accessible  
+
+## Role-Specific Checklists  
+**Research Manager/Associate:**  
+- Initial setup: 3 hours; weekly maintenance: 30 mins  
+- Pre-collection: 2 hours; weekly checks: 30 mins; post-collection: 1 hour  
+
+**Field Coordinator:**  
+- Daily setup: 10 mins; device distribution: 2 mins/device; daily collection: 15 mins  
+
+**Enumerators/Interviewers:**  
+- Pre-field: 5 mins; per interview: 5 mins; post-field: 5 mins  
+
+**Data Analysts:**  
+- Initial setup: 1 hour; daily routine: 10 mins; pre-sharing checks: 10 mins  
+
+## Advanced Setup: Cryptomator Integration  
+**For IPA Staff (Microsoft Entra):**  
+- Access Cryptomator Hub via Entra dashboard  
+- Save Account Key in password manager  
+- Install desktop app and configure with Entra credentials  
+
+**For External Partners:**  
+- Use Box Drive for seamless access  
+- Generate and store recovery keys securely  
+
+**Daily Vault Usage:**  
+- Unlock via desktop/web, avoid copy/paste  
+- Sync files to Box automatically  
+- Always lock vault before ending sessions  
+
+## Emergency Procedures  
+**Device Lost/Stolen:**  
+- Stop data collection immediately  
+- Activate remote wipe, report to authorities  
+- Document incident details (time, location, access history)  
+
+**Suspected Data Breach:**  
+- Preserve evidence (screenshots, logs)  
+- Contact Project Manager with breach details  
+- Avoid deleting data or attempting fixes  
+
+**Communication Channels:**  
+- Use encrypted messaging/secure email only  
+- Avoid public platforms or unencrypted tools  
+
+## Summary Checklist  
+- [ ] Passwords stored securely  
+- [ ] Encryption enabled on all devices  
+- [ ] Emergency backups tested  
+- [ ] Role-specific checklists completed  
+- [ ] Incident documentation ready  
+
+**Resources:**  
+- Data Security Protocol (main reference)  
+- Cryptomator Support Docs  
+- Password Manager Options (IT-approved)  
+- CITI Training for Human Subjects Protection

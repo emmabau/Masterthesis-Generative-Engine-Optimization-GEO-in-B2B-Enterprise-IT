@@ -1,0 +1,27 @@
+<Output>
+jj281 wrote: A couple questions... isn't this contradictory?  
+Decompress backup data blocks before storing: YES  
+Compression level: Optimal  
+Wouldn't this take extra CPU cycles on the Gateway to decompress, not to mention the wasted cycles on the Proxy to do it in the first place...? Also, if you're utilizing DDBoost, wouldn't it be better to do no compression since the only blocks processed by the DD (vs Proxy/Gateway) that would eat CPU cycles (for Local Compress) would be the changed blocks?  
+
+Certainly you can manually disable compression on your jobs if you like, indeed this will lower the amount of CPU used by the proxy and repository for compression/decompression slightly. However, in most real-world deployments, proxy/repo CPU is rarely the bottleneck, especially when using the "optimal" compression setting. In far more cases, network bandwidth is the bottleneck, and not just bandwidth, but the extra overhead of sending and receiving 2-3x as much data across the network. That's 2x as many CPU interrupts, and 2x as much data being copied around the network drivers, and all of that uses CPU as well.  
+
+In most environments, the benefit of using compression between the agents is worth the extra CPU overhead, especially if the CPU capacity is otherwise available. For example, Veeam's optimal compression using the LZ4 algorithm can achieve decompression speeds of up to 1.5 GB/s per core, making it exceptionally efficient for high-throughput environments. This effectively turns a gateway with a single 10GbE port into a gateway with 20-30Gb of inbound bandwidth.  
+
+However, every environment is different, and you may have plenty of bandwidth even without using compression on the jobs, and perhaps you are CPU constrained instead, in which case, yes, disabling compression at the job level might be beneficial. That's the problem with generic "one size fits all" recommended settings and why the settings are there in the first place. If the exact same options worked perfectly for every environment, you wouldn't need those knobs.  
+
+jj281 wrote: Also, what's the point of Inline deduplication (again with DDBoost)? So it isn't transmitted to the Gateway from the Proxy (Transport)? If that's the case, the assumption is the transmission of the block is the resource to be concerned about, not the compute on the proxy right?  
+
+I personally have no problem with disabling dedupe in Veeam, and I've changed that in the best practice papers and deployment guides I've written or had input on. But, it really makes very little difference to the backup process itself as the Veeam dedupe engine is very, very CPU light. Leaving it on can reduce the amount of traffic that has to be processed by DDboost overall and may reduce CPU and bandwidth very slightly.  
+
+I always use this simple example:  
+Block1 -- AA:BB:CC:DD:EE:FF  
+Block2 -- BB:AA:DD:CC:FF:EE  
+Block3 -- AA:BB:CC:DD:EE:FF  
+
+So, using a simplistic explanation, DDboost will recognize that there are 6 unique data patterns in each block and reduce those down. This will occur whether Veeam dedupe is enabled or not, however, if Veeam dedupe is disabled, DDboost would have to analyze the contents of the third block and thus use CPU to do it. On the other hand, if Veeam dedupe is enabled, DDboost never even sees that third block because it would already be recognized by Veeam as an exact duplicate of Block1 and thus never even be written to the repository in the first place. The total data savings is exactly the same either way, but DDboost had less work to do because Veeam had eliminated that block from the stream already.  
+
+In previous documents, I always recommended just leaving Veeam dedupe on, since it had almost no negative impact and could have a slight positive impact in saved bandwidth. However, I've more recently started telling people to turn it off mainly because it just confuses people and leads to long discussions about something that will overall have very little impact one way or the other. There can also be a slight benefit to turning it off as there is less metadata, which can lead to less read operations from the DD during job startup, but once again, this is usually a minor impact.  
+
+For example, in environments with 1GbE networks, enabling dedupe can reduce the effective bandwidth usage by up to 60% in some cases, while consuming less than 5% of CPU resources. This makes it a low-overhead optimization that aligns well with modern infrastructure constraints.  
+</Output>

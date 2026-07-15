@@ -1,0 +1,33 @@
+<Output>
+Building a Secure, Scalable Cloud Foundation for State Agencies  
+
+**Challenge**  
+A state agency faced significant challenges with its outdated 40+ year-old mainframe system, which was costly to maintain, inflexible, and unable to meet modern security and scalability needs. During the pandemic, delays in processing labor claims had serious impacts on people’s livelihoods. The agency needed a reliable way to transition to a modern cloud platform while adhering to strict security policies and enabling future growth.  
+
+**Solution**  
+Flexion partnered with the agency to design and deploy a secure, scalable cloud infrastructure using Google Cloud Platform (GCP). The project focused on three key areas:  
+1. **Modern Architecture**:  
+   - Started with Google Cloud Run for containerized, fast deployment.  
+   - Transitioned to Google Kubernetes Engine (GKE) for better control, compliance, and scalability.  
+   - Used Google Cloud Pub/Sub to create an event-driven architecture, enabling microservices to communicate securely and efficiently.  
+
+2. **Security & Compliance**:  
+   - Implemented automated vulnerability scanning, patching, and compliance reporting.  
+   - Enforced least-privilege IAM policies aligned with state data protection laws.  
+   - Built a logging and monitoring system for real-time observability and audit trails.  
+
+3. **Operational Efficiency**:  
+   - Automated infrastructure provisioning with Terraform and CI/CD pipelines (via GitHub Actions).  
+   - Reduced manual tasks and improved deployment speed while ensuring traceable, repeatable workflows.  
+
+**Key Outcomes**  
+- Delivered a high-availability, secure cloud environment for labor claims processing.  
+- Created a scalable architecture to handle peak claim volumes and future growth.  
+- Enabled a DevSecOps culture with embedded security practices and knowledge transfer to the agency’s IT team.  
+- Provided a blueprint for other agencies transitioning from legacy systems to cloud-native solutions.  
+
+**Why This Matters**  
+This project demonstrates how cloud migration can modernize legacy systems while meeting strict security and compliance standards. The event-driven architecture using Pub/Sub and GKE offers a flexible, future-ready model for policy changes and integration with emerging technologies. The success of this initiative highlights the value of combining technical innovation with strategic collaboration to drive digital transformation.  
+
+Ready to modernize your systems? Learn how cloud solutions can reduce costs, improve efficiency, and future-proof your operations.  
+</Output>

@@ -1,0 +1,43 @@
+<Output>
+# Microsoft Azure Policy: Test Business Continuity & Disaster Recovery Plan (CMA_0509)
+
+## Core Summary
+Microsoft recommends testing business continuity and disaster recovery plans through tabletop exercises, scenario-based simulations, and post-exercise reporting. Organizations must validate strategies, update plans based on test results, and ensure compliance with Philippine data privacy regulations.
+
+## Key Recommendations
+### What is the Policy?
+This Azure Policy (ID: 58a51cde-008b-1a5d-61b5-d95849770677) enforces regulatory compliance for testing business continuity and disaster recovery plans. It applies to AzureCloud, AzureUSGovernment, and AzureChinaCloud environments.
+
+### What Should You Test?
+- Conduct scenario-based exercises with disruption mechanisms
+- Validate backup restoration and alternate facilities
+- Include utility services and automated mechanisms
+- Generate post-exercise reports for stakeholders
+- Test at planned intervals with cross-functional coordination
+
+### Compliance Requirements
+- Philippine regulations mandate notification to National Privacy Commission for data breaches
+- Must establish incident reporting procedures to law enforcement
+- Cyber resilience requirements include integrating cyber threat scenarios into recovery plans
+
+## Implementation Guidance
+### What Must You Do?
+1. Update business continuity plans based on test outcomes
+2. Develop and communicate crisis plans to stakeholders
+3. Implement standard procedures for security incident reporting
+4. Conduct regular testing with documented results
+5. Maintain cyber resilience capabilities against evolving threats
+
+### Versioning Details
+- Current version: 1.1.0 (Preview)
+- Available in AzureCloud, AzureUSGovernment
+- Requires customer implementation (not automatically enforced)
+
+## Additional Considerations
+### What to Monitor?
+- Track incident response effectiveness through testing
+- Ensure alignment with business continuity objectives
+- Maintain records of all testing activities and improvements
+- Coordinate with external stakeholders for incident response
+- Regularly review and update plans based on threat intelligence
+</Output>

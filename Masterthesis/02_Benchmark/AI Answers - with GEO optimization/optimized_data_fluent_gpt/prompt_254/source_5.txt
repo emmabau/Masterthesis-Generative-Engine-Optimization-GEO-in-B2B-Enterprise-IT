@@ -1,0 +1,18 @@
+<Output>
+High-Performance Computing (HPC) systems face significant challenges in efficiency, scalability, and sustainability. This review explores how artificial intelligence (AI), including machine learning (ML) and optimization techniques, is transforming HPC operations. By analyzing 74 key papers from 2019 to 2025, we identify six critical application areas: performance estimation, performance optimization, scheduling, surrogate modeling, fault detection, and language-model-based automation. These findings highlight opportunities for integrating AI into HPC systems, emphasizing the need for MLOps advancements, standardization, and benchmarking.
+
+**Key Insights:**
+1. **Performance Estimation**: AI models predict job execution metrics (e.g., runtime, resource usage) to optimize scheduling and resource allocation. Techniques like graph neural networks and time-series analysis enhance anomaly detection by capturing spatio-temporal patterns in HPC telemetry.
+2. **Scheduling**: Reinforcement learning (RL) and hybrid ML-heuristic approaches dominate scheduling research. These methods adapt to dynamic workloads, reducing idle time and improving resource utilization. For example, GARL schedulers combine RL with expert heuristics, while Colossal-Auto uses ML estimators to reduce search costs.
+3. **Fault Detection**: Anomaly detection systems leverage GNNs and LSTM networks to identify hardware/software failures in real-time. These models analyze system logs, sensor data, and performance metrics to predict and mitigate disruptions, improving system reliability.
+4. **Surrogate Modeling**: ML surrogates replace computationally expensive simulations, accelerating tasks like hyperparameter tuning and training. Techniques such as convolutional autoencoders and diffusion models enable faster predictions while maintaining accuracy.
+5. **Code Automation**: Large language models (LLMs) automate scripting, coding, and configuration tasks. Tools like DeepSeek-Coder and Codex generate parallel code, optimize resource allocation, and reduce manual effort in HPC workflows.
+6. **Integration Challenges**: While AI offers transformative potential, challenges persist in standardization, interoperability, and scalability. The lack of shared APIs and benchmarks hinders seamless integration of AI components across HPC systems.
+
+**Future Directions:**
+- **LLM-OS Integration**: Embedding AI models into operating systems (LLM-OS) could unify scheduling, fault detection, and optimization. These systems would dynamically adapt to workload demands, leveraging natural language interfaces for intuitive user interaction.
+- **MLOps Advancements**: Developing robust MLOps frameworks is critical for managing AI workflows in HPC. This includes automated retraining, hyperparameter tuning, and monitoring to ensure model reliability and performance.
+- **Security and Sustainability**: Addressing cybersecurity risks and reducing environmental impact remain priorities. AI-driven energy optimization and secure, scalable architectures will be essential for sustainable HPC growth.
+
+This review underscores the transformative role of AI in HPC, offering a roadmap for researchers and practitioners to harness these technologies effectively. By prioritizing standardization, interoperability, and practical deployment, the HPC community can unlock new levels of efficiency and innovation.
+</Output>

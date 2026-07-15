@@ -1,0 +1,40 @@
+<Output>
+# How to Fix VirtualBox Performance Issues on Windows
+
+**Abstract:** VirtualBox performance issues on Windows can be resolved by disabling conflicting Windows features. This guide outlines steps to disable Hyper-V, Device Guard, and other services, ensuring optimal VM performance through registry edits and script automation.
+
+## What Are the Symptoms of VirtualBox Performance Issues?
+- A green turtle icon in the VM window indicates slow mode.
+- Correct icon (blue V) signifies VT-x/AMD-V is enabled.
+- VM slowness despite proper resource allocation.
+
+## What Causes VirtualBox Performance Degradation?
+- Windows features like Hyper-V and Device Guard conflict with VirtualBox's hardware virtualization.
+- Microsoft’s design limits simultaneous use of VT-x/AMD-V by virtualization tools.
+- Corporate group policies may override local settings.
+
+## Step-by-Step Guide to Disable Conflicting Features
+### 1. Disable Incompatible Windows Features
+- Turn off: Containers, Guarded Host, Hyper-V, Virtual Machine Platform, Windows Hypervisor Platform, Windows Sandbox, Windows Subsystem for Linux via **Turn Windows features on or off**.
+
+### 2. Disable Hypervisor
+- Run `bcdedit /set hypervisorlaunchtype off` in Command Prompt (Admin).
+
+### 3. Disable Device Guard
+- Set **Turn On Virtualization Based Security** to **Disabled** in Group Policy Editor.
+- Delete registry keys under `HKLM\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard`.
+
+### 4. Disable Windows Defender Credential Guard
+- Use registry deletions and `bcdedit` commands to disable VBS and LSA ISO protections.
+
+### 5. Disable Virtualization-Based Security
+- Run `bcdedit /set {0cb3b571-2f2e-4343-a879-d86a476d7215} loadoptions DISABLE-LSA-ISO,DISABLE-VBS` and `bcdedit /set vsmlaunchtype off`.
+
+### 6. Automate Fixes with a Script
+- Save the script to a `.cmd` file and schedule it via Task Scheduler to run at startup and logon.
+- Ensure script includes registry deletions, EFI file copies, and `bcdedit` commands for persistent settings.
+
+## How to Verify Changes
+- After reboot, confirm disabling of features via the Windows button prompt.
+- Monitor VM performance and ensure the blue V icon appears for optimal hardware virtualization.
+</Output>

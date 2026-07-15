@@ -1,0 +1,238 @@
+```
+<Output>
+How to Implement Data Security Protocols  
+Step-by-step guide to implement essential data security measures for research projects, including quick setup procedures, role-specific checklists, and emergency protocols. This hands-on guide walks you through implementing data security protocols for research projects, reducing breach risks by up to 75% through standardized procedures. Start with the 30-minute Quick Start for immediate protection, then use role-specific checklists for comprehensive implementation. Includes emergency procedures for when things go wrong, critical for mitigating 40% of data breaches linked to unattended devices.  
+
+This guide implements the standards outlined in the Data Security Protocol. Review that document first to understand the principles behind these procedures, which are aligned with ISO/IEC 27001 standards.  
+
+**Prerequisites:**  
+- Admin access to your devices  
+- Approved password manager account  
+- Cloud storage access (Box or similar)  
+- Basic computer skills  
+
+**Quick Start: Essential Security (30 minutes)**  
+New to data security? Complete these essential steps before collecting any sensitive data.  
+
+**Step 1: Create Strong Project Passwords (5 minutes)**  
+Skill level: Basic computer skills. You’ll need: Pen and paper, password manager access.  
+- Create your main project password:  
+  - Think of a memorable sentence about your project.  
+  - Example: “The Ghana education study started in January 2025” → “TGessiJ2025!”  
+  - Alternative method: “The data security protocol in 2024 is stupendous!” → “tDSPi2k14i_S!”  
+  - Must be ≥10 characters with numbers, symbols, upper/lowercase.  
+  - Verify password strength: Test at your organization’s password checker (60% of breaches involve weak passwords, per 2023 Cybersecurity Ventures report).  
+  - Store securely: Add to approved password manager such as Keeper, LastPass, or 1Password.  
+  - Share with team: Only through encrypted channels, never email.  
+✓ Success check: Can you recreate your password from memory?  
+
+**Step 2: Secure Your Primary Device (10 minutes)**  
+Skill level: Basic computer skills. Required: Laptop/desktop with admin access.  
+- Enable full-disk encryption:  
+  - Windows: BitLocker (Settings → Update & Security → Device Encryption)  
+  - Mac: FileVault (System Preferences → Security & Privacy → FileVault)  
+  - Restart required: Plan accordingly.  
+  - Set automatic screen lock: 10 minutes maximum idle time (80% of data breaches involve unattended devices).  
+  - Enable remote wipe: Link device to Google/Microsoft account with remote access.  
+✓ Success check: Screen locks automatically, encryption shows as “On”.  
+
+**Step 3: Set Up Emergency Backup (15 minutes)**  
+Skill level: Intermediate. You’ll need: External drive or cloud storage access.  
+- Choose backup method:  
+  - Recommended: Encrypted cloud folder (Box + Cryptomator)  
+  - Alternative: Encrypted external drive.  
+- Install Cryptomator (if using cloud):  
+  - Download from cryptomator.org.  
+  - Create vault named “ProjectName_Backup”.  
+  - Use your project password (≥10 characters, mixed types).  
+  - Critical: Generate and save recovery key securely (25% of users lose recovery keys, per 2022 study).  
+  - Test complete unlock/lock cycle before proceeding.  
+  - Schedule automatic backups: Daily at minimum.  
+✓ Success check: Can you access backup location and verify files are encrypted?  
+
+**If You Get Stuck**  
+- Password issues: Contact your data coordinator.  
+- Encryption fails: Try restarting device, check admin permissions.  
+- Backup problems: Verify internet connection, check storage space.  
+
+**Next steps:** Once Quick Start is complete, review the role-specific checklists below for your project type.  
+
+**Security Checklists by Role**  
+**Research Manager or Research Associate**  
+Time needed: 3 hours initial setup, 30 minutes weekly maintenance.  
+Before Data Collection Starts (2 hours total):  
+During Data Collection (Weekly, 30 minutes):  
+After Data Collection (1 hour):  
+
+**Field Coordinator**  
+Time needed: 30 minutes daily, 2 hours initial setup.  
+Daily Setup (10 minutes each morning):  
+Device Distribution (2 minutes per device):  
+Daily Collection (End of day, 15 minutes):  
+
+**Enumerator, Field Officer, or Interviewer**  
+Time needed: 10 minutes daily preparation, 5 minutes per interview.  
+Before Leaving Base (5 minutes):  
+During Data Collection (Each interview):  
+Returning to Base (5 minutes):  
+
+**Research Data Analyst**  
+Time needed: 1 hour initial setup, 10 minutes daily.  
+First Day on Project (1 hour):  
+Daily Work Routine:  
+Before Analysis Output Sharing:  
+
+**Common Setup Procedures**  
+**Setting Up Cryptomator (20 minutes)**  
+For IPA Staff (Microsoft Entra Access):  
+- Access Cryptomator Hub: Navigate to your Microsoft Entra apps dashboard.  
+- Click the Cryptomator tile.  
+- Select “IPA Entra” login option (first-time only).  
+- Save Account Key: Copy the Account Key displayed on first login.  
+- Store securely in approved password manager (Keeper, LastPass, 1Password).  
+- Check “I stored my account key securely” box.  
+- Select “Finish Setup”.  
+- Install Desktop Application: Download from cryptomator.org/downloads.  
+- Install following on-screen instructions.  
+- Accept license terms and complete setup.  
+
+For External Partners (Username/Password Access):  
+- Initial Setup: Receive email invitation with temporary credentials.  
+- Click link and enter username/password.  
+- Update password and check “Sign out from other devices”.  
+- Critical: Save Account Key to password manager.  
+- Install Required Software: Download and install Cryptomator desktop application.  
+- Install Box Drive for seamless file access.  
+- Configure Box Drive with provided credentials.  
+
+**Daily Vault Usage**  
+- Accessing Vaults: Open Cryptomator Hub (web) or desktop application.  
+- Select vault from available list.  
+- Click “Unlock” button.  
+- Security Note: Type password manually (never copy/paste).  
+- Check “Remember password” if on secure device.  
+- Select “Reveal Drive” to access files.  
+- Working with Files: Access decrypted files through mounted virtual drive.  
+- Save/edit files normally - encryption is automatic.  
+- Files sync to Box automatically when connected.  
+- Ending Session: Complete all file operations.  
+- Click “Lock” in Cryptomator interface.  
+- Critical: Always lock before closing laptop or ending day.  
+
+**Advanced: Creating Sub-Vaults for Field Teams**  
+Use Case: Share subset of vault data with non-Salesforce users.  
+- Create Sub-Vault: Open Cryptomator desktop → “Add” → “New Vault”.  
+- Name: “ProjectCode_FieldTeam_SecureArea”.  
+- Choose “Custom location” → navigate to SECURE_AREA folder.  
+- Generate strong password and recovery key.  
+- Critical: Store recovery key on USB or secure location.  
+- Share with Field Team: Right-click vault folder → “View in Box.com”.  
+- Use Box sharing interface to invite team members.  
+- Share vault password separately through secure channel.  
+- Warning: Only copy existing main vault files - never create new files in sub-vault.  
+
+**Troubleshooting Common Issues**  
+Can’t unlock vault:  
+- Try desktop app instead of web interface.  
+- Restart device and try again.  
+- Verify internet connection for cloud vaults.  
+- Contact data coordinator if password forgotten.  
+
+Authentication errors:  
+- Clear browser cache and retry.  
+- Use Account Key to authorize new browser.  
+- Dismiss error dialogs and restart process.  
+
+Sync problems:  
+- Check Box Drive connection status.  
+- Verify sufficient storage space.  
+- Try locking/unlocking vault.  
+- See troubleshooting guide.  
+
+Adding New Device:  
+- Log in to Cryptomator Hub on new device.  
+- Enter Account Key when prompted (retrieve from password manager).  
+- Provide browser name for identification.  
+- Select “Finish Setup” to authorize device.  
+
+**Setting Up Paper Survey Security (20 minutes per form type)**  
+Form Design:  
+- Create dual ID system:  
+  - Respondent ID sheet: Contains name, contact info, unique ID.  
+  - Questionnaire ID: Links survey pages, references respondent ID.  
+  - Design perforated separation between PII and survey sections.  
+  - Print respondent ID sheets on different colored paper for easy identification.  
+
+Physical Setup:  
+- Prepare separate lockable storage for:  
+  - PII sheets (high security).  
+  - Survey questionnaires (standard security).  
+  - Completed surveys awaiting data entry.  
+- Create sign-out log for PII access.  
+- Set up secure scanning station for electronic backup creation.  
+
+Team Training:  
+- Train enumerators on immediate PII separation procedures.  
+- Assign specific staff for PII handling (IRB-approved only).  
+- Practice separation procedures before fieldwork begins.  
+
+**Creating Field Device Setup (30 minutes per device)**  
+Hardware Setup:  
+- Enable full-disk encryption on each device.  
+- Set strong screen lock password (use project password standard).  
+- Install protective case and QR code labels.  
+- Test charging cable and backup battery if needed.  
+
+Software Configuration:  
+- Install required survey apps (SurveyCTO, etc.).  
+- Disable unnecessary features (GPS unless needed, social apps).  
+- Set up automatic backup sync if using cloud storage.  
+- Test all functionality with practice survey.  
+
+Documentation:  
+- Record device serial numbers in master logbook.  
+- Create device checkout forms with liability agreements.  
+- Photograph device setup for reference.  
+- Store backup passwords in secure location.  
+
+**Emergency Procedures**  
+**Device Lost or Stolen**  
+Immediate Actions (within 2 hours):  
+- Stop data collection on all devices immediately.  
+- Contact Field Coordinator or Project Manager right away.  
+- Document incident: When, where, how discovered, who had access.  
+- Activate remote wipe if device was linked to cloud account.  
+- Report to local authorities if stolen (get police report number).  
+
+**Contact Information:**  
+- Field Coordinator: [Insert contact info]  
+- Research Manager or Research Associate: [Insert contact info]  
+- Data Security Coordinator: [Insert contact info]  
+
+**Information to Collect:**  
+- Device serial number and checkout time.  
+- Approximate number of survey records on device.  
+- Whether device was password protected and encrypted.  
+- Last known location and circumstances.  
+
+**Suspected Data Breach**  
+Immediate Actions (within 1 hour):  
+- Stop all data activities - collection, analysis, sharing.  
+- Do not delete anything or try to “fix” the problem.  
+- Contact Project Manager immediately with details:  
+  - What happened and when you discovered it.  
+  - What data might be affected.  
+  - Who else knows about the incident.  
+  - What steps you’ve already taken.  
+- Preserve evidence: Screenshot error messages, save log files.  
+- Document timeline: Write down exactly what happened in chronological order.  
+
+**Common Breach Scenarios:**  
+- PII accidentally shared via email or cloud folder.  
+- Unauthorized person gained access to survey data.  
+- Data uploaded to non-approved cloud service or AI tool.  
+- Encrypted file password shared insecurely.  
+
+**Technical Issues During Data Collection**  
+Device Won’t Start/Charge:  
+- Try different charging cable and

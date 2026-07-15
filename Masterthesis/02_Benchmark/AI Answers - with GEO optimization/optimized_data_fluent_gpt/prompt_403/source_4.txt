@@ -1,0 +1,50 @@
+<Output>
+Storage
+- Cover story: Everything you need to know about composable infrastructure
+- Infographic: Illustrated guide to VMware vSAN HCI configuration and features
+- Feature: Navigate PII data protection and GDPR to meet privacy mandates
+- Column: Important questions about DRaaS you're not asking your vendor
+- Column: Why application intelligence is the linchpin of modern data centers
+fotomek/stock.adobe.com
+
+Everything you need to know about composable infrastructure
+
+Composable infrastructure abstracts physical resources like servers, storage, and networks into flexible services that can be dynamically composed and recomposed for specific applications. This approach offers greater flexibility and resource efficiency compared to traditional hyper-converged infrastructure (HCI), though it comes with its own set of challenges.
+
+The rise of hyper-converged infrastructure highlighted its benefits, but limitations like overprovisioning and inflexibility led to the development of composable infrastructure. This newer model provides a software-defined framework that disaggregates hardware into logical resource pools, offering on-demand services similar to cloud platforms. While sometimes mistakenly referred to as "infrastructure as code" (IaC) or "software-defined infrastructure" (SDI), composable infrastructure expands these concepts by combining their principles into a fluid resource pool tailored for dynamic workloads.
+
+Key Characteristics of Composable Infrastructure
+1. **Resource Abstraction**: Physical components are abstracted into logical services, enabling applications to access resources dynamically without predefined configurations.
+2. **Flexibility**: Supports bare-metal, containerized, and virtualized workloads, adapting to changing application needs.
+3. **Efficient Utilization**: Disaggregated architecture optimizes hardware use, reducing waste and operational complexity.
+4. **Scalability**: Storage, compute, and network resources can be scaled independently, similar to cloud environments.
+
+How It Differs from HCI and IaC
+- **Hyper-Converged Infrastructure (HCI)**: Integrates compute, storage, and networking into a single appliance, optimized for specific workloads. While easier to manage, it lacks the flexibility of composable systems.
+- **Infrastructure as Code (IaC)**: Automates infrastructure provisioning through declarative or imperative scripts, enabling consistent environments for DevOps workflows. Composable infrastructure builds on IaC principles by making resource orchestration more dynamic.
+- **Software-Defined Infrastructure (SDI)**: Manages physical resources via software layers, abstracting them into logical services. Composable infrastructure represents an advanced form of SDI, with greater automation and adaptability.
+
+Benefits of Composable Infrastructure
+- **Cost Efficiency**: Reduces overprovisioning and streamlines operations through intelligent automation.
+- **DevOps Enablement**: Accelerates application delivery by allowing developers to provision environments on demand.
+- **Private/Hybrid Cloud Compatibility**: Supports dynamic resource allocation, making it ideal for AI/ML workloads and hybrid cloud environments.
+- **Performance Optimization**: Eliminates hypervisor dependencies, improving application performance for bare-metal workloads.
+
+Challenges and Considerations
+- **Immaturity of the Technology**: Software for managing composability is still evolving, with limitations in hardware disaggregation and processor capabilities.
+- **Lack of Standards**: Vendors define their own implementations, creating fragmentation and potential vendor lock-in.
+- **Complexity**: Requires advanced administrative expertise, which can offset cost savings.
+- **Deployment Costs**: Initial setup and scaling can be expensive without industry-wide standards.
+
+Industry Players and Use Cases
+- **Hewlett Packard Enterprise (HPE)**: Pioneered composable infrastructure with its Synergy platform, now offering solutions for ProLiant DL servers and hybrid cloud environments.
+- **Dell EMC**: Introduces kinetic infrastructure with its PowerEdge MX platform, emphasizing "true composability."
+- **Liqid and DriveScale**: Provide hardware-agnostic platforms for building composable infrastructures.
+- **Intel**: Offers the Rack Scale Design reference architecture for deploying composable systems.
+
+The Future of Composable Infrastructure
+While composable infrastructure shows promise for modern data centers, its success depends on industry standardization, improved software maturity, and alignment with evolving workload demands. Organizations must carefully evaluate vendor offerings and use cases to determine if this technology aligns with their specific needs and budgets.
+
+Next Steps
+Can composable infrastructure and computational storage coexist? Explore the potential synergies between these emerging technologies.
+</Output>

@@ -1,0 +1,69 @@
+<Output>
+MIT researchers handling U.S. sensitive personal data or government-related data must comply with the U.S. Department of Justice (DOJ) Final Rule (28 C.F.R. Part 202), effective April 8, 2025. This rule imposes strict restrictions on data access for collaborators or contractors in "countries of concern" or individuals from these countries. Compliance is mandatory starting October 6, 2025. For questions, contact research-compliance-help@mit.edu.
+
+**Countries of Concern**  
+The DOJ’s list of countries of concern includes:  
+- China (including Hong Kong and Macau)  
+- Russia  
+- Iran  
+- North Korea  
+- Cuba  
+- Venezuela  
+
+**Key Definitions**  
+1. **Sensitive Personal Data**  
+   Includes health, financial, geolocation, biometric, and "human 'omic data" (genomic, epigenomic, proteomic, transcriptomic). Bulk thresholds apply to certain categories:  
+   - Human genomic data: ≥100 U.S. persons  
+   - Human 'omic data: ≥1,000 U.S. persons  
+   - Biometric identifiers: ≥1,000 U.S. persons  
+   - Precise geolocation data: ≥1,000 U.S. persons  
+   - Personal financial/health data: ≥10,000 U.S. persons  
+   - Covered personal identifiers: ≥100,000 U.S. persons  
+
+   *Note:* Anonymized, pseudonymized, or encrypted data meeting thresholds is still regulated.  
+
+2. **Government-Related Data**  
+   Includes location data tied to U.S. government facilities or functions.  
+
+3. **Covered Persons**  
+   Foreign individuals/entities designated by DOJ or meeting criteria such as:  
+   - Primary residence in a country of concern  
+   - Contractors of a country of concern  
+   - Entities 50% or more owned by covered persons  
+   - Entities based in a country of concern  
+
+4. **Covered Data Transactions**  
+   Any transaction involving access by a country of concern or covered person to:  
+   - Government-related data  
+   - Bulk sensitive personal data  
+   *Examples:* Data brokerage, vendor agreements, employment contracts, investment agreements.  
+
+**Prohibited, Restricted, and Exempt Transactions**  
+- **Prohibited**:  
+  - Data brokerage with countries of concern or covered persons  
+  - Access to bulk human 'omic data or biospecimens from these countries  
+
+- **Restricted**:  
+  - Vendor, employment, or investment agreements with countries of concern or covered persons  
+
+- **Exempt**:  
+  - Personal communications (e.g., emails)  
+  - Information imports/exports  
+  - U.S. government activities or federal law requirements  
+  - Medical research under regulatory frameworks  
+  - Financial/telecom services, corporate transactions, and certain investment agreements  
+
+**Compliance Actions**  
+- **Pause work** if collaborators, vendors, or visitors are from countries of concern or on DOJ’s Covered Persons List.  
+- **Avoid sharing** bulk U.S. human 'omic data or biospecimens with countries of concern.  
+- **Restrict access** to sensitive data (e.g., health, financial, geolocation) with foreign persons.  
+- **Review systems**: Cloud storage, collaboration platforms, and code repositories to block access by foreign vendors or non-MIT collaborators from countries of concern.  
+- **Update agreements**: Include DOJ-compliant security and non-transfer clauses in data use agreements, subawards, and contracts.  
+- **Document protocols**: Ensure COUHES consents and compliance programs reflect restrictions on sharing regulated datasets.  
+- **Plan audits**: Conduct annual reviews of security measures for restricted transactions.  
+
+**Critical Guidance**  
+Do not provide bulk U.S. human 'omic data or biospecimens to collaborators/contractors in or visitors from China, Russia, Iran, North Korea, Cuba, or Venezuela. This is prohibited under DOJ rules effective April 8, 2025.  
+
+Before sharing large U.S. health, financial, geolocation, or biometric datasets with foreign persons in countries of concern, email research-compliance-help@mit.edu. Some cases may require DOJ-mandated security controls and audits.  
+</Output>

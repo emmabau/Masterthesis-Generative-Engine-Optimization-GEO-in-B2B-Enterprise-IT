@@ -1,0 +1,34 @@
+<Output>
+Microsoft Azure Policy: Test Business Continuity & Disaster Recovery Plans
+
+**Policy Overview**  
+This policy (ID: 58a51cde-008b-1a5d-61b5-d95849770677) focuses on ensuring organizations maintain effective business continuity and disaster recovery plans. Key recommendations include:
+
+**Core Requirements**  
+1. **Regular Testing**  
+   - Conduct tabletop exercises or simulated crisis scenarios  
+   - Test at planned intervals using automated mechanisms  
+   - Include alternate facilities, utilities services, and backup restoration  
+
+2. **Plan Evaluation**  
+   - Validate strategies through disruption simulations  
+   - Develop post-exercise reports with actionable recommendations  
+   - Share results with stakeholders and update plans based on findings  
+
+3. **Cyber Resilience**  
+   - Incorporate cyber threat scenarios into planning  
+   - Establish procedures for reporting security incidents to designated officers  
+   - Notify law enforcement for criminal violations and the Philippine National Privacy Commission for data breaches  
+
+**Compliance & Implementation**  
+- Available in AzureCloud, AzureUSGovernment (version 1.1.0)  
+- Requires customer implementation (not automatically enforced)  
+- Supports manual compliance mode with default "Allowed" setting  
+
+**Key Takeaways**  
+- Prioritize team training and scenario-based testing  
+- Maintain documented processes for incident response  
+- Align plans with regulatory requirements (e.g., Philippine data protection laws)  
+- Use structured reporting to track improvements and stakeholder engagement  
+
+This policy emphasizes proactive preparation for disruptions while balancing technical rigor with organizational communication needs.

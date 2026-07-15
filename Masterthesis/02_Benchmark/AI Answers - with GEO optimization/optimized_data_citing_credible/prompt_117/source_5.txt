@@ -1,0 +1,84 @@
+<Output>
+Abstract  
+Modern buildings face increasing demands for energy efficiency, a global priority for sustainability. This study identifies critical parameters for building energy management, including occupancy patterns, environmental conditions, and device usage, to optimize energy consumption. Experiments in three smart buildings demonstrated energy savings of up to 23% through adaptive control strategies [30]. Keywords: IoT, smart buildings, energy efficiency  
+
+1. Introduction  
+Buildings account for 20–40% of global energy consumption [1], making energy efficiency a critical challenge. Regulatory frameworks like the EU’s Energy Performance of Buildings Directive [2] emphasize improving appliance efficiency, particularly HVAC systems. However, fragmented approaches often overlook holistic solutions. This work proposes a unified framework integrating IoT and semantic technologies to address energy efficiency holistically, supported by empirical validation in real-world scenarios [30].  
+
+2. Related Work  
+Existing solutions often rely on static models or isolated systems [12–15], failing to account for dynamic occupant behavior or contextual factors. While some studies highlight occupant behavior’s impact on energy use [7,8], most lack integration with real-time data. Our approach bridges this gap by combining sensor data, predictive analytics, and adaptive control, as demonstrated in [18,33].  
+
+3. Towards Smart Buildings: Optimization of Energy Efficiency  
+Key stages in building lifecycle management include design, operation, and maintenance. The CEN Standard EN15251 [24] underscores the importance of dynamic conditions in energy modeling. Our analysis identifies occupancy patterns, environmental factors, and device usage as critical inputs, validated through experiments in three buildings [30].  
+
+3.1. Monitoring  
+Energy consumption is influenced by:  
+- **Occupant behavior**: Studies show occupant actions account for 30–50% of energy use [7,8].  
+- **Environmental conditions**: Temperature, humidity, and lighting directly impact HVAC and lighting loads [26].  
+- **Device usage**: Non-intrusive load monitoring (NILM) techniques [27] enable granular analysis of appliance contributions.  
+
+3.2. Information Management  
+Balancing energy efficiency with user comfort requires adaptive systems. For example, thermal comfort strategies must align with energy-saving goals, as shown in [28].  
+
+3.3. Automation System  
+Automation platforms like City Explorer [29] integrate sensors, actuators, and semantic technologies to optimize energy use. By analyzing occupancy data and environmental conditions, these systems reduce energy waste by up to 30% [30].  
+
+3.4. Feedback and User Involvement  
+Real-time feedback mechanisms, such as smart meters, have been shown to reduce energy consumption by 5–15% [7]. Our system extends this by enabling users to adjust settings based on real-time data, enhancing engagement and savings [30].  
+
+4. City Explorer: A Holistic Platform for Smart Buildings  
+City Explorer’s modular architecture [29] supports scalable energy management, integrating IoT, semantic technologies, and adaptive control. Its ability to process heterogeneous data and apply intelligent rules enables energy savings of 23% in real-world deployments [30].  
+
+5. Deployment and Experimental Analysis  
+**Use Case 1: Smart Campus Building**  
+The University of Murcia’s Chemistry Faculty building, with 158 HVAC units, demonstrated that thermal comfort and occupancy levels drive 40.5% of energy use [30]. By correlating occupancy data with HVAC consumption, energy savings of 23% were achieved through adaptive control [30].  
+
+**Use Case 2: Test Lab of Smart Building**  
+In a controlled environment, City Explorer’s RFID and IR-based localization system [33] enabled precise occupant tracking, reducing energy waste by 14–30% through context-aware adjustments [30].  
+
+**Use Case 3: Smart Company Office**  
+A Spanish bank’s office building achieved 23.12% energy savings by optimizing lighting and HVAC based on occupancy and environmental data [30].  
+
+6. Conclusions  
+This work demonstrates that integrating IoT, semantic technologies, and real-time data analysis can achieve significant energy savings in buildings. By prioritizing occupant behavior, environmental factors, and adaptive control, our framework offers a scalable solution for sustainable energy management [30].  
+
+References  
+[1] Dane P., Steele J., Wilkerson J. WattBot: A Residential Electricity Monitoring and Feedback System. CHI′09.  
+[2] European Commission Directive 2010/31/EU.  
+[3] Van Dijk D.H., Essam E.K. ISO Energy Efficiency in Buildings.  
+[4] Agarwal Y., Balaji B., Gupta R., et al. Occupancy-driven energy management.  
+[5] Pettersen T.D. Energy consumption variation in dwellings.  
+[6] Lindberg R., Binamu A., Teikari M. Weather and energy consumption data.  
+[7] Darby Sarah. Feedback on energy consumption.  
+[8] Fischer C. Feedback on household electricity consumption.  
+[9] Voss K., Igor S., Assunta N., et al. Load matching and grid interaction.  
+[10] Perera C., Zaslavsky A., Christen P., Georgakopoulos D. Sensing as a service model.  
+[11] European Commission. 2020 Objectives.  
+[12] Al-Homoud M.S. Computer-aided building energy analysis.  
+[13] Crawley D.B., Jon W.H., Michaël K., Brent T.G. Building energy simulation programs.  
+[14] Clarke J.A., Cockroft J., Conner S., et al. Simulation-assisted control.  
+[15] Crawley D.B., Linda K.L., Frederick C.W., et al. EnergyPlus.  
+[16] Chen Z., Clements-Croome D., Hong J., Li H., Xu Q. Multicriteria lifespan energy efficiency.  
+[17] Garg V., Bansal N.K. Smart occupancy sensors.  
+[18] Hagras H., Victor C., Martin C., Graham C. Hierarchical fuzzy genetic multi-agent architecture.  
+[19] Han D.M., Lim J.H. Zigbee-based smart home energy management.  
+[20] Oksa P., Soini M., Sydänheimo L., Kivikoski M. Kilavi platform.  
+[21] O'Sullivan D.T.J., Keane M.M., Kelliher D., Hitchcock R.J. Building lifecycle metrics.  
+[22] Escrivá-Escrivá G., Álvarez-Bel C., Peñalvo-López E. Energy efficiency indices.  
+[23] Sundramoorthy V., Cooper G., Linge N., Liu Q. Domestic energy-monitoring systems.  
+[24] EN15251, CEN Standard.  
+[25] Hazas M., Adrian F., James S. Domestic energy inquiry.  
+[26] Berglund L. Thermal comfort response models.  
+[27] Zoha A., Alexander G., Muhammad A.I., Sutharshan R. Non-intrusive load monitoring.  
+[28] Dounis A.I., Christos C. Advanced control systems.  
+[29] Zamora-Izquierdo M.A., José S., Gómez-Skarmeta A.F. Home Automation solution.  
+[30] Moreno M., Zamora M.A., Skarmeta A.F. User-centric smart buildings.  
+[31] Fensel A., Kumar V., Tomic S.D.K. Energy-efficient semantically enabled homes.  
+[32] Bonino D., Castellina E., Corno F. DOG: Ontology-Powered OSGi Gateway.  
+[33] Moreno-Cano M.V., Zamora-Izquierdo M.A., Santa J., Skarmeta A.F. Indoor localization system.  
+[34] Moreno-Cano M.V., Zamora-Izquierdo M.A., Skarmeta A.F. IoT-based smart building framework.  
+[35] Kumar V., Fensel A., Fröhlich P. Context-based semantic rules.  
+[36] Luis P.-L., Ortiz J., Pout C. Buildings energy consumption review.  
+[37] Pérez-Lombard L., José O., Christine P. Buildings energy consumption review.  
+[38] Moreno M., Hernandez Ramos J.L., Skarm,eta A.F. User role in IoT systems.  
+</Output>

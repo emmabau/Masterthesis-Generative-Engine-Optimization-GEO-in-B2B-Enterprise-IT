@@ -1,0 +1,15 @@
+<Output>
+Public clouds are increasingly adopting Non-Volatile Memory Express (NVMe) storage to address the growing demands of modern workloads for high I/O throughput and low latency. NVMe storage is typically delivered via virtual machines (VMs), where multiple VMs on a single host may share a physical NVMe device. The method used to virtualize NVMe resources significantly impacts performance, usability, and security. This paper introduces three NVMe storage virtualization approaches:  
+1. **PCI device passthrough** – Directly assigns the physical NVMe device to a VM, minimizing latency but requiring dedicated hardware.  
+2. **Virtual block device method** – Abstracts NVMe as a block device, enabling flexible resource sharing while balancing performance and security.  
+3. **SPDK virtual host target method** – Leverages the Storage Performance Development Kit to create a virtual host target, optimizing scalability and CPU efficiency.  
+
+These methods were evaluated across performance, scalability, CPU overhead, technology maturity, security, and practicality for deployment. The findings provide actionable insights for cloud providers like IBM public cloud to implement NVMe virtualization effectively.  
+
+Key references:  
+- Ilias Iliadis, *International Journal on Advances in Networks and Services*  
+- Juan Miguel De Haro, Rubén Cano, et al., *IPDPS 2022*  
+- Hazar Yueksel, Ramon Bertran, et al., *MLSys 2020*  
+- Timothy Chainer, Liz Hulihan, et al.  
+- ARPA-E COOLERCHIPS Kickoff Meeting 2023  
+</Output>

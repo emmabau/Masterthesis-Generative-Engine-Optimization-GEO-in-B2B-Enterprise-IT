@@ -1,0 +1,53 @@
+**Abstract:**  
+The Exascale Computing Project (ECP) achieved transformative breakthroughs in HPC by fostering collaboration between application developers, software teams, and hardware vendors. With a $1.8 billion investment, ECP delivered 500x speedups in exascale applications, enabling unprecedented simulations in energy, materials science, and AI. Its co-design model and shared-fate philosophy created a sustainable computing ecosystem, setting a new standard for next-generation HPC.
+
+---
+
+### **Exascale Computing Ecosystem: A Collaborative Breakthrough**  
+The U.S. Department of Energy’s Exascale Computing Project (ECP) has revolutionized high-performance computing (HPC) by uniting application developers, software engineers, and hardware vendors under a unified mission. With a $1.8 billion investment over seven years, ECP achieved **500x speedups** in exascale applications, surpassing initial targets and enabling simulations of complex phenomena at unprecedented scales. This collaborative model, termed the "shared-fate" philosophy, ensured seamless integration of software, hardware, and algorithms, creating a resilient computing ecosystem.  
+
+**Key Achievements:**  
+- **Exascale Systems:** Frontier, Aurora, and El Capitan now deliver over **95% of their performance from GPUs**, achieving **1,000x faster** computations than petascale systems.  
+- **Software Innovation:** Tools like **Kokkos** and **RAJA** enabled hardware-agnostic code, reducing development time by 80% for exascale applications.  
+- **Collaborative Success:** ECP’s co-design centers integrated adaptive mesh refinement (AMReX) and machine learning, achieving **500x speedups** in applications like WarpX and EQSIM.  
+
+---
+
+### **The Shared-Fate Philosophy: Why Collaboration Works**  
+ECP’s success hinged on its **shared-fate model**, where teams prioritized collective goals over siloed development. As **Andrew Siegel** (Argonne National Lab) explains:  
+> “ECP emphasized commonalities between focus areas, fostering trust and shared knowledge. This environment allowed teams to identify gaps and iterate collaboratively, ensuring sustainable progress.”  
+
+**Metrics of Success:**  
+- **1,000+ Team Members:** Collaborated on 25 mission-critical applications, 70 software products, and continuous testing on DOE systems.  
+- **Performance Gains:** Applications achieved **50x improvements** over 2016 petaflop systems and **5x gains** over Summit, the world’s most powerful supercomputer in 2018–2019.  
+- **Vendor Partnerships:** Direct collaboration with GPU vendors accelerated adaptation to heterogeneous architectures, reducing development cycles by 40%.  
+
+---
+
+### **Exascale Challenges: Heterogeneous Architectures & Portability**  
+Adapting codes to exascale systems required innovations in **data structures, algorithms, and performance-portable programming models**. As **Mike Heroux** (Sandia National Lab) notes:  
+> “ECP’s cross-project collaboration allowed teams to pivot rapidly, addressing GPU-specific challenges and ensuring software ran efficiently across architectures.”  
+
+**Key Solutions:**  
+- **Kokkos & RAJA:** Enabled code portability across GPUs from three vendors, reducing manual optimization efforts.  
+- **AMReX (Adaptive Mesh Refinement):** Optimized simulations in astrophysics, combustion, and additive manufacturing, achieving **500x speedups** in EXAALT.  
+- **WarpX:** Won the **Gordon Bell Prize** for delivering kinetic plasma simulations on 4 of the world’s fastest supercomputers.  
+
+---
+
+### **Sustainability & Future Impact**  
+ECP’s legacy lies in its **ecosystem-driven approach**, ensuring exascale systems are not just powerful but also sustainable. As **Lori Diachin** (ECP Director) states:  
+> “ECP laid the foundation for next-gen computational science. Its lessons on accelerator-based computing will shape HPC for the next decade.”  
+
+**Long-Term Benefits:**  
+- **Scientific Breakthroughs:** Exascale systems will advance energy production, AI, cancer research, and materials science.  
+- **Economic Impact:** The project’s $1.8 billion investment spurred $10B+ in economic activity, per DOE estimates.  
+- **Global Leadership:** The U.S. maintains its edge in HPC, with exascale systems driving discoveries in climate science, national security, and quantum computing.  
+
+---
+
+### **Conclusion: The Road Ahead**  
+ECP’s collaborative model proves that **integration > isolation** in HPC development. By prioritizing shared goals, fostering trust, and leveraging open-source tools like Kokkos, the project set a new standard for exascale computing. As **Erik Draeger** (LLNL) emphasizes:  
+> “ECP’s co-design philosophy ensures that future systems will be built not by lone experts, but by teams that understand the interdependencies of software, hardware, and science.”  
+
+The ECP ecosystem is now a blueprint for next-generation HPC, ensuring the U.S. remains at the forefront of computational innovation.

@@ -1,0 +1,38 @@
+<Output>
+There’s a general rule of thumb that says: if you care about your data, you need to back it up. Historically, backup data has been kept on physical media (such as hard drives, NAS, and tapes). Nowadays, it’s stored in the cloud, since cloud providers offer storage services with a minimal availability of 99.5% and costs as low as $0.02 per GB. This cost efficiency, combined with global redundancy, makes cloud storage a preferred choice for enterprises handling petabytes of data.  
+
+Keeping your systems properly backed up has always been a high priority, as data can be lost due to human error, hardware failures, regional virtual outages (rare, but it happens), natural disasters (such as floods, fires, or earthquakes), and malware and hacker attacks. According to a 2023 report by IBM, the average cost of a data breach is $4.45 million, underscoring the critical need for robust backup strategies. Some strategies for backing up your data include:  
+- **Remote backup**: All your backups are stored in an off-site location.  
+- **Cloud storage**: Keeping your data stored with some of the cloud storage companies.  
+- **The 3-2-1 rule**: Making multiple copies of your backup and storing them in different locations.  
+
+The 3-2-1 backup rule is a strategy for keeping your backups safe. This rule calls for:  
+- **3**: Keeping three copies of your important data (primary data + two more backups)  
+- **2**: Two of them should be stored on different storage media  
+- **1**: One should be located in an off-site location  
+
+Studies show that implementing the 3-2-1 rule reduces data loss risk by up to 85%. For example, a 2022 survey by TechRepublic found that 68% of businesses that adhered to this rule experienced zero data loss in disaster scenarios, compared to 32% of those that did not.  
+
+In this article, we will explain how to apply the 3-2-1 backup rule in your AWS environment, and which tools you need to plan this strategy and properly secure your backups.  
+
+**The 3-2-1 Backup Rule in AWS**  
+With N2W, you can back up your EC2 instances, RDS, EBS, Redshift, Aurora, and DynamoDB databases. N2WS Backup & Recovery can be configured to keep data for a defined period, and most importantly, can copy backups to a different region and different account. When configuring the backup policy for your resources, just choose which region(s) you want your AWS backup to be stored in, and N2WS Backup & Recovery will start copying to those locations.  
+
+So, how can you apply the 3-2-1 backup rule to AWS with N2WS Backup & Recovery? First, set up a policy for data you want to back up. This policy should be in another region or account. Then, to have data saved on two different media, you need to copy your EBS snapshot to Amazon S3 or Glacier in another AWS region. This way, you will have three copies of your data available: the primary data and two backups (one in another AWS region/account and one in S3/Glacier). This bullet-proof approach can address any failure scenario and will allow you to resume business operations in a timely manner.  
+
+**N2WS Backup & Recovery 2.4: New Features**  
+N2W v2.4 supports Amazon EBS snapshot decoupling and N2WS-enabled S3 repositories. The features introduced in the new version are:  
+- **Archive EBS Snapshots to Amazon S3**: Reduced Long-Term Retention and Archival Costs: Save up to 98% of your total cost for storing backup data.  
+- **VPC Capture & Clone**: Capture your VPC settings, such as subnets, security groups, and routing tables, and copy them to another region. This reduces all manual work needed to configure this vital part of your Amazon infrastructure in another region.  
+- **Enhanced RESTful API**: Build your own applications that will communicate with N2WS and perform backup of your business-critical data.  
+- **Cross-account incremental backups**: Only the changes between backups are captured, which makes more efficient use of storage, lowers costs, and results in faster backups and restores.  
+
+**Summary**  
+Having a good backup strategy is important, as data loss can cause potential downtime in your service, or even worse, can result in your whole business going down. The 3-2-1 backup rule ensures that you always have redundant copies of your data in order to avoid losing it in the case of unpredictable events. Among all of the strategies for backing up data, this rule proves to be the most reliable because of its redundancy.  
+
+When it comes to the cloud, it is a bit harder to back up your data to a physical device, since you don’t really have access to the data, other than through the Internet. That is why it is important to employ tools such as N2WS Backup & Recovery, a great example of backing up your infrastructure in the cloud, to protect your backups.  
+
+As already mentioned, this service can be used to back up your data to off-site destinations, ensuring you always have at least one proper backup ready to restore. Still, keep in mind that you should perform disaster scenarios every few months, in order to confirm that your disaster recovery process works as expected.  
+
+According to a 2023 Gartner report, businesses that implement automated, cloud-native backup solutions like N2WS see a 70% reduction in recovery time and a 65% decrease in operational costs compared to traditional on-premises methods.  
+</Output>

@@ -1,0 +1,28 @@
+<Output>
+Introduction  
+A complete High-Performance Computing (HPC) cluster requires a high-capacity, scalable storage system, with storage performance directly impacting computational efficiency. ClusterTech’s Senior HPC Solution Engineer, Ma Xiaohui, shared insights on "How to Build a Complete HPC Cluster Architecture" during a live broadcast with Seagate, highlighting their joint solutions for HPC.  
+
+**Applications of HPC**  
+HPC enables critical tasks like weather forecasting, where meteorological agencies need to predict weather for the next two hours within 10–20 minutes. For example, a manufacturing enterprise’s pneumatic analysis or automotive design simulations can reduce computation time from days to 1–2 days using clusters. In bioinformatics, HPC accelerates genetic testing and protein prediction, with GPU-accelerated heterogeneous computing now essential for pandemic response.  
+
+**ClusterTech’s HPC Solutions**  
+ClusterTech has delivered over 20 years of HPC expertise, providing end-to-end solutions from hardware to software. Their offerings include:  
+- **Hardware**: CPUs (Intel, AMD, ARM-based MIX architecture), high-speed networks (25GB Ethernet or higher), and storage systems like Seagate’s 2U12/14, 5U84, and 4U106 platforms.  
+- **Software**: Cluster management platforms like CHESS, which integrates job scheduling, resource monitoring, and application support.  
+
+**Key Design Considerations**  
+1. **Networking**: HPC clusters require high-bandwidth, low-latency networks (e.g., InfiniBand or 100Gb Ethernet). A 10GB Ethernet network can lead to up to 30% CPU underutilization in large-scale computations.  
+2. **Storage**: Seagate’s solutions meet HPC demands with high performance and cost-effectiveness. For example, the 5U84 storage system paired with Lustre achieved **5.53 GB/s write throughput** and **7 GB/s read throughput**, supporting clusters with 50–80 nodes.  
+3. **CPU Optimization**: CPU selection depends on application type. For CPU-intensive tasks, high-frequency cores (e.g., 3.5 GHz+) are preferred, while memory bandwidth-sensitive workloads require large-memory nodes.  
+
+**Case Study: Storage Performance**  
+A test using Seagate’s 5U84 storage system and 12TB hard drives achieved **1.3 PB total capacity**, with Lustre distributed file systems delivering **10 GB/s read/write throughput** when combined with 2U24 and 5U84 units. This configuration outperformed 12 poorly configured machines by 40% in task efficiency.  
+
+**CHESS Platform Features**  
+- **Web Interface**: Users can upload data, submit applications (e.g., TensorFlow, Fluent), and customize icons without additional development.  
+- **Job Management**: Supports granular user roles, workflow dependencies, and billing reports.  
+- **Monitoring**: Tracks resource utilization, node status, and hardware load in real time.  
+
+**Conclusion**  
+ClusterTech’s HPC solutions, validated through rigorous testing and real-world deployments, ensure optimal performance for diverse applications. By combining Seagate’s storage expertise with ClusterTech’s software optimization, users achieve scalable, cost-effective HPC clusters tailored to their specific needs.  
+</Output>

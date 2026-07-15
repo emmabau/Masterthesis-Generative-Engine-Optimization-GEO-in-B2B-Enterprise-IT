@@ -1,0 +1,50 @@
+# Optimizing Data Performance for Azure Workloads  
+> This guide provides actionable strategies to enhance data performance in Azure environments, focusing on storage optimization, query efficiency, and system scalability. Key areas include data profiling, partitioning, indexing, and consistency management.  
+Optional details: The recommendations align with the Azure Well-Architected Framework's Performance Efficiency checklist (PE:08) to ensure robust, scalable data operations.  
+
+## Key Concepts  
+- **CAP Theorem**: Balances consistency, availability, and partition tolerance in distributed systems.  
+- **PACELC Theorem**: Evaluates trade-offs between latency, consistency, and availability in both partitioned and non-partitioned states.  
+- **OLTP vs. OLAP**: Separates transactional (OLTP) and analytical (OLAP) workloads for optimized performance.  
+
+## Data Profiling  
+- **Purpose**: Analyze data structure, volume, relationships, quality, and distribution to identify optimization opportunities.  
+- **Strategies**:  
+  - Evaluate data types, constraints, and relationships.  
+  - Assess growth patterns and storage requirements.  
+  - Detect anomalies like duplicates or inconsistent formats.  
+
+## Partitioning Strategies  
+- **Vertical Partitioning**: Split tables by columns (e.g., separating large fields).  
+- **Horizontal Partitioning (Sharding)**: Divide rows by ranges or keys (e.g., splitting a table into two partitions).  
+- **Use Cases**: Improve I/O performance, scale large datasets, and distribute workloads.  
+
+## Query Optimization  
+- **Techniques**:  
+  - Rewrite queries to eliminate redundant operations.  
+  - Use joins and batch fetching to avoid the N+1 problem.  
+  - Leverage index hints and caching for faster retrieval.  
+- **Tools**: Monitor query plans, runtime, and resource utilization.  
+
+## Index Optimization  
+- **Best Practices**:  
+  - Index frequently queried columns in `WHERE`, `JOIN`, and `ORDER BY` clauses.  
+  - Prioritize high-selectivity columns (e.g., unique identifiers).  
+  - Avoid low-cardinality indexes (e.g., boolean flags).  
+- **Maintenance**: Rebuild/reorganize indexes regularly to prevent fragmentation.  
+
+## Storage Design  
+- **Data Proximity**: Place data closer to users/services for reduced latency.  
+- **Polyglot Persistence**: Use multiple storage technologies (e.g., relational databases for transactions, NoSQL for unstructured data).  
+- **OLTP/OLAP Separation**: Deploy dedicated systems for transactional and analytical workloads.  
+
+## Azure-Specific Tools  
+- **Data Profiling**: Azure Data Catalog, Synapse Analytics, and Purview.  
+- **Monitoring**: Azure Monitor, Application Insights, and SQL/ Cosmos DB insights.  
+- **Partitioning**: Azure-specific strategies for SQL, Cosmos DB, and Blob Storage.  
+
+## Related Links  
+- [Azure SQL Automatic Tuning](https://learn.microsoft.com/en-us/azure/azure-sql/database/automatic-tuning-overview)  
+- [Cosmos DB Index Guidance](https://learn.microsoft.com/en-us/azure/cosmos-db/index-policy)  
+- [Query Performance Best Practices](https://learn.microsoft.com/en-us/azure/azure-sql/database/query-performance-guidance)  
+- [CQRS Pattern](https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/serverless/cqrs)

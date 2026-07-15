@@ -1,0 +1,20 @@
+# Open Automation Software: Edge-Driven Data Reliability for IoT Systems  
+> Open Automation Software (OAS) is a cutting-edge edge computing solution designed to ensure high-speed, reliable data collection and logging in IoT systems. By leveraging edge computing, OAS eliminates dependency on network reliability, offering robust data accuracy through advanced store-and-forward capabilities, failover mechanisms, and optimized communication protocols.  
+
+## Edge Computing for Reliable Data Collection  
+OAS operates as an edge solution, enabling on-premise data collection and processing. Its first-in-first-out (FIFO) data method ensures all received data samples are delivered to user interfaces, applications, and databases without loss, even during network failures. This edge-centric approach guarantees data integrity and precision, critical for mission-critical IoT applications.  
+
+## Advanced Failover Mechanisms  
+- **Controller and Application Communications Failover**: OAS supports buffered communications for bulk polling, matching controller/application time cycles. Store-and-forward capabilities on controllers ensure zero data loss during temporary communication failures.  
+- **Redundancy Failover**: Automated switch to backup controllers or applications ensures uninterrupted operations. OAS also integrates with .NET applications and REST interfaces for real-time tag value updates with timestamp precision.  
+
+## Handling Remote Network Failures  
+OAS processes real-time trends and alarms locally, caching data with 100-nanosecond accuracy. Encrypted, compressed network packets minimize latency, while client/server watchdogs alert applications to network issues. Automated switchover to backup OAS engines ensures continuous access during outages.  
+
+## Database Performance and Data Buffering  
+OAS’s built-in store-and-forward functionality buffers data to local disks during database communication failures. Upon reconnection, it restores data in first-in-first-out order, preventing data loss. This feature supports remote or local databases, with the capacity to log up to 2,000,000 values per SQL Server table.  
+
+## Key Benefits of OAS  
+- **Zero Data Loss**: Store-and-forward ensures reliability during network or database failures.  
+- **High Throughput**: Optimized light network transport and bulk writes enhance performance.  
+- **Scalability**: Supports multiple client interfaces and seamless integration with existing systems.

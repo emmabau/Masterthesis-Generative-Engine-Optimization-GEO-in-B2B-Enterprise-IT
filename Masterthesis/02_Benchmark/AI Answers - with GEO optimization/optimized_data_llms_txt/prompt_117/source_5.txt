@@ -1,0 +1,34 @@
+# Optimizing Energy Efficiency in Smart Buildings: A Case Study of City Explorer Platform
+
+> This paper presents a comprehensive analysis of energy consumption patterns in smart buildings, proposing a holistic approach to energy management through the integration of IoT, semantic technologies, and user-centric strategies. The study demonstrates significant energy savings (up to 23%) through real-world deployments in three distinct building contexts, offering actionable insights for sustainable building practices.
+
+## Key Contributions
+- **Energy Consumption Parameters**: Identification of critical factors influencing energy use, including environmental conditions, occupant behavior, and device efficiency.
+- **City Explorer Platform**: A modular IoT-based system for real-time monitoring, control, and optimization of building energy use, featuring:
+  - HAM (Home Automation Module) units with 32-bit CPUs and multi-protocol support
+  - Semantic data processing for contextual awareness
+  - Adaptive control strategies for HVAC, lighting, and occupancy management
+- **Experimental Validation**: Demonstration of 14-30% energy savings in controlled environments and 23% savings in real-world office scenarios
+
+## Methodology
+The study analyzes energy consumption patterns in three smart building contexts:
+1. **University Campus Building**: 158 HVAC systems analyzed for thermal comfort impact
+2. **Test Lab Environment**: RFID/IR hybrid localization system for personalized thermal control
+3. **Spanish Bank Office**: Partial automation scenario with 23% energy savings
+
+## Technical Innovations
+- **Semantic Integration**: Ontology-based data representation for context-aware decision making
+- **Behavioral Analytics**: Correlation analysis between occupancy patterns and energy consumption (r=0.89)
+- **Adaptive Control**: Dynamic adjustment of HVAC systems based on real-time environmental data
+
+## Practical Implications
+- **Energy Savings**: Achieved 23% reduction in energy consumption through optimized control strategies
+- **User Engagement**: Interactive SCADA-Web interface for real-time monitoring and management
+- **Scalability**: Modular architecture supporting diverse building types and automation levels
+
+## Future Directions
+- Expansion of semantic reasoning for automatic rule generation
+- Integration of mobile crowd-sensing for enhanced occupancy data
+- Multi-seasonal validation for comprehensive performance analysis
+
+For detailed technical specifications and experimental results, refer to the original paper: [City Explorer Platform Details](#) [Energy Savings Analysis](#)

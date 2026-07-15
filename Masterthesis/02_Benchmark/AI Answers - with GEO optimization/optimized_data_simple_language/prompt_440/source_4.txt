@@ -1,0 +1,43 @@
+<Output>
+Building a high-performance distributed storage system is a complex challenge. At simplyblock, we've spent years optimizing NVMe storage and network infrastructure to maximize performance. Our work has led to a multi-petabyte-scale system now ready for deployment in major private clouds.
+
+**Key Concepts in Storage Performance**  
+Storage systems are categorized into block, file, and object storage. Block storage forms the foundation for other storage types. Simplyblock focuses on high-performance distributed block storage and is developing shared file storage.
+
+**Performance Metrics & Relationships**  
+Storage performance is measured by:  
+- **Throughput**: Sequential (GB/s) and random-access (IOPS)  
+- **Latency**: Round-trip time for I/O requests  
+
+These metrics are interdependent. As load increases, latency rises, and throughput plateaus. A single latency number is meaningless without context (e.g., queue depth). Think of this like a cafeteria line: if all servers are busy, wait times increase.
+
+**Scalability & Predictability**  
+- **Vertical Scalability**: Improve performance per node by optimizing hardware (NVMe, RAM, CPUs)  
+- **Horizontal Scalability**: Add nodes without creating bottlenecks  
+- **Predictability**: Focus on tail latency (95th/99th percentiles) rather than average metrics  
+
+**Tail Latency & Real-World Workloads**  
+Latency isn't a single number—it follows a distribution. Real workloads mix read/write operations, varying block sizes, and random/sequential access patterns. Small changes in hardware (e.g., network switches, NVMe devices) can significantly impact performance.
+
+**Optimization Techniques**  
+- **User-Space Polling**: Reduces latency from interrupt-based systems  
+- **Zero-Copy Architecture**: Minimizes data copying between user/kernel spaces  
+- **Lockless Design**: Avoids thread contention for deterministic performance  
+- **Erasure Coding**: Balances data protection with performance (e.g., 4+2 schemes)  
+
+**Performance Measurement Framework**  
+We define metrics for different workloads (e.g., 4K random writes) and hardware configurations. Key factors include:  
+- **Latency Amplification**: Network vs. NVMe delays  
+- **Bandwidth Amplification**: Impact of erasure coding on throughput  
+- **Scalability**: Linear growth with node additions (e.g., 4-node → 16-node clusters)  
+
+**System Architecture Highlights**  
+- **Core Isolation**: Dedicated cores for storage tasks  
+- **Memory Pre-Allocation**: Fast buffer retrieval using huge pages  
+- **Distributed Data Placement**: Ensures balanced I/O across nodes  
+
+**Why Performance Matters**  
+Modern workloads are unpredictable, mixing sequential and random access. Simplyblock prioritizes low latency, high IOPS, and consistent performance. Optimization is an ongoing process, as hardware evolves and new bottlenecks emerge.  
+
+By focusing on measurable, repeatable improvements and leveraging advanced techniques like queuing theory, we've built a system that delivers predictable performance at scale. This approach ensures reliability for demanding applications while maintaining flexibility for future growth.
+</Output>

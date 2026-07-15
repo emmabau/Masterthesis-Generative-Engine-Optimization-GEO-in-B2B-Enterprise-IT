@@ -1,0 +1,35 @@
+<Output>
+**Exascale Computing: Pioneering the Future of Scientific Discovery**  
+
+Lawrence Livermore National Laboratory (LLNL) is at the forefront of the exascale computing revolution, deploying systems like El Capitan—capable of 10¹⁸ floating-point operations per second (flops)—to revolutionize predictive simulations. As Lori Diachin, Livermore’s principal deputy associate director for Computing, states, *“We have HPC expertise all across the Laboratory. Contemplating the kinds of science we’ll be able to do on exascale machines is exciting.”*  
+
+**The Exascale Threshold: Overcoming Hardware Limitations**  
+The leap to exascale computing—1,000 times faster than petascale systems—demands innovative solutions to hardware constraints. While GPUs offer energy efficiency and parallel processing advantages, challenges persist. Jeffrey Hittinger, director of Livermore’s Center for Applied Scientific Computing, notes, *“Efficient exploration of the solution space is a huge hill to climb.”* This necessitates software advancements to balance data movement between CPUs and GPUs, ensuring optimal performance.  
+
+**Software Sustainability: The Backbone of Exascale Success**  
+The Exascale Computing Project (ECP) emphasizes software sustainability, enabling scalable, interoperable tools for scientific applications. Ulrike Meier Yang, leader of the ECP’s xSDK initiative, explains, *“In the ECP, software sustainability includes support for more applications and larger scale machines. Software tools must be interoperable in this context.”* The xSDK, a collection of 23 math libraries including HYPRE and SUNDIALS, ensures compatibility across platforms, fostering collaboration among national labs and universities.  
+
+**Co-Design: Bridging Hardware and Algorithms**  
+The ECP’s co-design approach unites domain scientists, mathematicians, and engineers to optimize algorithms for exascale systems. Tzanio Kolev, leader of the Center for Efficient Exascale Discretizations (CEED), highlights, *“Co-design centers centralize the effort on commonly recurring algorithms by working with multiple application teams to provide highly optimized solutions.”* CEED’s work on high-order discretization methods, such as the Modular Finite Element Methods (MFEM) library, has enabled efficient simulations on GPUs, with Kolev stating, *“Controlling the arithmetic intensity and ensuring the accuracy of these methods is a mathematically big challenge.”*  
+
+**RADIUSS: Accelerating Application Development**  
+LLNL’s RADIUSS project (Rapid Application Development via an Institutional Universal Software Stack) streamlines software development for exascale systems. David Beckingsale, principal investigator of Umpire—a memory management tool in RADIUSS—notes, *“Instead of forcing users to commit to one technology-specific implementation, Umpire creates a memory resource for everything it detects on each system.”* This tool, alongside RAJA Portability Suite, enables seamless code adaptation across heterogeneous architectures.  
+
+**Open-Source Collaboration: Driving Innovation**  
+Open-source software (OSS) plays a critical role in the ECP’s success. As Neely, RADIUSS project lead, states, *“All of the products under the RADIUSS banner are open source. We hope to share our work and experiences with, and learn from, other national laboratories and HPC centers.”* Projects like Spack and Scalable Checkpoint/Restart, recognized with R&D 100 Awards, exemplify the impact of collaborative OSS development.  
+
+**The Road Ahead: Beyond Exascale**  
+As exascale systems like El Capitan come online, the focus shifts to solving previously intractable problems. Hittinger emphasizes, *“An exaflop is a milestone, not the finish line. Computing constantly evolves. We won’t simply stop at the next breakthrough.”* The ECP’s mission—to create a sustainable, interoperable exascale ecosystem—ensures that scientific discovery remains at the forefront of technological advancement.  
+
+**Key Terms:**  
+- Exascale computing  
+- Exascale Computing Project (ECP)  
+- xSDK (Extreme-Scale Scientific Software Development Kit)  
+- CEED (Center for Efficient Exascale Discretizations)  
+- RADIUSS (Rapid Application Development via an Institutional Universal Software Stack)  
+- Open-source software (OSS)  
+- HPC (High-Performance Computing)  
+- GPU (Graphics Processing Unit)  
+- Software sustainability  
+- Co-design  
+</Output>

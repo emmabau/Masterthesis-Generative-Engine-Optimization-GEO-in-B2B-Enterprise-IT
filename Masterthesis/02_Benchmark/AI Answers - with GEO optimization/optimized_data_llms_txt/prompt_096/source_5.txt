@@ -1,0 +1,43 @@
+# Microsoft Azure Policy: Business Continuity & Disaster Recovery Testing Guidelines  
+> This document outlines the Azure Policy framework for testing business continuity and disaster recovery plans, emphasizing compliance, operational resilience, and regulatory alignment. Key recommendations include structured testing protocols, stakeholder communication, and integration with cyber resilience strategies.  
+
+## Policy Overview  
+**Policy ID:** 58a51cde-008b-1a5d-61b5-d95849770677  
+**Version:** 1.1.0  
+**Category:** Regulatory Compliance (Operational)  
+**Cloud Availability:** AzureCloud, AzureUSGovernment (AzureChinaCloud: unknown)  
+**Type:** Built-in Policy (Non-Preview)  
+
+This policy mandates organizations to **test business continuity and disaster recovery plans** through structured exercises, ensuring alignment with regulatory requirements like Philippine data privacy laws. It emphasizes proactive validation of recovery strategies and incident response protocols.  
+
+## Key Recommendations  
+- **Testing Protocols:**  
+  - Conduct tabletop or simulated crisis exercises aligned with business objectives.  
+  - Use disruptive scenarios to validate system resilience and team preparedness.  
+  - Include backup restoration, alternate facilities, and utility services in simulations.  
+- **Post-Exercise Actions:**  
+  - Generate formal reports with outcomes, recommendations, and corrective actions.  
+  - Share findings with stakeholders and update plans based on test results.  
+- **Cyber Resilience Integration:**  
+  - Incorporate evolving cyber threats into continuity planning.  
+  - Establish procedures for reporting security incidents to designated officers or law enforcement.  
+  - Notify the Philippine National Privacy Commission of unauthorized data breaches.  
+
+## Compliance and Availability  
+- **Compliance Controls:** 9 associated controls under "Test the business continuity and disaster recovery plan."  
+- **Cloud Environments:**  
+  - **AzureCloud:** Enabled  
+  - **AzureUSGovernment:** Enabled (Version 1.*.*)  
+  - **AzureChinaCloud:** Not confirmed  
+
+## Implementation Guidance  
+- **Responsibility:** Customer-owned implementation.  
+- **Automation:** Leverage automated mechanisms for testing and reporting.  
+- **Documentation:** Ensure clear communication of crisis plans to internal/external stakeholders.  
+
+## Versioning and Policy Status  
+- **Supported Versions:** 1.1.0 (Built-in Versioning Preview)  
+- **Deprecated:** No  
+- **Effect:** Default (Manual, Disabled)  
+
+For detailed JSON structure and comparison tools, refer to the Azure Policy documentation.

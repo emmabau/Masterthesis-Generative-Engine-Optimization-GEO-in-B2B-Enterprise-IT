@@ -1,0 +1,33 @@
+<Output>
+# Optimizing High-Performance Computing Systems: A Comprehensive Approach to Efficiency
+
+> This dissertation presents groundbreaking methodologies for enhancing HPC system efficiency through advanced monitoring, intelligent workload management, and innovative scheduling strategies. By leveraging machine learning and disaggregated architectures, these techniques address critical challenges in resource utilization and performance optimization.
+
+## Key Contributions
+- **MonSTer Monitoring System**: A scalable tool for HPC platforms that integrates Redfish for sensor data and UGE/Slurm for resource tracking. Achieves 70.38% database size reduction with <1% accuracy loss, deployed successfully on Texas Tech's RedRaider cluster.
+- **ML-Driven Workload Management**: 
+  - Queue-time model predicts pre-execution failures with 90.61% precision
+  - Runtime model detects in-execution failures with 97.75% accuracy
+  - ARcode CNN model improves application recognition by 18.87% over existing methods
+- **Disaggregated Memory Scheduling (FM)**: 
+  - Boosts GPU memory utilization from 27.97% to 79.24%
+  - Maintains 94.48% job performance with 5.52% average degradation
+  - Outperforms traditional schedulers in throughput and slowdown metrics
+
+## System Monitoring
+MonSTer revolutionizes HPC monitoring by correlating resource usage with application behavior through time-series databases. Its deduplication algorithm reduces storage needs while maintaining 0.74% mean absolute percentage error. This enables real-time insights without compromising system performance.
+
+## Workload Management
+Machine learning models provide predictive analytics for workload optimization:
+- Queue-time model: 90.61% failure prediction accuracy
+- Runtime model: 97.75% real-time failure detection
+- ARcode: 18.87% accuracy improvement over existing methods, with >20% performance gains for specific applications at 0.8 confidence threshold
+
+## Scheduling Strategies
+The FM scheduler addresses resource underutilization in disaggregated memory systems:
+- Resolves GPU memory underuse (25% utilization) through fine-grained allocation
+- Achieves 79.24% memory utilization with minimal performance impact
+- Demonstrates 16.7% CPU and 14.53% memory usage reduction when integrated with job schedulers
+
+## Technical Impact
+These innovations enable HPC systems to handle growing computational demands while maintaining efficiency. The combination of monitoring data analysis, ML-driven predictions, and architectural optimizations provides a framework for next-generation HPC systems capable of meeting evolving scientific computing needs.

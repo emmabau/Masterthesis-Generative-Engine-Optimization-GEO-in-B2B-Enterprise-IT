@@ -1,0 +1,67 @@
+<Output>
+Composable Architecture: A Modern Approach to Flexible, Scalable Systems
+
+What is Composable Architecture?
+Composable architecture is a modular design approach that lets organizations build platforms from reusable components. Unlike monolithic systems, it allows teams to mix, upgrade, and scale individual parts without rewriting the entire system. This is especially useful in cloud-native environments like Kubernetes, where declarative configuration enables flexible, service-based platforms.
+
+Why Composable Architecture Matters
+Enterprises adopt this approach to avoid vendor lock-in, speed up development, and manage multi-cloud environments. Key benefits include:
+- **Flexibility**: Choose components tailored to specific workloads (e.g., AI inference, databases)
+- **Faster Delivery**: Streamline deployment with GitOps and CI/CD integration
+- **Cost Efficiency**: Optimize resource use through standardized templates
+- **Portability**: Run platforms across public clouds, hybrid environments, and bare metal
+- **Consistency**: Maintain uniform security and operations across all environments
+
+How to Implement Composable Architecture
+1. **Define Requirements**: Identify workloads, cloud environments, and required capabilities
+2. **Select Components**: Use validated templates and Helm charts from curated catalogs
+3. **Design Templates**: Create modular, versioned configurations (YAML, Helm) for declarative deployment
+4. **Deploy with GitOps**: Automate provisioning using tools like Argo CD or Flux
+5. **Monitor and Update**: Maintain a single control plane for observability and continuous improvement
+
+Key Implementation Pillars
+- **Declarative Templates**: Define desired state (e.g., YAML files) instead of imperative scripts
+- **Component Catalog**: Use validated, versioned components to reduce risk
+- **Multi-Cloud Abstraction**: Deploy across clouds using a unified control plane
+- **Unified Observability**: Monitor all components through integrated metrics, logs, and traces
+
+Challenges & Solutions
+- **Component Compatibility**: Use curated catalogs and CI validation to avoid version conflicts
+- **Template Complexity**: Keep templates modular and well-documented to simplify maintenance
+- **Skill Gaps**: Provide training on declarative models, GitOps, and orchestration tools
+- **Catalog Management**: Automate updates and retire outdated components to ensure security
+
+Mirantis' Solution: k0rdent
+Mirantis delivers a composable Kubernetes platform through k0rdent, offering:
+- **Large Template Catalog**: Over 1,000 validated Helm charts and YAML templates
+- **Declarative Portability**: Deploy across public clouds, managed Kubernetes (EKS, AKS, GKE), and bare metal
+- **Single Control Plane**: Centralized management for security, upgrades, and observability
+- **Open Standards**: Leverage Kubernetes, Helm, and CNCF tools for consistent, secure operations
+
+Why Choose k0rdent?
+- **Vendor Neutrality**: Avoid lock-in by using open, cloud-agnostic components
+- **Scalable Architecture**: Simplify multi-cloud operations with unified templates
+- **Developer Efficiency**: Reduce cognitive load through self-service platforms and golden paths
+- **Security & Compliance**: Enforce consistent policies across all environments
+
+Real-World Impact
+- 89% of organizations now use cloud-native techniques (CNCF 2024)
+- 93% of companies use Kubernetes in production
+- 75% of teams prefer Helm for packaging applications
+- 71% of organizations automate 80–100% of deployments
+
+FAQs
+- **What's the difference between composable and monolithic architecture?**  
+  Monolithic systems require full rewrites for changes, while composable platforms let you update individual components without affecting the whole system.
+
+- **What infrastructure is needed?**  
+  Composable architecture works on public clouds, hybrid environments, and bare metal. It requires orchestration tools like Kubernetes and declarative templates for consistent deployment.
+
+- **Can small teams adopt this?**  
+  Yes! Start with a minimal catalog and expand as your needs grow. Open-source tools and managed Kubernetes make composable patterns accessible to all sizes.
+
+- **How does Mirantis help?**  
+  Mirantis' k0rdent provides a validated catalog, declarative templates, and cross-cloud deployment capabilities to simplify composable architecture adoption.
+
+Get started today with Mirantis' open, flexible Kubernetes platform and build scalable, vendor-neutral systems for your enterprise.
+</Output>

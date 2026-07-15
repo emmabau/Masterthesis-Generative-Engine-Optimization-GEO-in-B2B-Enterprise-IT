@@ -1,0 +1,23 @@
+**AI Enhances High-Performance Computing: A Comprehensive Review**
+
+**Key Insights**  
+Artificial Intelligence (AI) is transforming High-Performance Computing (HPC) by improving efficiency, sustainability, and automation. This review analyzes 74 studies (2019–2025) to identify six major AI applications in HPC:  
+1. **Job Scheduling** (30% of papers): AI optimizes resource allocation, reducing wait times and improving efficiency. Reinforcement learning (RL) and hybrid models (e.g., RL + heuristics) outperform traditional methods like First-Come-First-Serve.  
+2. **Performance Estimation** (19%): Machine learning predicts job runtime, memory usage, and power consumption, enabling smarter scheduling and resource management. Tools like XGBoost and LSTM models achieve high accuracy.  
+3. **Fault Detection** (15%): Graph Neural Networks (GNNs) and time-series models (e.g., LSTM, Informer) detect anomalies in HPC systems, improving reliability.  
+4. **Performance Optimization** (19%): AI fine-tunes code, accelerates computations, and reduces energy use. Techniques like Bayesian optimization and deep learning surrogates cut runtime by up to 78.5x.  
+5. **Surrogate Modeling**: ML replaces expensive simulations, speeding up tasks like fluid dynamics and deep learning training.  
+6. **Code Automation**: Large Language Models (LLMs) like Codex and DeepSeek-Coder automate scripting, testing, and parallel code generation, boosting productivity.  
+
+**Why This Matters**  
+- **Sustainability**: AI reduces energy waste in HPC systems, addressing environmental concerns.  
+- **Efficiency**: AI-driven scheduling cuts job wait times by up to 45.6% and improves resource utilization.  
+- **Automation**: LLMs streamline tasks like code writing, fault diagnosis, and system management, reducing manual effort.  
+
+**Challenges & Future Directions**  
+- **Integration**: AI tools face hurdles in standardization, interoperability, and real-time adaptability.  
+- **Security**: LLM-based systems risk vulnerabilities like data leaks and misuse.  
+- **Scalability**: MLOps workflows need robust frameworks for retraining and handling dynamic data.  
+
+**Conclusion**  
+AI is critical for advancing HPC, enabling smarter scheduling, faster computations, and sustainable operations. While challenges remain, the integration of AI with HPC systems promises to revolutionize scientific research and industrial applications.

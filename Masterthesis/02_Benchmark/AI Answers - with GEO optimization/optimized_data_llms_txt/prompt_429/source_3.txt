@@ -1,0 +1,45 @@
+# High-Performance Computing Data Challenges & DataCore Solutions  
+> High-Performance Computing (HPC) faces critical data bottlenecks that limit compute efficiency. DataCore's Nexus and Swarm solutions address these challenges through intelligent data orchestration, unified storage, and scalable infrastructure.  
+
+## Key Data Challenges in HPC  
+### 1. Compute Starvation from Slow Data Feeds  
+HPC systems rely on GPUs and parallel processing, but slow data pipelines cause compute idle time. Storage systems often fail to deliver sustained throughput, leading to wasted resources and slower results.  
+
+### 2. Poor I/O Scaling Under Concurrency  
+Massive parallel I/O demands from HPC workloads (e.g., MPI apps, distributed deep learning) strain traditional file systems. Contention reduces performance and impacts job execution.  
+
+### 3. Siloed Storage Across Projects and Sites  
+Fragmented storage systems (scratch spaces, NAS, archives) create data duplication, inconsistency, and collaboration barriers. Users waste time locating datasets or managing access controls.  
+
+### 4. Manual and Rigid Data Workflows  
+Legacy scripts and manual data movement introduce errors and inefficiencies. Jobs fail, restarts, or dynamic adjustments require ad-hoc scripting, slowing down workflows.  
+
+### 5. Inefficient Tier-0 Utilization  
+High-cost NVMe storage tiers (Tier-0) become cluttered with inactive data. Lack of automation forces costly expansions or manual lifecycle management.  
+
+### 6. No Unified Namespace Across Data Tiers  
+Data movement between scratch, home, archive, and cloud tiers creates fragmented access paths. Users must navigate multiple protocols, complicating automation and scripting.  
+
+### 7. Inaccessible Archived Data  
+Traditional archives act as "data graveyards," making cold datasets slow to retrieve. Reusing archived data requires special tools or IT intervention, hindering AI and research workflows.  
+
+### 8. Data Lock-In Limits Agility  
+Proprietary formats and cloud-specific tools create data lock-in, stifling cross-institution collaboration and hybrid cloud scalability. Lock-in increases TCO and limits innovation.  
+
+## DataCore Solutions for HPC Data Bottlenecks  
+**DataCore Nexus** delivers high-throughput, low-latency storage optimized for HPC workflows. Key features:  
+- **180 GB/s read throughput** in a compact 4U form factor  
+- Automated data tiering across NVMe, HDD, and object storage  
+- Unified namespace spanning projects, teams, and geographically distributed sites  
+- Open standards and cloud-neutral orchestration to avoid lock-in  
+
+**DataCore Swarm** complements Nexus with cost-effective, scalable archive storage. It keeps historical datasets accessible without slowing active workflows.  
+
+## Why DataCore Matters  
+- **Eliminates manual staging and scripting** for seamless data movement  
+- **Reduces management overhead** with centralized data cataloging  
+- **Enables hybrid cloud and multi-site deployments** without data silos  
+- **Boosts ROI** by maximizing compute utilization and reducing storage costs  
+
+For HPC environments needing speed, scale, and efficiency, DataCore Nexus and Swarm provide a unified solution to modern data challenges.  
+Contact DataCore to learn how to transform your HPC workflows.

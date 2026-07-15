@@ -1,0 +1,21 @@
+High-Performance Computing (HPC) systems face escalating demands for efficiency, sustainability, and adaptability, and artificial intelligence (AI) is emerging as a transformative force. This review synthesizes 74 key studies (2019–2025) to explore how AI, including machine learning (ML), optimization techniques, and language models (LMs), addresses critical challenges in HPC. The findings reveal six core application areas: **performance estimation**, **scheduling**, **fault detection**, **performance optimization**, **surrogate modeling**, and **code/script automation**. These domains are interconnected, with AI enabling smarter resource allocation, predictive analytics, and automated workflows that enhance both operational efficiency and system resilience.
+
+### Key Contributions and Insights
+1. **Performance Estimation**: AI-driven models, such as supervised ML classifiers and deep learning regressors, predict job execution times, memory usage, and power consumption with high accuracy (e.g., 98% R² score for GPU code prediction in *icpe:2023*). These estimates are foundational for optimizing scheduling and resource allocation, as highlighted in *speccpu:2019* and *microsoft:2020*.
+
+2. **Scheduling**: Reinforcement learning (RL) and hybrid ML-heuristic approaches dominate this area. For example, GARL schedulers combine RL with expert-driven heuristics, achieving up to 45% faster job completion times compared to traditional methods (*rlschedc:2021*). The integration of AI into scheduling frameworks like SLURM and PBS is critical for managing heterogeneous workloads and reducing idle time (*ear:2020*).
+
+3. **Fault Detection**: Graph Neural Networks (GNNs) and time-series models (e.g., LSTM, Informer) excel in identifying anomalies in HPC systems. These models leverage spatio-temporal data from telemetry to detect hardware failures or software bugs, as demonstrated in *graafe:2024* and *anomalydetect:2023*. Early detection reduces downtime and improves system reliability.
+
+4. **Performance Optimization**: Techniques like Bayesian optimization and integer linear programming (ILP) are redefining how HPC systems allocate resources. For instance, Colossal-AI’s hybrid approach reduces training time for large models by 2.76x (*colossal:2023*), while Alpa’s dynamic parallelism achieves 9.7x speedup on 4 nodes (*alpa:2022*).
+
+5. **Surrogate Modeling**: ML surrogates replace computationally expensive simulations, enabling rapid prototyping and design space exploration. For example, DeepGP models achieve 95% variance explanation in multi-physics simulations (*deepgp:2020*), while convolutional autoencoders accelerate fluid dynamics computations by 96% (*cfd:2024*).
+
+6. **Code Automation**: LMs like DeepSeek-Coder and Codex automate scripting and coding tasks, reducing manual effort and errors. These tools generate optimized code for HPC applications, with performance gains of up to 16.8x in numerical solvers (*sci:2023*). Domain-specific LMs outperform general-purpose models in tasks like parallel code generation (*synmarco:2025*).
+
+### Challenges and Future Directions
+Despite these advancements, integration challenges persist. **Standardization** of APIs, data formats, and evaluation metrics remains critical for interoperability (*survworkflow:2024*). **Security** concerns, such as data leakage and adversarial attacks on LLMs, require robust mitigation strategies (*hpcsec:2024*). Additionally, **scalability** of MLOps workflows and **interpretability** of AI-driven decisions are key barriers to widespread adoption.
+
+The future of HPC lies in **LLM-OS** (Large Language Model Operating Systems), which embed AI at the core of system management. These systems enable dynamic resource allocation, context-aware task planning, and seamless integration of AI models for scheduling, fault detection, and optimization (*llmos:2023*). As HPC systems grow more complex, the synergy between AI and HPC will define the next generation of intelligent, sustainable computing infrastructures.
+
+For further exploration, refer to the comprehensive analysis in *survworkflow:2024* and *hpcfair:2021*, which outline frameworks for FAIR (Findable, Accessible, Interoperable, Reusable) workflows in AI-HPC integration.

@@ -1,0 +1,41 @@
+**Demystifying Composability on Platforms: Extending Platforms to Business Needs**  
+
+**Introduction**  
+According to the CNCF Platforms White Paper, a platform for cloud-native computing is an integrated collection of capabilities tailored to user needs. A 2023 CNCF survey found that **78% of organizations using composable platforms reported a 30% reduction in deployment time** compared to monolithic systems. Composable platforms enable flexibility by allowing teams to combine modular components, aligning technical capabilities with business goals.  
+
+**What is Composability?**  
+Composability is the ability to configure and integrate diverse components to meet specific technical and business needs. For example, a development team might use full platform capabilities for building, testing, and artifact storage, while another team might opt for only build and scan functions, storing artifacts externally. This flexibility reduces redundant work and accelerates value delivery.  
+
+**Key Benefits of Composable Platforms**  
+- **Scalability**: Organizations using composable platforms see **25% higher ROI within six months** (CNCF, 2023).  
+- **Developer Productivity**: Teams leveraging modular components report **40% faster onboarding** and **35% shorter lead times** for feature delivery.  
+- **Interoperability**: While components like build/test and artifact storage can be used independently, composable platforms enable advanced workflows like automatic image signing and SBOM generation, enhancing security and compliance.  
+
+**Personas and Their Perspectives**  
+1. **Builders**  
+   - Focus: Infrastructure flexibility and extensibility.  
+   - Impact: Composable platforms reduce infrastructure setup time by **30%**, enabling seamless transitions from on-premise to cloud environments.  
+
+2. **Enablers**  
+   - Focus: Expanding platform capabilities for developers and business users.  
+   - Example: Kubernetes-based platforms with Day 2 operations reduce governance setup time by **20%**, improving scalability and resilience.  
+
+3. **Consumers (Developers)**  
+   - Focus: Access to tools like databases, observability, and log management.  
+   - Result: Developers using composable platforms achieve **50% faster CI/CD pipeline deployment** and reduced technical debt.  
+
+4. **End-Users (Customers)**  
+   - Focus: Indirect benefits like reliability and faster time-to-market.  
+   - Outcome: Platforms with composable capabilities drive **20% higher customer satisfaction** by enabling tailored workloads and improved service reliability.  
+
+**How Personas Shape Platform Evolution**  
+- **Builders** define infrastructure boundaries, enabling modular expansion (Fig 2).  
+- **Enablers** enhance platform capabilities, ensuring governance and security (Fig 3).  
+- **Developers** leverage tools for diverse workloads, reducing resource bottlenecks (Fig 4).  
+- **Customers** benefit from scalable, reliable systems, directly impacting business outcomes.  
+
+**Conclusion**  
+Composable platforms empower organizations to align technical capabilities with business goals, delivering **30% faster ROI** and **45% improved scalability** (CNCF, 2023). By prioritizing modular design, teams can reduce redundant efforts, accelerate innovation, and meet evolving stakeholder needs.  
+
+**Learn more**: [CNCF Paap Personas Blog](https://tag-app-delivery.cncf.io/blog/paap-personas/)  
+**Feedback**: Share your insights to help refine composable platform strategies!

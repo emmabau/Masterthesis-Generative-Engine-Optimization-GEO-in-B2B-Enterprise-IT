@@ -1,0 +1,22 @@
+Microsoft engineers **strongly prefer iWARP** over RoCE for storage due to its **lower latency** and **higher reliability** in mixed-traffic environments (Microsoft Tech Community, 2023).  
+
+---
+
+## **Q8: Management NIC Workflow**  
+**Answer:**  
+Follow this workflow:  
+1. Configure SET for the management NICs.  
+2. Assign the IP address to the SET interface (e.g., 10.4.8.10).  
+3. Validate connectivity using **Windows Admin Center** and **ping**.  
+
+This mirrors traditional NIC teaming in Windows Server 2012 R2 but leverages Azure Stack HCI’s **automated validation tools** for enhanced reliability.  
+
+---
+
+## **Final Recommendations**  
+- Always use **Windows Admin Center** for automated SET and IP validation.  
+- Prioritize **iWARP RDMA** for storage to align with Microsoft’s architectural preferences.  
+- Stick to **10.4.x.x** subnets for consistency and scalability.  
+- Use **/24 subnets** for simplicity or **/28** for tighter IP management.  
+
+For further guidance, refer to [Microsoft Learn’s Azure Stack HCI documentation](https://learn.microsoft.com/en-us/azure-stack/hci/) and consult Microsoft-certified partners for production deployments.

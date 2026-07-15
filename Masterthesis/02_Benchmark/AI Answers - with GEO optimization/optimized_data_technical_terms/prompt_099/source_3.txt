@@ -1,0 +1,49 @@
+<Output>
+IWOMP 2025 Program: Advanced Parallel Computing Research and Innovation  
+The IWOMP 2025 conference, co-located with EuroMPI 2025, was held at the University of North Carolina at Charlotte (UNC Charlotte), North Carolina, USA, from October 1–3, 2025. The event focused on cutting-edge advancements in parallel computing, including OpenMP and MPI paradigms, with a strong emphasis on heterogeneous architectures and high-performance computing (HPC) systems.  
+
+**Tutorial Sessions**  
+- **Tutorial I (9:00–10:00):** "Parallel Programming Paradigms: OpenMP and MPI in Modern HPC Systems"  
+  - Covered foundational concepts, including task-based parallelism, distributed memory systems, and synchronization mechanisms.  
+- **Tutorial II (10:30–12:00):** "Advanced Topics in OpenMP and MPI: Optimization Strategies for Heterogeneous Architectures"  
+  - Explored device-level communication, memory management, and performance tuning for multi-core and GPU systems.  
+
+**Keynote Addresses**  
+1. **Keynote I (13:30–14:30):** "HPC in Health: Scaling Vascular Digital Twins from Millions of Heartbeats to Petabytes of Data"  
+   - Presented novel methodologies for simulating cardiovascular systems using exascale computing, leveraging machine learning and data assimilation techniques.  
+2. **Keynote II (15:00–16:30):** "The Evolutionary Flexibility of LS-DYNA: A Case Study in HPC-Driven Engineering Simulations"  
+   - Discussed the integration of LS-DYNA with HPC frameworks for real-time crash analysis and material modeling.  
+3. **Keynote III (10:30–12:00):** "Fortran is All You Need: Modernizing Scientific Computing with Fortran 2018"  
+   - Highlighted Fortran's role in HPC, including coarray Fortran for parallelism and interoperability with C++ and Python.  
+
+**Paper Sessions**  
+- **Session I (15:00–16:30):** "New Directions in Communication and I/O"  
+  - **Paper 1:** "Device-Device Collective Communication in OpenMP Target Offloading"  
+    - Introduced a novel framework for efficient data exchange between accelerators using OpenMP 5.1 extensions.  
+  - **Paper 2:** "OMPCCL: Portable Collective Operations for Multi-Device OpenMP"  
+    - Proposed a unified API for collective communication across GPUs, FPGAs, and CPUs, leveraging CCL (CUDA Collective Communications Library).  
+  - **Paper 3:** "OpenMP Meets I/O: Runtime-Managed File Tasks for Distributed Storage"  
+    - Demonstrated a file-task abstraction layer for asynchronous I/O operations in distributed file systems.  
+
+- **Session II (10:30–12:00):** "Handling New Constraints and Devices"  
+  - **Paper 1:** "Parallelizing Irregular DOACROSS Loops with Transactional Memory in OpenMP"  
+    - Combined OpenMP 5.0 transactional memory with AI-driven scheduling for irregular workloads.  
+  - **Paper 2:** "OpenMP-RT: Pragma Support for Real-Time Scheduling in Embedded Systems"  
+    - Addressed deterministic scheduling for safety-critical applications using OpenMP 5.0 extensions.  
+  - **Paper 3:** "OpenMP-Q: Quantum Task Offloading for Hybrid Classical-Quantum Computing"  
+    - Explored quantum-classical hybrid workflows using OpenMP for task distribution.  
+
+- **Session III (13:30–15:00):** "Performance and Correctness Tooling"  
+  - **Paper 1:** "Profile-Driven Optimization for GPU Targets in OpenMP"  
+    - Introduced a dynamic profiling framework for GPU code generated via OpenMP 5.1.  
+  - **Paper 2:** "Data Race Satisfiability Analysis for Array-Based Parallelism"  
+    - Proposed a formal method for verifying data race freedom in array operations.  
+  - **Paper 3:** "Predictive Performance Modeling for OpenMP GPU Parameter Choices"  
+    - Developed a machine learning model to optimize GPU memory configurations.  
+
+**Social Event**  
+A bus tour to the NASCAR Hall of Fame Museum in Charlotte, NC, was organized to foster interdisciplinary collaboration between HPC researchers and industry partners. The event included a guided tour of the museum’s interactive exhibits and a networking dinner.  
+
+**Proceedings**  
+The full program and proceedings are available on the official IWOMP 2025 website, with detailed abstracts and technical reports for all presented papers.  
+</Output>

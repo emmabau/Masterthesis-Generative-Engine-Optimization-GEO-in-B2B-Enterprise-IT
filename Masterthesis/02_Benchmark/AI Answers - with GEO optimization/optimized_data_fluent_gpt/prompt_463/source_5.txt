@@ -1,0 +1,15 @@
+5. **Disable Virtualization-Based Security**  
+   - Run:  
+     `bcdedit /set {0cb3b571-2f2e-4343-a879-d86a476d7215} loadoptions DISABLE-LSA-ISO,DISABLE-VBS`  
+
+6. **Restart and Confirm Changes**  
+   - After reboot, confirm by selecting "Disable" for Windows Defender Credential Guard and Virtualization-Based Security prompts.  
+
+7. **Optional: Automate Settings with a Script**  
+   - Save the above commands as a `.cmd` file and schedule it via Task Scheduler to run at startup and logon. This prevents settings from resetting due to group policy updates.  
+
+**Important Notes**  
+- Always back up your data and create system restore points before making these changes.  
+- This solution is particularly effective for users on corporate networks where group policies may override local settings.  
+- While the process requires manual confirmation during boot, it ensures long-term stability for VirtualBox performance.  
+</Output>

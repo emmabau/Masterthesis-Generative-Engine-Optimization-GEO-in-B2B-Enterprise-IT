@@ -1,0 +1,35 @@
+<Output>
+Introduction  
+Liquid cooling has been a cornerstone of high-performance computing (HPC) since its inception. As Seymour Cray famously noted, “plumbing” is essential for supercomputers, a sentiment that remains relevant today. Early systems like the CDC-6600 and Cray-2 exemplified this, with the latter using full immersion cooling and a striking “waterfalls” design to manage extreme thermal loads. These innovations laid the groundwork for modern liquid cooling, which has evolved from a niche HPC requirement to a mainstream necessity.  
+
+Why Liquid Cooling Is No Longer Optional  
+The rise of GPU-heavy workloads, memory-intensive applications, and AI training has pushed thermal limits beyond air cooling’s capacity. As the Green500 list transforms energy efficiency into a competitive benchmark, datacenters worldwide now face the same challenges once reserved for exascale systems. Europe’s JUPITER supercomputer, powered by the BullSequana XH3000 architecture, exemplifies this shift. Its JEDI module topped the Green500 for energy efficiency, marking a milestone in sustainable performance.  
+
+Designing for Liquid Cooling Realities  
+Replacing air with liquid fundamentally changes datacenter dynamics. Pumps replace fans, effluent management becomes critical, and leaks pose significant risks. Liquid coolants also require storage, handling, and compliance with tightening environmental standards. Organizations must balance peak performance with metrics like PUE, WUE, and lifecycle costs, underscoring the need for holistic system design.  
+
+It’s Not Just About Scale: Use Cases Across the Spectrum  
+Liquid cooling’s benefits extend far beyond exascale systems:  
+- **Rack-scale systems**: Prevent GPU throttling in high-density environments.  
+- **Modular data centers**: Integrate power and thermal design seamlessly.  
+- **Edge and remote locations**: Overcome space, power, and noise constraints.  
+- **Retrofit and hybrid environments**: Add liquid components without full overhauls.  
+
+The Challenge: Too Many Options, Too Many Variables  
+With immersion, direct-to-chip, warm water, and 2-phase cooling among the options, selecting the right solution requires expertise in performance, cost, and site-specific factors. As noted in *HPCwire*, “No two data centers are alike,” and cooling strategies must adapt to legacy infrastructure, geography, utilities, and regulations.  
+
+Why Customization Matters  
+Liquid cooling demands tailored approaches. Colder climates may prioritize heat reuse, while arid regions focus on water conservation. High-memory nodes or edge deployments present unique challenges compared to AI training clusters. Workload types further influence design—AI inference, simulation, and model training each require distinct thermal tuning.  
+
+The Role of Co-Design  
+Co-design—aligning compute, cooling, and infrastructure from the start—enables optimal efficiency. It allows organizations to:  
+- Right-size cooling and compute infrastructure.  
+- Improve long-term energy use and cooling overhead.  
+- Accelerate deployment by reducing delays and rework.  
+
+Conclusion: Cooling Is Now Core to System Design  
+Once reserved for elite HPC environments, liquid cooling is now a foundational element of modern datacenters. Whether powering exascale systems or compact modular clusters, efficiency hinges on holistic design. Co-design is the key to achieving this integration, ensuring sustainability, performance, and cost-effectiveness.  
+
+For expert guidance on navigating liquid cooling options, consult SourceCode’s specialists.  
+Note: This article was first published in *HPCwire* on October 20, 2025.  
+</Output>

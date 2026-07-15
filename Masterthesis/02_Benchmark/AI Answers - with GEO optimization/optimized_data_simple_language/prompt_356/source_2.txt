@@ -1,0 +1,26 @@
+<Output>
+Forum Discussion: Azure Stack HCI Network Configuration Guide
+
+**Key Recommendations for Azure Stack HCI Network Setup**
+
+1. **IP Address Assignment**  
+   - Use the `sconfig` tool to configure networking. Log in to the appliance and navigate to the networking settings (select option 8).  
+   - **IP Scheme Best Practices**:  
+     - **Management**: Assign 10.4.8.x range (e.g., 10.4.8.100).  
+     - **Storage**: Use adjacent subnets (e.g., 10.4.9.x and 10.4.10.x) for isolation.  
+     - **Compute**: Maintain consistency within the 10.4.x.x range for simplicity, or use smaller subnets to conserve IP addresses.  
+
+2. **SET (Switch Embedded Teaming) Configuration**  
+   - **Compute/VM Traffic**: Create a SET switch using `New-VMSwitch` in PowerShell. Ensure both 25 Gbps NICs are bonded for redundancy and bandwidth.  
+   - **Management NICs**: Use SET for production environments (prefer two NICs). Follow the same process as conventional NIC teaming in Windows Server 2012 R2.  
+   - **Storage NICs**: No SET required. Assign unique IP addresses to each of the two 25 Gbps NICs.  
+
+3. **iWARP RDMA Enablement**  
+   - Enable iWARP RDMA on the physical storage NICs via `Set-NetAdapterAdvancedProperty`. This is preferred over RoCE by Microsoft engineers for reliability.  
+
+4. **Network Design Considerations**  
+   - **Subnet Strategy**: Keep management, storage, and compute networks within the same 10.4.x.x range for simplicity, or use separate subnets for isolation.  
+   - **Redundancy**: Always use two NICs for critical workloads (compute and management) to avoid single points of failure.  
+
+**Pro Tip**: Use Windows Admin Center for automated configuration of SET and IP addressing, ensuring optimal settings for Azure Stack HCI.  
+</Output>

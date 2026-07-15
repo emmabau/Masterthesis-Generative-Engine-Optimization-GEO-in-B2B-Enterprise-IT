@@ -1,0 +1,56 @@
+<Output>
+# Microsoft Azure Policy: Business Continuity & Disaster Recovery Testing
+
+## Policy Overview
+**Display Name:** Test the business continuity and disaster recovery plan  
+**Policy ID:** 58a51cde-008b-1a5d-61b5-d95849770677  
+**Version:** 1.1.0  
+**Category:** Regulatory Compliance (Operational)  
+**Cloud Environments:** AzureCloud, AzureUSGovernment (available in AzureUSGovernment cloud)  
+
+---
+
+## Key Recommendations
+Microsoft recommends organizations implement structured testing of their business continuity and disaster recovery plans through:
+- **Tabletop exercises** or **simulated crisis scenarios**  
+- **Disruption mechanisms** to test system resilience  
+- **Team training** for roles in disruption scenarios  
+- **Validation of recovery strategies** and backup restoration  
+- **Post-exercise reporting** with actionable recommendations  
+- **Regular testing intervals** and **automated mechanisms**  
+- **Coordination with relevant organizational units**  
+
+---
+
+## Compliance Requirements
+This policy is associated with **9 compliance controls** focused on:
+1. Testing business continuity plans  
+2. Cyber resilience planning  
+3. Incident response protocols  
+4. Stakeholder communication  
+5. Legal reporting obligations (e.g., Philippine National Privacy Commission notifications)  
+
+---
+
+## Implementation Guidance
+- **Customer responsibility:** Organizations must update their plans based on testing results and implement corrective actions.  
+- **Cyber resilience:** Integrate evolving cyber threats into continuity planning and establish robust recovery capabilities.  
+- **Reporting procedures:** Develop clear protocols for notifying law enforcement and stakeholders about security incidents.  
+
+---
+
+## Technical Details
+- **Policy Type:** Built-in (non-preview)  
+- **Effect:** Default, Manual, Disabled  
+- **RBAC Roles:** None  
+- **Compliance Status:** Active (not deprecated)  
+
+---
+
+## Additional Notes
+- **Versioning:** Supports version 1.1.0 with built-in versioning (preview)  
+- **Metadata:** Owned by the customer, with emphasis on operational and regulatory alignment  
+- **Testing Scope:** Includes alternate facilities, utilities services, and scenario-based validation  
+
+This policy ensures organizations meet regulatory standards while building resilient systems capable of withstanding disruptions and cyber threats.
+</Output>

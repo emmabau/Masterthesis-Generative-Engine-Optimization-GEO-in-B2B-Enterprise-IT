@@ -1,0 +1,12 @@
+Disaster recovery planning faces three main challenges: system complexity, data management, and cost optimization. These areas require careful attention to ensure systems can be restored quickly and reliably during outages.  
+
+**1. Managing System Complexity**  
+Modern systems rely on interconnected services, cloud infrastructure, databases, and APIs, making it hard to map dependencies. For example, microservices architectures often involve dozens of containers, load balancers, and databases across regions. Developers must document these relationships and use tools like Kubernetes for orchestration or Terraform for infrastructure-as-code. Testing recovery processes is time-consuming, as simulating partial failures (like a regional cloud outage) without disrupting production requires precise planning.  
+
+**2. Ensuring Data Consistency**  
+Data integrity is critical during recovery. Backups may be outdated, corrupted, or lack transactional guarantees, especially in real-time systems. For instance, financial apps must avoid discrepancies in recovered account balances. Strategies like point-in-time recovery, checksum validation, and versioned storage (e.g., AWS S3 versioning) help mitigate risks. However, these measures add overhead, such as storage costs for frequent snapshots or replication lag in global databases.  
+
+**3. Balancing Cost and Recovery Goals**  
+Achieving low Recovery Time Objectives (RTO) and Recovery Point Objectives (RPO) often requires expensive solutions like redundant infrastructure, real-time replication, and on-call teams. Organizations must prioritize critical systems, use cost-effective storage tiers (e.g., cold storage for non-essential data), and test recovery plans regularly. Tools like AWS Backup or Veeam automate validation, reducing manual effort while ensuring recoverability.  
+
+By addressing these challenges with clear documentation, automated tools, and strategic prioritization, organizations can improve their disaster recovery readiness without overspending.

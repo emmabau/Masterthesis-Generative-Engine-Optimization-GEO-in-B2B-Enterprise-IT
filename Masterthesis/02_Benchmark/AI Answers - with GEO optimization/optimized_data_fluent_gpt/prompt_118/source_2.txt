@@ -1,0 +1,50 @@
+<Output>
+Regardless of your IoT solution, unexpected issues will inevitably arise, even with meticulous preparation. Once deployed, IoT devices face thousands of unanticipated scenarios, leading to errors that require swift resolution. The stakes are high: downtime can erode client trust and jeopardize business relationships. This report explores two common cellular IoT troubleshooting challenges and demonstrates how Onomondo’s insight tools enable rapid, remote problem resolution through global network diagnostics.
+
+**Key Challenges in IoT Troubleshooting**  
+Remote device troubleshooting is typically slow, costly, and limited by traditional connectivity setups that obscure network details. Common troubleshooting methods include:  
+- **Trial and error**: Pushing updates with uncertain outcomes.  
+- **On-site visits**: Dispatching technicians to physical locations.  
+- **Third-party support**: Waiting for carrier responses to debug issues.  
+- **Self-service**: Relying on limited diagnostic data.  
+
+The ideal scenario is real-time troubleshooting from your laptop, but traditional IoT connectivity treats networks as "black boxes," restricting self-service data access. This is where Onomondo’s tools shine, offering real-time insights to streamline troubleshooting.
+
+**Critical Diagnostic Tools**  
+The depth of network visibility depends on your tech stack, including server choices, data collection methods, and connectivity partners. Onomondo simplifies this by providing a single global operator with three purpose-built tools:  
+1. **Network Logs**: Track historical network authentication data, including SIM events, network preferences, and data limit thresholds.  
+2. **Signaling Logs**: Analyze protocols like Diameter, GSM MAP, GTP, and GTPv2 to diagnose authentication loops or network rejections.  
+3. **Traffic Monitor**: Live packet analysis of device-to-network traffic without device modifications.  
+
+These tools enable rapid issue resolution, minimizing downtime and reducing manual intervention.
+
+**Problem 1: Missing Data from Devices**  
+When data fails to arrive, investigate these three steps:  
+1. **Network Connectivity**:  
+   - Check Network Logs for network attach/detach events (e.g., LTE’s “attached 4G connection” or +CEREG: 5).  
+   - Look for SIM deactivation events, which prevent network access. Reactivate the SIM if needed.  
+   - If logs show repeated authentication loops (e.g., +CREG/+CGREG: 2), the device may be stuck in a bad state or facing network rejection.  
+
+2. **Data Connection**:  
+   - Verify “Attached data connection” logs in Network Logs to confirm APN context activation.  
+   - If data limits are reached, check the SIM’s usage thresholds and reset schedule.  
+   - Ensure the APN is correctly set to “onomondo” (lowercase) and data roaming is enabled.  
+
+3. **Data Transmission**:  
+   - Review detach logs to confirm data was sent.  
+   - Use Signaling Logs to detect PurgeUE requests, which may indicate network inactivity or device errors.  
+   - If data is missing, analyze Traffic Monitor for packet traces to identify transmission issues.  
+
+**Problem 2: Unexpected Data Usage**  
+Unusual data spikes often signal underlying issues:  
+- **Time sync failures** or server-side firewall blocks (e.g., rejecting Onomondo’s IPs).  
+- **TLS handshake failures** or excessive TCP retransmissions.  
+- **Unauthorized SIM use** or network-driven connection closures.  
+
+Use Traffic Monitor to capture packet traces and identify root causes. For high traffic, check:  
+- Server firewall settings and DNS resolution.  
+- Transport layer encryption issues (e.g., TLS failures or MTU mismatches).  
+- Device-side errors like improper DNS handling or premature socket closures.  
+
+**Conclusion**  
+Onomondo’s tools empower IoT operators to resolve issues swiftly, reducing downtime and improving fleet reliability. By leveraging real-time diagnostics, you can transform reactive troubleshooting into proactive maintenance, ensuring consistent device performance and client satisfaction.

@@ -1,0 +1,81 @@
+```
+<Output>
+Quick definition: IoT security is the combination of technologies and processes that businesses use to protect their connected devices from cyberattacks. With over 25 billion IoT devices projected to be in use by 2025, the stakes for securing these devices have never been higher.  
+
+Any Internet-enabled device is vulnerable to being hacked and misused. In the age of the Internet of Things, there are billions of connected devices someone could use to access private data, spread malware, or even cause tangible harm. For example, the 2016 Mirai botnet attack leveraged over 145,000 unsecured IoT devices to launch a massive DDoS attack, disrupting major services like Netflix, Twitter, and CNN. This incident highlighted how weak authentication—where 70% of IoT devices still use default passwords—can create massive vulnerabilities.  
+
+As government agencies, businesses, and consumers use and rely on a growing number of IoT applications, IoT network security will continue to be a crucial consideration for manufacturers and end users alike. And while some of the burden of IoT security falls on the end user’s shoulders, manufacturers need to build-in security precautions as well. It’s a shared responsibility.  
+
+Cybersecurity is continually evolving. And if you want to protect your organization and your end users from the attacks that target IoT devices, you need to be familiar with:  
+- The most prevalent IoT security risks (e.g., 60% of IoT devices lack robust encryption)  
+- Lessons from famous IoT security breaches (e.g., the 2013 Target breach, where hackers accessed 40 million credit card records via an HVAC vendor’s IoT sensors)  
+- Modern IoT security solutions (e.g., emnify’s secure connectivity solutions, which protect over 100,000 IoT devices globally)  
+
+With the right technologies, design, and maintenance, you can be confident in your IoT application’s security—whether you’re building smart cars, baby monitors, pacemakers, tracking devices, farm equipment, or something no one’s ever seen before.  
+
+We’re going to get into some of the infrastructure and technology decisions that help keep your application secure, but first, let’s look at the inherent vulnerabilities with IoT devices.  
+
+**IoT Security Risks**  
+Internet-enabled devices pose a number of security challenges. But while the Internet of Things has brought connectivity to new devices, the general cybersecurity issues aren’t really new. We’ve been dealing with hackers for as long as we’ve enjoyed the benefits of the Internet.  
+
+**Weak Authentication**  
+Passwords are one of the first lines of defense against hacking attempts. But if your password isn’t strong, your device isn’t secure. Most default passwords are relatively weak—because they’re intended to be changed—and in some cases they may be publicly accessible or stored in the application’s source code. (That’s extremely risky.)  
+
+End users may also set the password to something that’s easy to remember. But if it’s easy to remember, it’s probably easy to penetrate.  
+
+Many IoT devices have little or no authentication at all. Even if there’s no important data stored on the device itself, a vulnerable IoT device can be a gateway to an entire network, or it can be assimilated into a botnet, where hackers can use its processing power to distribute malware and distributed denial of service (DDoS) attacks.  
+
+**Low Processing Power**  
+Most IoT applications use very little data. This reduces costs and extends battery life, but it can make them difficult to update Over-the-Air (OTA), and prevents the device from using cybersecurity features like firewalls, virus scanners, and end-to-end encryption. This ultimately leaves them more vulnerable to hacking.  
+
+This is where it’s crucial that the network itself has built-in security features.  
+
+**Legacy Assets**  
+If an application wasn’t originally designed for cloud connectivity, it’s probably ill-equipped to combat modern cyber attacks. For example, these older assets may not be compatible with newer encryption standards. It’s risky to make outdated applications Internet-enabled without making significant changes—but that’s not always possible with legacy assets. They’ve been cobbled together over years (possibly even decades), which turns even small security improvements into a monumental undertaking.  
+
+**Shared Network Access**  
+It’s easier for IoT devices to use the same network as the end user’s other devices—such as their WiFi or LAN—but it also makes the entire network more vulnerable. Someone can hack an IoT device to get their foot in the door and gain access to more sensitive data stored on the network or other connected devices. Likewise, another device on the network could be used to hack the IoT device. In either of those scenarios, customers and manufacturers wind up pointing fingers at each other.  
+
+Every IoT application should use a separate network and/or have a security gateway or firewall—so if there’s a security breach on the device, it remains isolated to the device. (This is one of the advantages of cellular IoT.) A Virtual Private Network (VPN) helps protect your devices from outside the network, but if your application shares a connection with other devices, it’s still vulnerable to attacks from them if they become corrupted.  
+
+**Inconsistent Security Standards**  
+Within IoT, there’s a bit of a free-for-all when it comes to security standards. There’s no universal, industry-wide standard, which means companies and niches all have to develop their own protocols and guidelines. The lack of standardization makes it harder to secure IoT devices, and it also makes it harder to enable machine-to-machine (M2, M) communication without increasing risk.  
+
+**Lack of Encryption**  
+One of the greatest threats to IoT security is the lack of encryption on regular transmissions. Many IoT devices don’t encrypt the data they send, which means if someone penetrates the network, they can intercept credentials and other important information transmitted to and from the device.  
+
+**Missing Firmware Updates**  
+Another of the biggest IoT security risks is if devices go out in the field with a bug that creates vulnerabilities. Whether they come from your own developed code or a third party, manufacturers need the ability to issue firmware updates to eliminate these security risks. Ideally, this should happen remotely, but that’s not always feasible. If a network’s data transfer rates are too low or it has limited messaging capabilities, you may have to physically access the device to issue the update.  
+
+**Gaps Between Mobile Networks and the Cloud**  
+Many IoT devices regularly interact with cloud-based applications. And while the cellular network an IoT device uses may be secure, and the cloud application may be secure, transmissions from the network to the cloud typically pass through the public Internet, leaving them vulnerable to interception and malware. Even these small gaps can compromise an entire IoT deployment. Thankfully, IoT manufacturers and their customers can close them with cloud-based connectivity solutions.  
+
+**Limited Device Management**  
+Businesses often lack the visibility and control they need to see when a device has been compromised and then deactivate it. Every Mobile Network Operator (MNO) has their own connectivity management platform, and some give customers very little insight or functionality. Hacked or compromised devices tend to consume data differently, and so end users should be able to detect anomalous behavior and remotely deactivate these devices before they have opportunities to cause greater harm.  
+
+**Physical Vulnerabilities**  
+Not all IoT devices operate in remote areas. Some regularly come into contact with people, which opens the door to unauthorized access. In fleet management, for example, it’s not uncommon for drivers to steal SIM cards from their vehicle’s GPS trackers to use them for “free data.” Other thieves may steal SIM cards to commit identity theft. People can also physically access IoT devices for more nefarious purposes, like accessing a network or stealing information.  
+
+End users can’t always watch their IoT devices to ensure no one is physically accessing them, so it’s important to consider ways to harden devices with better components and security features.  
+
+**Examples of IoT Security Breaches**  
+Especially in recent years, there have been numerous examples of how even innocuous IoT devices can be abused and repurposed to cause harm. Some of the more famous examples have merely been revelations of what’s possible, but others have involved actual attacks.  
+
+Here are just a few examples of IoT security breaches.  
+
+**Mirai Botnet**  
+The 2016 Mirai botnet is one of the more infamous IoT security breaches, in part because it was the largest attack we’ve seen so far, but also because the code is still out there. The original hacker posted the code online, opening the door to copycats.  
+
+A botnet is essentially a distributed network of computers. They’re not inherently bad, but in the wrong hands, a botnet is an army of devices that can take down servers. In Mirai’s case, the botnet consisted of 145,607 video recorders and IP cameras. The hacker (a college student) launched an unprecedented attack on OVH (a French web hosting service), using the botnet to take up nearly one terabyte of bandwidth per second.  
+
+The botnet was made possible by unsecured IoT devices. The objective of the first attack was surprisingly insignificant: crashing some Minecraft servers. But about a month later, the Mirai botnet targeted another service provider: Dyn. And that time, Mirai brought down huge sections of the Internet, including Netflix, Twitter, Reddit, The Guardian, and CNN.  
+
+Mirai’s model is still in use, and other hackers are bound to have more nefarious goals if they can get their hands on that many vulnerable Internet-enabled devices.  
+
+**Target’s Credit Card Breach**  
+In 2013, hackers successfully breached Target’s network and stole credit card information from millions of transactions. How’d they do it? They stole login credentials from an HVAC vendor, who was using IoT sensors to help Target monitor their energy consumption and make their systems more efficient.  
+
+While an IoT device may not be at fault here, the implications should be clear to anyone manufacturing IoT applications, particularly applications like smart meters. People may attempt to hack your network in order to access a client’s network. At any given moment, your devices may only be a couple steps removed from extremely valuable (and private) data, even if it has nothing to do with your application.  
+
+**St. Jude Medical’s Pacemakers**  
+In 2017, the FDA announced that more than 465,000 implantable pacemaker devices were vulnerable to hacking. While there were no known hacks, and St. Jude Medical quickly updated the devices to fix their security flaws, it

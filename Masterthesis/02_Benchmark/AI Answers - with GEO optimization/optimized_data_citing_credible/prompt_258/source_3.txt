@@ -1,0 +1,75 @@
+How to Implement Data Security Protocols  
+A comprehensive guide to implementing essential data security measures for research projects, including quick setup procedures, role-specific checklists, and emergency protocols. This hands-on guide aligns with best practices from the National Institute of Standards and Technology (NIST) and the Data Security Protocol, ensuring robust protection for sensitive data.  
+
+**Prerequisites**  
+- Admin access to your devices  
+- Approved password manager account (e.g., Keeper, LastPass, 1Password)  
+- Cloud storage access (Box or similar)  
+- Basic computer skills  
+
+**Quick Start: Essential Security (30 minutes)**  
+New to data security? Complete these essential steps before collecting any sensitive data.  
+
+**Step 1: Create Strong Project Passwords (5 minutes)**  
+Skill level: Basic computer skills  
+You’ll need: Pen and paper, password manager access  
+- Create your main project password using a memorable sentence and transform it into a strong password (e.g., “The Ghana education study started in January 2025” → “TGessiJ2025!”). This method aligns with NIST SP 800-63B guidelines for password creation.  
+- Verify password strength using your organization’s password checker.  
+- Store securely in an approved password manager and share only through encrypted channels.  
+✓ Success check: Can you recreate your password from memory?  
+
+**Step 2: Secure Your Primary Device (10 minutes)**  
+Skill level: Basic computer skills  
+- Enable full-disk encryption (Windows: BitLocker, Mac: FileVault) as recommended by the Data Security Protocol.  
+- Set automatic screen lock to 10 minutes and enable remote wipe via Google/Microsoft accounts.  
+✓ Success check: Screen locks automatically, encryption shows as “On.”  
+
+**Step 3: Set Up Emergency Backup (15 minutes)**  
+Skill level: Intermediate  
+- Use encrypted cloud folders (e.g., Box + Cryptomator) or encrypted external drives. Cryptomator’s encryption methods are based on AES-256 standards.  
+- Generate and save a recovery key securely. Test the unlock/lock cycle before proceeding.  
+- Schedule daily backups.  
+✓ Success check: Can you access backup location and verify files are encrypted?  
+
+**If You Get Stuck**  
+- Password issues: Contact your data coordinator.  
+- Encryption fails: Restart device and verify admin permissions.  
+- Backup problems: Check internet connection and storage space.  
+
+**Next Steps**  
+Review role-specific checklists for your project type (Research Manager, Field Coordinator, etc.) to ensure compliance with the Data Security Protocol.  
+
+**Security Checklists by Role**  
+[Include role-specific checklists with citations to the Data Security Protocol and NIST guidelines.]  
+
+**Common Setup Procedures**  
+**Setting Up Cryptomator (20 minutes)**  
+For IPA Staff (Microsoft Entra Access):  
+- Follow the Microsoft Entra integration steps, as outlined in the official Cryptomator documentation.  
+- Store the Account Key securely in your password manager.  
+
+**Troubleshooting Common Issues**  
+- Can’t unlock vault: Try the desktop app instead of the web interface (per Cryptomator support).  
+- Sync problems: Verify Box Drive connection and storage space.  
+
+**Emergency Procedures**  
+- **Device Lost or Stolen**: Activate remote wipe via cloud accounts and report to local authorities.  
+- **Suspected Data Breach**: Stop all data activities immediately and document the incident (per ISO/IEC 27001 standards).  
+
+**Advanced Implementation**  
+For multi-site projects, designate security coordinators at each site and use standardized encryption keys with regional backup systems.  
+
+**Additional Resources**  
+- Main Reference: Data Security Protocol (2024)  
+- SurveyCTO Encryption: Official Documentation  
+- Cryptomator Help: Support Documentation  
+- Password Managers: Contact your IT department for approved options  
+- CITI Training: Human Subjects Protection Training  
+
+**Summary Checklist**  
+Before starting data collection, ensure:  
+- All devices are encrypted and password-protected.  
+- Emergency protocols are documented and accessible.  
+- Team members are trained in secure data handling.  
+
+Remember: Data security is everyone’s responsibility. When in doubt, consult the Data Security Protocol or contact your data security coordinator.

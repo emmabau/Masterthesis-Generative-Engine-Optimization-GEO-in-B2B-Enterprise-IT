@@ -1,0 +1,13 @@
+This ensures secure boot settings do not override hypervisor configuration.  
+
+5. **Persistent Configuration via Task Scheduler**  
+   - Create a `.cmd` script to automate registry and boot configuration edits. Schedule it via *Task Scheduler* to run at startup and logon, ensuring settings persist across domain policy updates.  
+
+**Post-Implementation Verification**  
+After reboot, confirm hypervisor deactivation by checking the **VT-x/AMD-V indicator**. If the "V" icon appears, VirtualBox will utilize hardware acceleration.  
+
+**Advanced Considerations**  
+- **Corporate Domain Environments**: Domain policies may reset configurations. The script ensures persistent overrides.  
+- **Security Implications**: Disabling VBS and Credential Guard reduces system security. This should only be done in controlled environments with alternative security measures.  
+
+By systematically disabling hypervisor conflicts and adjusting secure boot policies, this solution enables optimal VirtualBox performance while maintaining system stability.

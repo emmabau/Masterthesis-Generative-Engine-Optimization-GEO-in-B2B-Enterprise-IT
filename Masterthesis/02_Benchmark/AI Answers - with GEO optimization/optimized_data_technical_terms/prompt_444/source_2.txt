@@ -1,0 +1,23 @@
+MIT researchers handling U.S. sensitive personal data or government-related data must comply with the DOJ Final Rule (28 C.F.R. Part 202), effective April 8, 2025. This regulation imposes strict access controls on "countries of concern" (China, Russia, Iran, North Korea, Cuba, Venezuela) and their "covered persons," including entities 50% owned by such jurisdictions or persons primarily resident in these regions. Non-compliance risks prohibited data transfers, including bulk human 'omic data (genomic, epigenomic, proteomic, transcriptomic) and biospecimens exceeding thresholds of ≥100 U.S. persons for genomic data or ≥1,000 U.S. persons for other 'omic data. 
+
+The rule defines "bulk thresholds" as follows:  
+- Human genomic data: ≥100 U.S. persons  
+- Human 'omic data (epigenomic/proteomic/transcriptomic): ≥1,000 U.S. persons  
+- Biometric identifiers: ≥1,000 U.S. persons  
+- Precise geolocation data: ≥1,000 U.S. persons  
+- Personal financial/health data: ≥10,000 U.S. persons  
+- Covered personal identifiers: ≥100,000 U.S. persons  
+
+These thresholds apply regardless of anonymization, pseudonymization, or encryption. "Government-related data" includes location data tied to U.S. federal facilities. Prohibited transactions under 28 C.F.R. Part 202 include:  
+1. Data brokerage involving countries of concern or covered persons  
+2. Access to bulk human 'omic data or biospecimens from such entities  
+
+Restricted transactions involve vendor agreements, employment contracts, or investment agreements with covered persons. Exempt activities include personal communications, information imports/exports, U.S. government mandates, and clinical trials under HIPAA/GDPR frameworks.  
+
+Researchers must:  
+- Block access to bulk sensitive data (e.g., health, financial, geolocation) for collaborators in countries of concern  
+- Review cloud storage, collaboration platforms, and code repositories for foreign vendor access  
+- Update data use agreements with non-transferability provisions and DOJ-compliant security clauses  
+- Implement COUHES protocols prohibiting dataset sharing with restricted jurisdictions  
+
+Compliance requires annual audits of restricted transactions and adherence to 28 C.F.R. Part 202's "covered data transaction" definitions, which encompass data brokerage, vendor agreements, employment contracts, and investment agreements. Immediate consultation with research-compliance-help@mit.edu is mandatory for collaborators from countries of concern or DOJ-designated covered persons.

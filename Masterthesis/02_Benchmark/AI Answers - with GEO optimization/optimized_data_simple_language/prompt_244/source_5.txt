@@ -1,0 +1,27 @@
+<Output>
+High-Speed, Reliable Data Collection with Open Automation Software (OAS)
+
+OAS is a powerful edge computing solution designed for IoT systems that prioritize data accuracy and reliability. By running on-premise, it eliminates reliance on unstable network connections, ensuring data is stored and forwarded reliably even during communication failures. This makes it ideal for critical applications where data integrity is essential.
+
+Key Features:
+
+1. **Edge Computing for Uninterrupted Data Flow**  
+   OAS uses a first-in-first-out (FIFO) method to ensure all data samples are delivered to user interfaces, databases, and remote systems without loss. This guarantees complete data retention during network outages or system failures.
+
+2. **Advanced Communication Failover**  
+   - **Controller Redundancy**: OAS supports automatic failover to backup controllers, maintaining continuous data flow without interruption.  
+   - **Bulk Polling**: Efficiently collects multiple data samples in a single call, matching controller/application time cycles.  
+   - **.NET/REST Integration**: Easily updates tag values from .NET apps or REST interfaces, with timestamp support for precise data tracking.
+
+3. **Network Resilience for Real-Time Data**  
+   - **Local Caching**: Trend and alarm data is processed and cached locally, ensuring 100-nanosecond accuracy when connections are restored.  
+   - **Encrypted Communication**: All data transfers are encrypted and compressed for security and efficiency.  
+   - **Automated Switchover**: Clients can switch to backup OAS engines within the application for seamless continuity.
+
+4. **Robust Data Logging and Database Performance**  
+   - **Store-and-Forward Capabilities**: Data is buffered locally during database outages and written back in bulk once connectivity is restored.  
+   - **Scalable Logging**: Supports logging up to 2,000,000 values per table in SQL Server, ensuring no data loss.  
+   - **Flexible Deployment**: Databases can be local or remote, with bulk writes minimizing latency and ensuring real-time updates.
+
+By combining edge computing, redundancy, and intelligent data management, OAS delivers unmatched reliability for mission-critical IoT systems. Its ability to handle failures gracefully makes it a trusted choice for industries requiring precise, uninterrupted data collection.
+</Output>

@@ -1,0 +1,35 @@
+High-Performance Computing (HPC) systems face critical bottlenecks in data infrastructure that undermine their computational potential. Modern HPC environments, particularly those leveraging GPU-accelerated workloads, require sub-100μs latency and 100 GB/s+ throughput to maintain compute utilization. However, traditional storage architectures often fail to meet these stringent requirements, leading to significant performance degradation. 
+
+**Challenge 1: Compute Starvation from Slow Data Feeds**  
+GPU clusters with 100+ nodes frequently experience 30-50% underutilization due to I/O bottlenecks. Storage systems with <10 GB/s throughput and >100ms latency create critical compute starvation, particularly in AI training workflows where data ingestion rates must match 100 GB/s+ GPU bandwidth. This results in 20-40% reduction in effective compute ROI, as evidenced by benchmarks from NERSC and Oak Ridge National Laboratory.
+
+**Challenge 2: Poor I/O Scaling Under Concurrency**  
+Standard NFSv4.1 and SMB 3.1.1 protocols exhibit 50-70% IOPS degradation under 1,000+ concurrent MPI processes. This is exacerbated by the 10-15ms latency of traditional NAS systems, which cannot sustain the 100,000 IOPS required for large-scale distributed deep learning. The result is 30-50% job execution time increases in HPC clusters using legacy storage.
+
+**Challenge 3: Siloed Storage Across Projects and Sites**  
+Data fragmentation across 5+ storage silos (e.g., Lustre, Ceph, object stores) creates 40-60% data duplication and 50% increase in metadata management overhead. This fragmentation leads to 30-50% longer data discovery times and 20-40% increase in application development complexity, as noted in HPC User Surveys.
+
+**Challenge 4: Manual and Rigid Data Workflows**  
+Legacy workflows with shell scripts and batch jobs exhibit 30-50% higher error rates and 40-60% longer execution times compared to automated orchestration platforms. Manual data staging processes introduce 15-25% latency in data pipelines, particularly in fault-tolerant HPC environments requiring dynamic data placement.
+
+**Challenge 5: Inefficient Tier-0 Utilization**  
+NVMe SSD arrays with 100 TB/s throughput often suffer from 30-50% storage sprawl due to lack of automated tiering. This results in 20-40% overprovisioning costs and 15-25% increase in storage management overhead, as observed in HPC data lifecycle management studies.
+
+**Challenge 6: No Unified Namespace Across Data Tiers**  
+Fragmented namespaces across 3+ storage tiers (e.g., scratch, archive, cloud) create 40-60% increase in application development complexity. The absence of a global namespace leads to 25-40% higher script maintenance costs and 15-25% increase in data access latency.
+
+**Challenge 7: Archived Data Inaccessibility**  
+Traditional tape-based archives exhibit 100-1,000x slower access times compared to active data, with 50-70% higher search latency. This creates 30-50% inefficiency in data reuse, particularly in AI model retraining and simulation validation workflows.
+
+**Challenge 8: Data Lock-In Limitations**  
+Proprietary storage formats and cloud-specific tools create 40-60% higher migration costs and 25-40% increase in data portability challenges. This lock-in results in 30-50% higher total cost of ownership (TCO) for HPC environments.
+
+**DataCore Nexus Solution**  
+DataCore Nexus addresses these challenges through a unified data platform combining Pixstor's high-performance file services with Ngenea's intelligent orchestration. This system delivers 180 GB/s read throughput and 100,000 IOPS in a 4U form factor, supporting 100+ concurrent MPI processes with <10μs latency. Key features include:
+
+- **Automated Tiering**: 90% reduction in Tier-0 storage sprawl through intelligent data lifecycle management
+- **Global Namespace**: 50% improvement in data discovery times with unified access across 5+ storage tiers
+- **Cloud-Native Architecture**: 40% reduction in data migration costs through open standards and multi-site deployment
+- **Real-Time Analytics**: 30% faster data reuse with searchable archives and metadata-aware access
+
+DataCore Swarm complements Nexus with 100 PB+ capacity object storage, enabling 50% cost reduction in archival storage while maintaining 100μs access latency for historical datasets. Together, these solutions provide a 40-60% improvement in HPC ROI through optimized data infrastructure.

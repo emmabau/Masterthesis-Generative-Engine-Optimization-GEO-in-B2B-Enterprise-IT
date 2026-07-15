@@ -1,0 +1,24 @@
+<Output>
+Optimizing High-Performance Computing Systems: Insights from System Monitoring, Workload Management, and Scheduling Strategies  
+**Date**: [Insert Date]  
+**Authors**: [Insert Authors]  
+**Journal Title**: [Insert Journal Title]  
+**Journal ISSN**: [Insert ISSN]  
+**Volume Title**: [Insert Volume]  
+**Publisher**: [Insert Publisher]  
+
+**Abstract**  
+The exponential growth of High-Performance Computing (HPC) data centers has necessitated advanced methodologies to address efficiency challenges in resource allocation, workload execution, and system scalability. This dissertation presents a comprehensive framework for optimizing HPC systems through three critical domains: system monitoring, workload management, and scheduling strategies. By leveraging machine learning (ML) and disaggregated architectures, we demonstrate significant improvements in resource utilization, predictive accuracy, and operational efficiency.  
+
+**System Monitoring**  
+We introduce **MonSTer**, a scalable monitoring framework for HPC platforms, integrating **Redfish** for sensor data retrieval and **UGE/Slurm** for application-level resource tracking. MonSTer employs **time-series databases (e.g., InfluxDB, Prometheus)** to correlate resource metrics with application workloads, enabling real-time anomaly detection without additional overhead. Deployed on Texas Tech University’s **RedRaider cluster**, MonSTer achieves **70.38% database size reduction** via metric-based deduplication, with **<0.74% mean absolute percentage error (MAPE)** in data fidelity.  
+
+**Workload Management**  
+Our ML-driven workload management framework employs **queue-time and runtime predictive models** to preemptively identify failing jobs. Trained on terabyte-scale datasets, the queue-time model achieves **90.61% precision** in pre-execution failure prediction, while the runtime model attains **97.75% accuracy** for in-execution failures. Integration with job schedulers reduces CPU usage by **16.7%** and memory consumption by **14.53%**. The **ARcode** application recognition model, utilizing **convolutional neural networks (CNNs) with ResNet-18 architecture**, outperforms existing methods by **18.87% in F1-score**, achieving **>20% performance gains** for specific applications at a **0.8 confidence threshold**.  
+
+**Scheduling Strategies**  
+Analyzing NERSC’s **Perlmutter HPC system**, we identify **CPU/GPU underutilization** (27.97% memory utilization) due to traditional bundled compute-memory architectures. To address this, we propose **disaggregated memory architectures** and the **FM scheduler**, optimized for fine-grained resource allocation. FM improves memory utilization to **79.24%** while maintaining **94.48% job completion rate** with only **5.52% average performance degradation**. This approach significantly enhances system throughput and reduces job slowdown metrics by **32.1%** compared to conventional schedulers.  
+
+**Conclusion**  
+This work underscores the transformative potential of **big data analytics and ML** in HPC systems. By combining **Redfish-based monitoring**, **CNN-driven workload classification**, and **disaggregated scheduling**, we achieve unprecedented efficiency gains. As HPC demands escalate across scientific domains, these techniques provide a scalable blueprint for next-generation architectures, enabling **automated resource optimization** and **predictive workload management**. The methodologies presented here offer actionable insights for HPC operators and researchers seeking to maximize computational throughput while minimizing energy and operational costs.  
+</Output>

@@ -1,0 +1,26 @@
+<Output>
+Note: Access to this page requires authorization. You can attempt to authenticate or navigate to an alternative directory.  
+
+This document provides storage architecture guidelines for AI workloads on Azure Infrastructure-as-a-Service (IaaS) environments. A storage solution for AI workloads must address data ingestion, parallel access, and transfer latency inherent in distributed machine learning training and inferencing pipelines. Key requirements include sub-millisecond latency for random I/O operations, terabytes-per-second throughput for data sharding, and distributed consensus protocols for data consistency across heterogeneous compute clusters.  
+
+For active data processing:  
+1. **Azure Managed Lustre** (POSIX-compliant parallel file system) is recommended for low-latency, high-throughput workloads. This solution leverages Lustre's distributed metadata architecture with Azure Blob Storage as a data tier, achieving 100+ GB/s throughput and <1 ms latency for random read/write operations. It supports dynamic data import from Blob Storage, enabling cost-effective data tiering.  
+
+2. **Azure NetApp Files** (based on NetApp ONTAP 9.10) is ideal for enterprise-grade AI workloads requiring synchronous replication, snapshot capabilities, and data encryption at rest. This solution provides 10 Gbps+ throughput with 99.999% SLA, supporting hybrid cloud deployments and seamless integration with existing NetApp infrastructure.  
+
+3. **Local NVMe/SSD file systems** (via BeeGFS On Demand) offer ultra-low latency (<10 µs) for I/O-intensive tasks like deep learning training. This architecture aggregates NVMe storage across compute nodes, achieving 100+ GB/s throughput with minimal network overhead.  
+
+For data lifecycle management:  
+- **Blob Storage tiering** (Hot, Cool, Archive) should be implemented with lifecycle policies to migrate infrequently accessed data to lower-cost tiers. The Archive tier provides 10x cost reduction but requires 24-hour retrieval latency.  
+- **Checkpointing mechanisms** must save model states (weights, optimizer states) at regular intervals (e.g., every 500 training iterations) using Azure Managed Lustre's POSIX-compliant interface. This enables fault tolerance and resumable training.  
+
+Data consistency protocols:  
+- Implement **synchronous replication** between Azure Managed Lustre and Blob Storage using Azure Data Box Gateway to ensure distributed consensus across compute nodes. This prevents data divergence in distributed training scenarios.  
+
+Data versioning:  
+- Enable **immutable storage** in Blob Storage with versioning policies to track dataset and model modifications. This supports rollback to previous versions and facilitates reproducible experiments.  
+
+Optimization strategies:  
+- Use **Azure Blob Storage lifecycle management** to automate data migration to Cool/Archive tiers based on access patterns. This reduces storage costs by 60-80% for infrequently accessed data while maintaining queryable access.  
+- Leverage **Azure Managed Lustre's data import/export capabilities** to optimize data transfer between Blob Storage and compute nodes, reducing data movement overhead by up to 75%.  
+</Output>

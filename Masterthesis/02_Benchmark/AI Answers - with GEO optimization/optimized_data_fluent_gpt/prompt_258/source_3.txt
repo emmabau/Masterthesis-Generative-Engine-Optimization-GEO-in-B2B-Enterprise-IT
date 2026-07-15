@@ -1,0 +1,170 @@
+<Output>
+How to Implement Data Security Protocols: A Comprehensive Guide for Research Projects
+
+This step-by-step guide provides actionable instructions for implementing essential data security measures in research projects. It includes quick setup procedures, role-specific checklists, and emergency protocols to ensure data protection at every stage.
+
+**Key Resources**  
+Before starting, review the **Data Security Protocol** document to understand the foundational principles of these procedures. This guide aligns with the standards outlined in that document.
+
+---
+
+### **Prerequisites**  
+To begin, ensure you have:  
+- Admin access to your devices  
+- Approved password manager account (e.g., Keeper, LastPass, 1Password)  
+- Cloud storage access (Box or similar)  
+- Basic computer skills  
+
+---
+
+### **Quick Start: Essential Security (30 Minutes)**  
+New to data security? Complete these critical steps before collecting sensitive data.  
+
+#### **Step 1: Create Strong Project Passwords (5 Minutes)**  
+- **Method**: Use a memorable sentence about your project (e.g., "The Ghana education study started in January 2025") and transform it into a secure password (e.g., "TGessiJ2025!").  
+- **Requirements**: ≥10 characters with numbers, symbols, and mixed case.  
+- **Verification**: Test password strength using your organization’s password checker.  
+- **Storage**: Save in an approved password manager and share only through encrypted channels.  
+- **Success Check**: Can you recreate your password from memory?  
+
+#### **Step 2: Secure Your Primary Device (10 Minutes)**  
+- **Enable Full-Disk Encryption**:  
+  - Windows: BitLocker (Settings → Update & Security → Device Encryption)  
+  - Mac: FileVault (System Preferences → Security & Privacy → FileVault)  
+- **Set Automatic Screen Lock**: 10 minutes idle time.  
+- **Enable Remote Wipe**: Link device to Google/Microsoft account for remote access.  
+- **Success Check**: Confirm encryption is "On" and screen locks automatically.  
+
+#### **Step 3: Set Up Emergency Backup (15 Minutes)**  
+- **Recommended Method**: Encrypted cloud folder (Box + Cryptomator).  
+- **Alternative**: Encrypted external drive.  
+- **Install Cryptomator**: Download from cryptomator.org and create a vault using your project password.  
+- **Critical**: Generate and securely store a recovery key.  
+- **Success Check**: Verify you can access and decrypt backup files.  
+
+---
+
+### **If You Get Stuck**  
+- **Password Issues**: Contact your data coordinator.  
+- **Encryption Fails**: Restart device and check admin permissions.  
+- **Backup Problems**: Verify internet connection and storage space.  
+
+---
+
+### **Security Checklists by Role**  
+#### **Research Manager or Research Associate**  
+- **Initial Setup**: 3 hours; **Weekly Maintenance**: 30 minutes.  
+- **Before Data Collection**: 2 hours total.  
+- **During Collection**: 30 minutes weekly.  
+- **After Collection**: 1 hour.  
+
+#### **Field Coordinator**  
+- **Daily Setup**: 10 minutes.  
+- **Device Distribution**: 2 minutes per device.  
+- **Daily Collection**: 15 minutes end-of-day.  
+
+#### **Enumerator, Field Officer, or Interviewer**  
+- **Preparation**: 10 minutes daily.  
+- **Per Interview**: 5 minutes.  
+- **Returning to Base**: 5 minutes.  
+
+#### **Research Data Analyst**  
+- **Initial Setup**: 1 hour.  
+- **Daily Routine**: 10 minutes.  
+- **Before Sharing Outputs**: Follow security protocols.  
+
+---
+
+### **Common Setup Procedures**  
+#### **Setting Up Cryptomator**  
+- **For IPA Staff (Microsoft Entra Access)**:  
+  - Access Cryptomator Hub via Microsoft Entra apps.  
+  - Save the Account Key in your password manager.  
+  - Install the desktop application and complete setup.  
+- **For External Partners (Username/Password)**:  
+  - Use provided credentials to log in and update your password.  
+  - Install Cryptomator and Box Drive for seamless access.  
+
+#### **Daily Vault Usage**  
+- **Accessing Vaults**: Unlock via Cryptomator Hub or desktop app.  
+- **Working with Files**: Edit decrypted files through the virtual drive.  
+- **Ending Session**: Always lock the vault before closing your device.  
+
+#### **Advanced: Sub-Vaults for Field Teams**  
+- **Create Sub-Vault**: Share subset data securely with non-Salesforce users.  
+- **Critical**: Store recovery keys on USB or secure locations.  
+
+---
+
+### **Troubleshooting Common Issues**  
+- **Can’t Unlock Vault**: Try the desktop app or restart your device.  
+- **Authentication Errors**: Clear browser cache and use the Account Key.  
+- **Sync Problems**: Check Box Drive status and storage space.  
+- **Adding New Devices**: Authorize via the Account Key from your password manager.  
+
+---
+
+### **Setting Up Paper Survey Security**  
+- **Dual ID System**: Separate respondent IDs (with PII) from questionnaires.  
+- **Physical Storage**: Use lockable containers for PII and survey materials.  
+- **Team Training**: Assign IRB-approved staff for PII handling.  
+
+---
+
+### **Field Device Setup**  
+- **Hardware**: Enable encryption, set strong passwords, and use protective cases.  
+- **Software**: Install survey apps (e.g., SurveyCTO), disable unnecessary features.  
+- **Documentation**: Record device serial numbers and create checkout forms.  
+
+---
+
+### **Emergency Procedures**  
+#### **Device Lost or Stolen**  
+- **Immediate Actions**: Stop data collection, contact your Field Coordinator, and activate remote wipe.  
+- **Documentation**: Record device details, last known location, and circumstances.  
+
+#### **Suspected Data Breach**  
+- **Immediate Actions**: Pause all data activities and contact your Project Manager.  
+- **Preserve Evidence**: Save logs, screenshots, and document the timeline.  
+
+#### **Technical Issues During Collection**  
+- **Device Won’t Start/Charge**: Use backup devices or paper forms.  
+- **Encryption/Password Problems**: Contact your Data Security Coordinator immediately.  
+
+---
+
+### **Communication During Emergencies**  
+- **Approved Channels**: Direct phone calls, encrypted messaging, or secure email.  
+- **Avoid**: Public social media, unencrypted emails, or AI tools for advice.  
+
+---
+
+### **Post-Emergency Documentation**  
+- **Incident Report**: Include timeline, actions taken, and data assessment.  
+- **Recovery Steps**: Update protocols, retrain teams, and review emergency contacts.  
+
+---
+
+### **Advanced Implementation for Multi-Site Projects**  
+- **Site Coordination**: Standardize security check-ins and incident reporting.  
+- **Data Flow Management**: Use site-specific encryption keys and regional backups.  
+
+---
+
+### **Additional Resources**  
+- **Main Reference**: Data Security Protocol  
+- **SurveyCTO Encryption**: Official Documentation  
+- **Cryptomator Help**: Support Documentation  
+- **Password Managers**: Contact your IT department for approved options  
+- **CITI Training**: Human Subjects Protection Training  
+
+---
+
+### **Summary Checklist**  
+Before starting data collection, ensure:  
+- All devices are encrypted and password-protected.  
+- Emergency backups are configured and tested.  
+- Team members understand role-specific security protocols.  
+- Communication channels are secure and approved.  
+
+**Remember**: Data security is everyone’s responsibility. When in doubt, ask for help rather than risk a breach.

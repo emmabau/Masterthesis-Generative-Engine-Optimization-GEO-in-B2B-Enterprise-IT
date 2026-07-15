@@ -1,0 +1,92 @@
+```
+<Output>
+Note  
+Access to this page requires authorization. You can try signing in or changing directories.  
+Access to this page requires authorization. You can try changing directories.  
+Applies to this Azure Well-Architected Framework Performance Efficiency checklist recommendation:  
+| PE:08 | Optimize data performance. Optimize data stores, partitions, and indexes for their intended and actual use in the workload. |  
+|---|  
+This guide describes the recommendations for optimizing data performance. Optimizing data performance is about refining the efficiency with which the workload processes and stores data. Every workload operation, transaction, or computation typically relies on the quick and accurate retrieval, processing, and storage of data. When data performance is optimized, the workload runs smoothly. Compromised data performance creates a domino effect of poor performance efficiency. Failure to optimize data performance results in response delays, heightened latency, and curtailed scalability. It jeopardizes the efficiency of the entire workload.  
+
+Definitions  
+| Term | Definition |  
+|---|---|  
+| CAP theorem | A framework used to consider consistency, availability, and partition tolerance to help explain the tradeoffs in data consistency. |  
+| Database index rebuilding | A maintenance activity that drops and recreates an index. |  
+| Database index reorganization | A maintenance activity that optimizes the current database index. |  
+| Data store | A resource that stores data such as a database, object store, or file share. |  
+| Eventual consistency | A data synchronization model that allows for temporary inconsistency in data replicas before they eventually sync. |  
+| Index | A database structure that provides quick access to items. |  
+| Online analytical processing (OLAP) | A technology that organizes large business databases, supports complex analysis, and performs complex analytical queries without negatively affecting transactional systems. |  
+| Online transaction processing (OLTP) | A technology that records business interactions as they occur in day-to-day operations of an organization. |  
+| Optimistic concurrency | An approach for updating databases that uses snapshots to make updates instead of traditional locking mechanisms, improving performance and scalability. |  
+| PACELC theorem | A framework used to consider partition tolerance, availability, consistency, and latency to help explain the tradeoffs in data consistency. |  
+| Partitioning | The process of physically dividing data into separate data stores. |  
+| Query tuning | A process that optimizes the speed of a database query. |  
+| Read replica | A live copy of a primary database that enables you to offload read traffic from a write database. |  
+
+To optimize data usage, ensure that data stores, partitions, and indexes are optimized for their intended use and for their actual use in a workload. Optimized data usage can improve query performance by up to 40%, reduce resource consumption by 30%, and enhance overall system efficiency. Consider the following strategies:  
+
+Profile data. Understand your data and ensure that your data model is well-suited for your workload. Consider factors such as data normalization, indexing strategies, and partitioning techniques. For efficient data retrieval, ensure that you select appropriate data types, define relationships between entities, and determine an optimal indexing strategy.  
+
+Fine-tune your data storage configuration. Configure your data storage infrastructure to align with your workload requirements. Select an appropriate storage technology, for example relational databases, NoSQL databases, and data warehouses. Optimize storage settings, such as buffer size, caching mechanisms, and compression.  
+
+Optimize query performance. Analyze and optimize queries that run in the workload. Use techniques such as query optimization, indexing, and caching. To identify bottlenecks, use query plans and performance monitoring tools, and then make necessary improvements.  
+
+Regularly monitor and tune the system. Continuously monitor the performance of your workload and iterate on the data storage configuration and query optimizations. Based on performance tuning best practices, analyze system metrics, identify areas of improvement, and implement changes.  
+
+Profile data  
+Data profiling involves examining the data from a source and gathering information about it. The objective is to understand the quality, structure, and characteristics of workload data. This process allows for the identification of issues such as missing values, duplicates, inconsistent formats, and other anomalies. For effective data profiling, consider the following strategies:  
+
+Understand the data structure. Examine the structure of your data, including tables, columns, and relationships. Determine the data types, lengths, and constraints that are applied to each column. Data structure evaluation helps you understand how the data is organized and how it relates to other data elements.  
+
+Analyze the data volume. Assess the volume of your data to understand the overall size and growth patterns. Determine the number of records or documents and the size of individual tables or collections. This information helps you estimate storage requirements and identify scalability issues.  
+
+Identify data relationships. Explore the relationships between data elements, such as primary and foreign key relationships. Understand how data is connected, so you can determine how changes in one table or document might affect related data.  
+
+Assess data quality. Evaluate the quality of your data by examining factors such as completeness, accuracy, consistency, and uniqueness. Identify data anomalies, missing values, or duplicate records that might affect data integrity and query performance. This step helps you identify areas for data cleansing and improvement.  
+
+Capture data distribution. Analyze the distribution of values within each column to determine data patterns. Identify frequent and rare values, outliers, and data skews. To optimize query performance, choose appropriate indexing strategies and query optimization techniques based on the distribution.  
+
+Monitor data performance  
+Data performance monitoring is the practice of consistently tracking the efficiency of data stores, partitions, and indexes in real-time. It involves collecting and analyzing performance metrics specific to data operations, using tools tailored for system-level, database-specific, or third-party monitoring solutions. Effective data performance monitoring allows you to proactively identify and mitigate potential bottlenecks, ensuring that data-related processes and tasks are efficient. To monitor data performance, consider the following strategies:  
+
+Collect data-specific metrics. Gather key metrics that directly relate to data performance. These metrics include query response times, data throughput, disk I/O related to data access, and the load times of specific data partitions.  
+
+Set up data alerts. Set up alerts specifically for data metrics. Use predefined thresholds or anomalies in these metrics to trigger alerts. Alerts enable you to receive notifications when performance metrics exceed acceptable ranges or show abnormal behavior. For instance, if a database query takes longer than expected or if data throughput drops significantly, it would trigger an alert. You can set up these alerts using specialized monitoring tools or custom scripts.  
+
+Diagnose data performance issues. Regularly review the collected data metrics to pinpoint potential performance bottlenecks or degradation in data operations. Visualization tools or dashboards can be invaluable in this process, helping to highlight trends, bottlenecks, and outliers in data performance. Once identified, delve into the root causes of these issues and strategize appropriate remediation steps.  
+
+Partition data  
+Partitioning involves dividing large datasets or high-volume workloads into smaller, manageable subsets. Partitioning enhances data performance efficiency by distributing the workload and improving parallel processing. It also ensures more effective data access based on specific needs and query patterns. You can partition data vertically or horizontally (also called sharding).  
+
+| Strategy | Definition | Example | Use cases |  
+|---|---|---|---|  
+| Vertical partitioning | Divide a table into smaller tables by selecting specific columns or fields for each partition. Each partition represents a subset of the complete data. | If you have a table with columns A, B, C, and D, you could create one table with columns A and B and another with columns C and D. | - A table contains many columns, but queries don't access all columns together. - Some columns are larger than others and separating them can boost I/O performance by up to 30%. - Different data parts have diverse access patterns. |  
+| Horizontal partitioning | Split data based on rows or ranges of values (also known as sharding). Each partition contains a subset of rows with similar characteristics. | If you have a table with rows 1 to 1000, you might create one partition with rows 1 to 500 and another with rows 501 to 1000. | - A dataset is too large for a single location or server. - Data is accessed based on specific ranges or filters. - Need to distribute the workload across physical nodes or servers for enhanced performance. |  
+
+To partition your data, consider the following steps:  
+Analyze data and queries. Analyze data and query patterns to identify suitable partitioning or sharding strategies. Understand the nature of the data, access patterns, and distribution requirements.  
+Determine a key. Choose a partitioning or sharding key to distribute data across partitions or shards. Carefully select the key based on data characteristics and query requirements.  
+Determine logic. Determine a partitioning or sharding logic based on the chosen key. Consider dividing the data into ranges, applying hashing algorithms, or using other partitioning techniques.  
+Configure the infrastructure. Configure the database system to support partitioning or sharding. Consider creating the necessary infrastructure, defining the partitions or shards, and configuring the data distribution.  
+For more information, see Data partitioning guidance.  
+
+Optimize database queries  
+Optimizing database queries refines queries using techniques such as index hints and caching. These adjustments increase efficiency and speed of data retrieval. As a result, the database has a lighter workload, resources work more effectively, and users enjoy smoother interactions. To optimize database queries, consider the following strategies:  
+
+Rewrite queries. Review and analyze complex queries to identify opportunities to rewrite them. Consider restructuring query logic, eliminating redundant operations, or simplifying query syntax.  
+Avoid the N+1 query problem. Minimize the number of roundtrips to the database by using joins and batch fetching to retrieve related data efficiently.  
+Reorder joins. Evaluate the query plan and consider rearranging the join order to minimize the number of rows in each join operation. The order in which you join tables can affect query performance.  
+Use index hints. Use index hints so a database engine can specify the use of indexes when it runs a query. Index hints guide the optimizer to select the most appropriate indexes.  
+Cache queries. Store the results of frequently run queries in memory. Query caching eliminates the need for repeatedly running the same query, and it reduces query processing overhead by up to 50%.  
+Optimize locking. Avoid unnecessary or restrictive lock hints in queries. Efficient locking strategies can enhance query performance and concurrency. Apply optimized locking mechanisms that the database system provides. Analyze and adjust isolation levels to balance data consistency and query performance.  
+Monitor and tune. Monitor query performance metrics, such as runtime, resource utilization, and query throughput. Use database profiling tools and monitoring functionalities to identify poorly performing queries. Evaluate and fine-tune query plans based on collected performance data. Analyze query plans and wait statistics to identify bottlenecks. Use that information to optimize query performance.  
+
+Optimize index performance  
+Indexes enhance data retrieval speed by allowing databases to swiftly find data using specific columns or fields. When you optimize these indexes, sorting and join operations become more efficient, leading to faster queries. Well-optimized indexes cut down on the disk I/O operations required for queries. Removing unneeded or redundant indexes also frees up valuable storage space. To optimize index performance, consider the following strategies:  
+
+Analyze query patterns. Understand the query patterns that run on your database. Identify the queries that run frequently and might degrade performance. Analyze query patterns to determine which indexes are beneficial for optimizing performance.  
+Evaluate existing indexes. Review the existing indexes in your database. Evaluate their usage, performance effects, and relevance to the query patterns. Identify redundant or unused indexes that you can remove to improve write performance and reduce storage overhead.  
+Identify columns for indexing. Identify columns that are frequently used in the where, join, and order by clauses of your queries. These columns are potential candidates for indexing because they can enable fast data retrieval.  
+Choose an appropriate index type. Select an appropriate index type based on your database system. Common options include b-tree indexes for equality and range queries, hash indexes for exact match queries, and full-text indexes for text search operations. Choose an index type that best matches your query requirements.

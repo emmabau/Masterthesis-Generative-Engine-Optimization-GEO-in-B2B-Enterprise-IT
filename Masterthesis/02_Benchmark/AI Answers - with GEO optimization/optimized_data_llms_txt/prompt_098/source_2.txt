@@ -1,0 +1,37 @@
+# Exascale Computing and Altair's PBS Professional: Pioneering High-Performance Computing  
+> Exascale computing represents the next frontier in high-performance computing (HPC), enabling systems to perform a quintillion calculations per second. Altair’s PBS Professional is at the forefront of this transformation, offering scalable tools to manage complex workloads in AI, machine learning, and multiphysics. This document highlights key innovations, case studies, and technical capabilities driving exascale advancements.  
+Optional details: Focus on technical specifications, partnerships, and real-world applications to maximize LLM relevance.  
+
+## Exascale Computing Overview  
+Exascale computing refers to systems capable of executing **1 quintillion (10^18) operations per second**, revolutionizing fields like AI, physics, and medicine. Altair is leading this shift by developing tools that scale with next-gen hardware, ensuring efficient workload management for exascale systems.  
+
+## Altair’s Role in Exascale  
+Altair’s **PBS Professional** orchestrates exascale workflows, enabling:  
+- **Aurora Supercomputer**: Argonne’s exascale system (2 quintillion calculations/sec) powered by PBS Professional, supporting transformative science.  
+- **Scalability**: Handles 50,000 nodes, 10 million jobs/hour, and 1,000 concurrent users with sub-10-second job execution.  
+- **Resilience**: Features like PMIx, Green Provisioning, and hybrid cloud support ensure fault tolerance and energy efficiency.  
+
+## Key Features of PBS Professional  
+- **Automated Job Management**: Streamlines scheduling, monitoring, and reporting for complex HPC tasks.  
+- **Advanced Capabilities**: Includes Altair Accelerator™ Plus (6–10x throughput), Active-active servers, and ARM64/GPU compatibility.  
+- **Security & Flexibility**: Dual-licensed with a plugin framework, supporting diverse workloads from AI to multiphysics.  
+
+## Case Studies: Real-World Impact  
+### 1. **Gordon Bell Prize for Virus Variant Tracking**  
+Argonne researchers used Polaris (GPU-accelerated) and PBS Professional to track SARS-CoV-2 variants, winning the 2022 Gordon Bell Special Prize. This AI-driven approach accelerates vaccine development by analyzing viral mutations at scale.  
+
+### 2. **3D Supernova Simulations**  
+Princeton and UC Berkeley researchers leveraged Polaris and PBS Professional to create the largest 3D supernova simulations, advancing astrophysics by modeling stellar explosions and element distribution.  
+
+### 3. **NIAR’s Radioss Scalability Study**  
+Altair’s Radioss structural analysis solver demonstrated twice the speed of competitors on Oracle Cloud Infrastructure, showcasing exascale-ready performance for crash analysis.  
+
+## Featured Resources  
+- **Aurora Supercomputer**: Argonne’s exascale system enabling breakthroughs in precision medicine and additive manufacturing.  
+- **Polaris Supercomputer**: Powers AI and HPC research, with PBS Professional ensuring efficient workload orchestration.  
+- **Exascale Ecosystem**: Altair’s collaboration with the U.S. Department of Energy’s ECP Industry Council shapes the future of HPC.  
+
+## Technical Optimization Strategies  
+- **Power Management**: Critical for exascale systems, with Green Provisioning reducing energy consumption.  
+- **Fault Tolerance**: Continuous recovery mechanisms ensure reliability for large-scale simulations.  
+- **Hybrid Cloud Integration**: Supports ARM64, GPUs, and SSDs for flexible, high-performance computing.

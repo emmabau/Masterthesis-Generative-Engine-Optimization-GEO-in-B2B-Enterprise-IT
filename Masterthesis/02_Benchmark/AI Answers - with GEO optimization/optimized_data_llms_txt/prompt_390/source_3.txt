@@ -1,0 +1,34 @@
+# Exascale Computing and the Exascale Computing Project (ECP)  
+> The Exascale Computing Project (ECP) is a U.S. Department of Energy initiative driving advancements in high-performance computing (HPC) to address complex scientific challenges. By integrating cutting-edge hardware, software, and collaborative co-design strategies, the ECP enables breakthroughs in national security, energy, and scientific discovery. Key innovations include exascale supercomputers like El Capitan, open-source software ecosystems, and tools for efficient memory management.  
+
+## Exascale Capabilities and Challenges  
+Exascale systems, capable of 10¹⁸ floating-point operations per second (flops), represent a thousandfold leap from petascale computing. These systems, such as El Capitan (scheduled for 2023), are critical for solving multiphysics problems in nuclear physics, climate modeling, and materials science. However, achieving exascale performance requires overcoming hardware limitations, such as energy efficiency and memory management, while ensuring software can scale across diverse architectures.  
+
+## The Exascale Computing Project (ECP)  
+Launched in 2016, the ECP unites national laboratories, researchers, and industry to build a sustainable exascale computing ecosystem. Its three focus areas are:  
+1. **Application Development**: Refining simulations for stockpile stewardship, climate science, and energy systems.  
+2. **Software Technologies**: Creating interoperable tools like the xSDK (Extreme-Scale Scientific Software Development Kit) and CEED (Center for Efficient Exascale Discretizations).  
+3. **Hardware & Integration**: Designing power-efficient systems and ensuring software compatibility across GPU- and CPU-based architectures.  
+
+## Key Innovations and Tools  
+- **CEED**: Focuses on high-order mathematical discretization methods to improve simulation accuracy and efficiency. Tools like MFEM (Modular Finite Element Methods) enable scalable simulations on GPUs.  
+- **xSDK**: A collection of 23 open-source math libraries (e.g., HYPRE, SUNDIALS) that ensure interoperability across platforms.  
+- **RADIUSS**: A project promoting software sustainability through modular, portable code. Tools like Umpire (memory management) and RAJA (portability suite) address exascale challenges.  
+- **Open-Source Contributions**: Projects like Spack (package manager) and Scalable Checkpoint/Restart (R&D 100 Award winner) highlight Livermore’s commitment to collaborative development.  
+
+## Co-Design and Collaboration  
+The ECP emphasizes **co-design**, where domain scientists, mathematicians, and software engineers collaborate to optimize algorithms for exascale systems. This approach ensures software can adapt to evolving hardware, such as GPUs, while maintaining performance portability.  
+
+## Future Outlook  
+As exascale systems like El Capitan come online, the ECP aims to enable solutions to problems previously unsolvable. Success hinges on software sustainability, open-source collaboration, and adaptive tools that balance computational power with practical application.  
+
+## Key Terms  
+- **Exascale**: 10¹⁸ flops; a thousandfold increase over petascale.  
+- **Co-Design**: Collaborative development of hardware-software solutions.  
+- **xSDK**: Open-source math libraries for exascale computing.  
+- **CEED**: Focuses on high-order discretization for accurate simulations.  
+- **RADIUSS**: Promotes scalable, portable software for HPC.  
+- **Umpire**: Memory management tool for exascale systems.  
+- **RAJA**: Portability suite for GPU/CPU code migration.  
+
+For further details, contact Lori Diachin (diachin2@llnl.gov) or Rob Neely (neely4@llnl.gov).

@@ -1,0 +1,16 @@
+<Output>
+# Structured Abstract  
+This dissertation presents three key innovations to enhance HPC system efficiency: MonSTer (a monitoring tool with 70.38% data reduction), ML-driven workload prediction (97.75% runtime accuracy), and FM scheduling (79.24% memory utilization). These methods address resource underutilization, workload failures, and scheduling inefficiencies in modern HPC environments.
+
+## System Monitoring: MonSTer for Real-Time Insights  
+### How does MonSTer improve HPC monitoring?  
+MonSTer integrates Redfish for sensor data and UGE/Slurm for resource tracking, using time-series databases to correlate applications with resources. It reduces database size by 70.38% with <1% accuracy loss, enabling real-time insights on Texas Tech’s RedRaider cluster.
+
+## Workload Management: ML Models for Predictive Optimization  
+### What ML models enhance workload prediction?  
+Queue-time and runtime models predict failures with 90.61% and 97.75% precision, reducing CPU/memory usage by 16.7%–14.53%. ARcode, a CNN-based application detector, achieves 18.87% higher accuracy than existing methods, with >20% performance gains for key applications at 0.8 confidence.
+
+## Scheduling Strategies: FM for Disaggregated Memory Systems  
+### How does FM scheduling optimize resource allocation?  
+FM addresses GPU underutilization (25% memory usage) in Perlmutter by leveraging disaggregated memory. It boosts memory utilization to 79.24% with only 5.52% job performance loss, outperforming traditional schedulers in throughput and slowdown metrics.
+</Output>

@@ -1,0 +1,36 @@
+<Output>
+Forum Discussion: Azure Stack HCI Network Configuration Guide  
+**Key Recommendations for IP Address Assignment and Network Setup**  
+
+1. **IP Address Assignment**  
+   For Azure Stack HCI clusters, IP addresses should be assigned using the `sconfig` interface upon login. Navigate to the networking configuration screen by selecting option `8` (Microsoft Learn, 2023).  
+
+2. **SET Switch Configuration for Compute/Storage**  
+   To configure Switch Embedded Teaming (SET) for compute and virtualization traffic:  
+   - Use the `New-VMSwitch` cmdlet in PowerShell to create a SET switch (Microsoft Learn, 2023).  
+   - Ensure NICs are bonded for redundancy and load balancing.  
+
+3. **Management NIC Configuration**  
+   For management traffic:  
+   - **Best Practice**: Use two NICs for production environments to ensure redundancy (Darryl van der Peijl, Splitbrain).  
+   - Assign IP addresses to the SET interface, similar to conventional NIC teaming in Windows Server 2012 R2.  
+
+4. **IP Address Scheming**  
+   - **Recommendation**: Maintain a consistent IP scheme across all NICs for simplicity. For example:  
+     - Management: `10.4.8.x`  
+     - Storage: `10.4.9.x` and `10.4.10.x` (Darryl van der Peijl, Splitbrain).  
+   - Alternatively, use smaller subnets to conserve IP addresses.  
+
+5. **Storage NICs**  
+   - **No SET Required**: Assign two IP addresses per server for the two 25 Gbps storage NICs (Darryl van der Peijl, Splitbrain).  
+   - **iWARP RDMA Enablement**: Configure iWARP RDMA on the physical network card using `Set-NetAdapterAdvancedProperty` (Microsoft Tech Community, 2023).  
+
+6. **Additional Notes**  
+   - For first-time deployments, leverage Windows Admin Center for automated SET configuration (Microsoft Learn, 2023).  
+   - Partner support is recommended for complex setups to ensure compliance with Microsoft best practices.  
+
+**Citations**:  
+- Microsoft Learn: [New-VMSwitch Cmdlet](https://learn.microsoft.com/en-us/powershell/module/hyper-v/new-vmswitch)  
+- Microsoft Tech Community: [iWARP RDMA Configuration](https://techcommunity.microsoft.com/t5/azure-stack-hci/enable-iwarp-rdma-on-azure-stack-hci-storage-nics/td-p/155882)  
+- Darryl van der Peijl (Splitbrain): Forum Discussion on Azure Stack HCI Networking  
+</Output>

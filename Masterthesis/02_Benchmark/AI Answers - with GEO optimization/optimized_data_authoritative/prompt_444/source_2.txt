@@ -1,0 +1,39 @@
+<Output>
+The U.S. Department of Justice (DOJ) Final Rule (28 C.F.R. Part 202), effective April 8, 2025, imposes strict compliance requirements on MIT researchers handling U.S. sensitive personal data or government-related data. This rule mandates immediate adherence by October 6, 2025, to prevent unauthorized access by "countries of concern" or covered persons, with severe national security implications. Non-compliance risks legal penalties and operational disruptions, making this guidance critical for all MIT research activities.
+
+**Countries of Concern (Effective October 2025):**  
+- China (including Hong Kong and Macau)  
+- Russia  
+- Iran  
+- North Korea  
+- Cuba  
+- Venezuela  
+
+**Key Definitions and Thresholds:**  
+1. **Sensitive Personal Data** includes health, financial, geolocation, biometric, and human "omic" data (genomic, epigenomic, proteomic, transcriptomic). Bulk thresholds apply:  
+   - Human genomic data: ≥100 U.S. persons  
+   - Human "omic" data: ≥1,000 U.S. persons  
+   - Biometric identifiers: ≥1,000 U.S. persons  
+   - Personal financial/health data: ≥10,000 U.S. persons  
+   - Covered identifiers: ≥100,000 U.S. persons  
+
+2. **Government-Related Data** encompasses location data tied to U.S. government facilities or functions.  
+
+3. **Covered Persons** include foreign nationals from countries of concern, entities owned/controlled by such persons, or those with primary operations in these jurisdictions.  
+
+**Prohibited and Restricted Transactions:**  
+- **Prohibited:** Data brokerage, vendor agreements, or employment/investment deals involving:  
+  - Access to government-related data  
+  - Bulk human "omic" data or biospecimens  
+- **Restricted:** Vendor/employment/investment agreements with covered persons, requiring DOJ-compliant security controls.  
+
+**Critical Compliance Actions:**  
+- **Pause all work** with collaborators/contractors from countries of concern or DOJ-listed entities.  
+- **Block access** to bulk sensitive data (health, financial, geolocation, biometrics) for foreign persons in countries of concern.  
+- **Review systems:** Cloud storage, collaboration platforms, and code repositories to exclude foreign vendors from regulated data.  
+- **Update agreements:** Ensure data use, subaward, and contract terms include DOJ-compliant non-transfer clauses.  
+- **Audit readiness:** Maintain records and plan annual audits for restricted transactions.  
+
+**Final Guidance:**  
+Do not share bulk U.S. human "omic" data or biospecimens with collaborators from China, Russia, Iran, North Korea, Cuba, or Venezuela. Before transferring any large U.S. health, financial, geolocation, or biometric dataset to a foreign person in a country of concern, **immediately contact research-compliance-help@mit.edu**. This rule is non-negotiable; compliance is the cornerstone of MIT’s national security obligations.  
+</Output>

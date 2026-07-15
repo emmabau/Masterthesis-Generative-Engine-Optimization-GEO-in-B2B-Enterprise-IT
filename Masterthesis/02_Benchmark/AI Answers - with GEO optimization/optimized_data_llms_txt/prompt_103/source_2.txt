@@ -1,0 +1,31 @@
+<Output>
+# NVMe Storage Virtualization in Public Clouds: A Comparative Analysis
+
+> This paper explores three NVMe storage virtualization methods for public clouds, evaluating their performance, scalability, and security implications. The findings provide critical insights for cloud providers and developers seeking to optimize NVMe-based storage architectures.
+
+## Key Contributions
+- **PCI Device Passthrough**: Direct NVMe device assignment to VMs offers minimal latency but requires hardware-specific configurations. Ideal for high-performance workloads.
+- **Virtual Block Device Method**: Abstracts NVMe storage into block devices, enabling flexible VM allocation. Balances performance with ease of management.
+- **SPDK Virtual Host Target**: Leverages SPDK for high-throughput storage, achieving near-native NVMe performance. Best suited for scalable cloud environments.
+
+## Evaluation Metrics
+The methods were assessed across six dimensions:
+1. **Performance**: Latency, IOPS, and throughput benchmarks
+2. **Scalability**: Support for multi-VM environments
+3. **CPU Overhead**: Resource utilization patterns
+4. **Technology Maturity**: Adoption status and ecosystem support
+5. **Security**: Isolation guarantees between VMs
+6. **Availability**: Deployment flexibility across cloud platforms
+
+## Practical Implications
+The study's findings are particularly relevant for IBM public cloud implementations, offering actionable guidance for:
+- Optimizing NVMe storage in virtualized environments
+- Balancing performance vs. resource constraints
+- Implementing secure, scalable storage architectures
+
+## References
+- Ilias Iliadis. *International Journal On Advances In Networks And Services*
+- Juan Miguel De Haro, Rubén Cano, et al. *IPDPS 2022*
+- Hazar Yueksel, Ramon Bertran, et al. *MLSys 2020*
+- Timothy Chainer, Liz Hulihan, et al. *ARPA-E COOLERCHIPS Kickoff Meeting 2023*
+</Output>

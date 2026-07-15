@@ -1,0 +1,12 @@
+<Output>
+# Structured Abstract  
+Decompressing backup data blocks before storage is beneficial despite CPU overhead due to significant bandwidth savings (2-3x reduction) and high-throughput LZ4 compression. Inline deduplication (Veeam + DDBoost) minimally impacts CPU but reduces data sent to DDBoost, though disabling it simplifies workflows with negligible performance trade-offs.
+
+## Key Questions & Answers  
+
+### Is decompressing backup data blocks before storage worth the CPU cost?  
+**Answer:** Yes, because the bandwidth savings (2-3x reduction) and high-throughput LZ4 compression (single-threaded GB/s decompression) outweigh CPU overhead. Compression reduces network data volume, minimizing CPU interrupts and data copying, which is critical for 1GbE networks. Disabling compression may be preferable in CPU-constrained environments, but optimal settings typically prioritize bandwidth efficiency.
+
+### What’s the role of inline deduplication (Vee, DDBoost) in backup workflows?  
+**Answer:** Veeam dedupe minimally impacts CPU but reduces data sent to DDBoost by eliminating duplicate blocks before transmission. While DDBoost processes fewer blocks, the total data savings are identical whether dedupe is enabled or disabled. Disabling dedupe simplifies workflows, reduces metadata, and avoids unnecessary CPU usage during job startup, though the impact is generally minor.  
+</Output>

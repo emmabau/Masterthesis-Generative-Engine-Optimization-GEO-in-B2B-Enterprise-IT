@@ -1,0 +1,30 @@
+<Output>
+Optimizing High-Performance Computing (HPC) Systems: A Comprehensive Approach to Efficiency and Scalability
+
+**Key Contributions and Innovations**
+
+1. **Advanced System Monitoring with MonSTer**  
+   - Developed **MonSTer**, a cutting-edge monitoring tool for HPC platforms, integrating Redfish for sensor data retrieval and UGE/Slurm for application/resource tracking.  
+   - Achieved **70.38% reduction in time-series database size** through metric-based deduplication, with **<0.74% data accuracy loss** (mean absolute percentage error).  
+   - Successfully deployed on Texas Tech University's RedRaider cluster, enabling real-time resource-application correlation without performance overhead.  
+
+2. **Machine Learning-Driven Workload Management**  
+   - Introduced **ML models** for predictive workload analysis, including:  
+     - **Queue-time model**: Predicts pre-execution failures with **90.61% precision**.  
+     - **Runtime model**: Detects in-execution failures with **97.75% precision**, reducing CPU/memory usage by **16.7%** and **14.53%**, respectively.  
+   - **ARcode**: A CNN-based application recognition model that encodes time-series data into images, achieving **18.87% higher accuracy** than existing methods and **>20% performance improvement** for specific applications at a 0.8 confidence threshold.  
+
+3. **Disaggregated Memory Scheduling Strategy (FM)**  
+   - Analyzed NERSC's Perlmutter system, identifying **underutilization of GPU resources** (up to 25% memory usage).  
+   - Proposed **disaggregated memory architecture** and the **FM scheduling strategy**, which:  
+     - Boosts memory utilization from **27.97% to 79.24%**.  
+     - Maintains **<5.52% average job performance degradation** while improving system throughput and slowdown metrics.  
+
+**Core Insights and Impact**  
+- **Monitoring Data as a Foundation**: Leveraging extensive monitoring data enables deep insights into resource usage patterns, critical for optimizing HPC systems.  
+- **Machine Learning Integration**: ML models are indispensable for automating workload prediction, resource allocation, and system efficiency gains.  
+- **Future-Ready Architectures**: Disaggregated memory and adaptive scheduling strategies are pivotal for addressing escalating computational demands in scientific domains.  
+
+**Conclusion**  
+This dissertation provides actionable methodologies and validated results to enhance HPC efficiency through monitoring, ML-driven workload management, and innovative scheduling. The proposed techniques, including MonSTer, ARcode, and FM, offer scalable solutions for next-generation HPC systems, with measurable improvements in resource utilization and performance. These contributions aim to inspire further research and practical implementation in the HPC community.  
+</Output>

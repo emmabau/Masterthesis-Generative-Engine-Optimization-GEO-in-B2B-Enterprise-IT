@@ -1,0 +1,116 @@
+<Output>
+Building a high-performance, low-latency distributed storage system is a complex challenge. At simplyblock, we've spent years optimizing modern NVMe storage and network infrastructure to extract maximum performance. Our journey has yielded valuable insights into performance measurement and optimization, which we now share.
+
+**Key Concepts in Storage Systems**
+Storage systems are typically categorized into block, file, and object storage. Block storage forms the foundation for higher-level systems like key-value stores and databases. simplyblock implements high-performance distributed block storage and an upcoming shared file storage layer.
+
+**Performance Metrics and Relationships**
+Storage performance is measured through two primary indicators:
+- **Throughput**: Includes sequential (GB/s) and random-access (IOPS) metrics
+- **Latency**: Measured as round-trip time for I/O requests
+
+These metrics are interdependent. As system load increases, latency rises proportionally. The relationship between concurrency (QD), IOPS, and latency is critical:
+Concurrency (QD) = IOPS × Latency  
+This equation shows how system limitations can constrain throughput.
+
+**Queuing Theory Insights**
+Understanding latency patterns requires queuing theory principles. For example, in an M/M/c queue model:
+- Arrival rate (λ) = 1 customer per minute
+- Service rate (μ) = 1 customer per minute
+- Servers (c) = 2
+
+The average wait time in the queue is calculated as 1/(cμ - λ), demonstrating how system design impacts latency.
+
+**Scalability Considerations**
+There are two primary scalability types:
+1. **Vertical (Node-level)**: Maximizing IOPS and throughput per node
+2. **Horizontal (Cluster-wide)**: Scaling across nodes without creating bottlenecks
+
+Balancing these requires careful consideration of network traffic and resource allocation.
+
+**Performance Predictability**
+Modern systems prioritize predictable performance over raw metrics. Key considerations include:
+- Maintaining performance during node failures
+- Meeting tail latency targets (95th-99th percentiles)
+- Ensuring consistent latency under varying workloads
+
+**IOPS vs Sequential I/O**
+Storage vendors often publish IOPS and sequential throughput metrics, but these are based on simplified assumptions. Real-world workloads are more complex, involving:
+- Mixed read/write patterns
+- Variable block sizes
+- Random access patterns
+- Sequential access patterns
+
+Understanding these patterns is crucial for accurate performance evaluation.
+
+**Hardware and System Optimization**
+Our optimization efforts focus on:
+- **Network infrastructure**: RDMA/ROCEv2, TCP/IP configurations
+- **CPU architecture**: ARMv9-A, x86 EPYC processors
+- **Memory systems**: DDR5, huge pages
+- **Storage devices**: NVMe with DMA support
+
+**Erasure Coding Impact**
+Erasure coding significantly affects performance:
+- 4+2 scheme requires 2 reads + 3 writes
+- Network bandwidth multiplies due to cross-hops
+- Latency roughly doubles due to read-before-write requirement
+- Metadata operations add additional latency
+
+**Performance Measurement Framework**
+We use a comprehensive measurement approach:
+1. **Test Series**: 42 tests per series across 4K-1M block sizes
+2. **Workload Mixes**: 1+1, 2+2, 4+2 erasure coding schemes
+3. **Latency Metrics**: 95th, 99th, 99.9th percentiles
+4. **Throughput Analysis**: GB/s measurements with queue depth considerations
+
+**Horizontal Scaling Tests**
+We evaluate scalability across 4-node, 8-node, and 16-node clusters:
+| In-flight I/O | 4 Nodes | 8 Nodes | 16 Nodes |
+|---------------|---------|---------|----------|
+| 4K Random Write | 32 | 64 | 128 |
+
+These tests demonstrate near-linear scalability (k≈1) while maintaining latency constraints.
+
+**System Architecture Innovations**
+Our architecture focuses on:
+- **User-space polling drivers** to reduce interrupt latency
+- **Zero-copy architecture** minimizing DRAM copies
+- **Thread-to-core pinning** for cache optimization
+- **Lockless design** with asynchronous messaging
+- **Memory pre-allocation** using huge pages
+- **Core isolation** for dedicated processing
+- **QoS classes** for traffic isolation
+
+**Data Placement and Erasure Coding**
+Data is divided into fixed-size extents (MiB) with erasure coding:
+- Stripe chunks distributed across nodes
+- I/O load balanced proportionally to device capacity
+- Automatic rebalancing after node failures
+- Parallel rebuilding for optimal speed
+
+**Performance Profiling Techniques**
+We analyze I/O paths through multiple stages, measuring:
+- In-flight I/O rates
+- Queue lengths
+- Remaining latency
+- Statistical distributions (average, 99th percentile)
+
+Example breakdown:
+| Write-I/O | μs |
+|-----------|----|
+| Disk1 (remote) | 280 |
+| Disk2 (remote) | 250 |
+| Disk3 (local) | 150 |
+
+This granular analysis helps identify latency bottlenecks.
+
+**Key Takeaways**
+- Performance optimization is an ongoing process
+- Real-world workloads are complex and unpredictable
+- System design must balance latency, throughput, and scalability
+- Predictable performance is critical for enterprise applications
+- Continuous measurement and tuning are essential for maintaining performance
+
+These principles define simplyblock's approach to building a high-performance, low-latency distributed storage system optimized for modern workloads.
+</Output>

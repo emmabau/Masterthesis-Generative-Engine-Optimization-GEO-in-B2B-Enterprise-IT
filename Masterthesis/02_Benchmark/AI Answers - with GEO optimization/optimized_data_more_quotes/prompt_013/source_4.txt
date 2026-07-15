@@ -1,0 +1,35 @@
+<Output>
+How to Build a Data Recovery Strategy That Actually Works  
+A well-known adage in politics — “trust, but verify” — applies equally to data backup and recovery. Many organizations assume that having a formal backup strategy means they’re protected, but this assumption only holds if the strategy is tested and validated. Tim Burke, founder of Quest Technology Management, explains, “We’re typically brought in when organizations realize that what they believed was a backup strategy was really just a storage strategy.”  
+
+**The Core Problem: Lack of Validation**  
+Burke highlights that most backup strategies fail because recovery objectives are never clearly defined, and restoration is never tested under real-world conditions. “The biggest takeaway we see across the market is that the presence of backups does not equal recoverability. Resilience only exists when restoration is tested, timed, and aligned to business priorities,” he says.  
+
+**Immutable Backups as a Last Line of Defense**  
+AJ Thompson, CCO at Northdoor PLC and IBM Security Advisory Council member, emphasizes the importance of tested, verified backups. “The key wasn’t just having backups — it was having tested, verified backups with clear recovery procedures that everyone understood,” he explains. A financial services client’s server failure during a critical month-end period was resolved in four hours thanks to immutable backups stored on-site and in an air-gapped environment.  
+
+**Speed of Recovery Matters**  
+Disruptions are inevitable, but speed is critical. Howard Miller, CIO at UCLA Anderson School of Management, shares a success story: “A faculty member lost all their research in the 2025 wildfires, but we recovered it within days using endpoint backups.” UCLA’s multi-faceted approach includes endpoint protection, backup-as-a-service, and disaster recovery-as-a-service.  
+
+**Validation is Non-Negotiable**  
+Burke stresses that consistent validation is where most strategies fall short. “A backup strategy only becomes a disaster recovery strategy once it’s been tested under pressure,” he says. Organizations should test restore processes quarterly, use full environment simulations, and document recovery drills.  
+
+**Defining RPO and RTO: Business-Driven Metrics**  
+Recovery Point Objectives (RPO) and Recovery Time Objectives (RTO) must reflect real business needs, not IT convenience. Thompson explains, “A manufacturing client might need different recovery times for production systems versus HR databases — the strategy must reflect these realities.”  
+
+**Layered Protection and Encryption**  
+Burke advocates for layered protection, including multiple data copies across media types, immutable backups, and encryption. “Encrypting backup data in transit and at rest is essential. Separating backup infrastructure from production environments reduces lateral threat movement,” he adds.  
+
+**Three Interconnected Plans**  
+Northdoor’s “Store IT. Protect IT. Use IT.” philosophy includes:  
+1. **Enhanced Backup Strategy**: Three data copies across two media types (one offsite, one air-gapped).  
+2. **Business-Driven RPO/RTO**: Align recovery metrics to actual business impact.  
+3. **Immutable Backups**: “The CrowdStrike incident in 2024 shows even trusted systems can fail — immutable backups are a crucial last line of defense,” Thompson says.  
+4. **Three Plans**: Incident Response, Business Continuity, and Disaster Recovery — all tested quarterly.  
+
+**From Cost Center to Strategic Capability**  
+Burke and Thompson stress that data protection must be framed as a strategic investment, not a cost center. “Positioning resilience as operational continuity and risk mitigation gains executive support,” Burke explains. Reporting on RTO/RPO adherence, testing results, and remediation progress transforms disaster recovery into an enterprise risk management capability.  
+
+**The Future of Data Protection**  
+Thompson predicts a shift toward intelligent, automated backup systems that adapt to business needs while maintaining human oversight. “Organizations that thrive view data protection as a strategic capability, not a cost center,” he concludes.  
+</Output>

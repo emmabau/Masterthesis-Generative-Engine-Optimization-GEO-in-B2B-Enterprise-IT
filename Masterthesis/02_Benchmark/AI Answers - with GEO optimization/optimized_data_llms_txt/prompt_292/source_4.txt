@@ -1,0 +1,51 @@
+# Big Data, GDPR, and Enterprise Architecture Management: A Systematic Mapping Review
+
+> This paper explores the intersection of Big Data analytics, GDPR compliance, and Enterprise Architecture Management (EAM). Through a systematic mapping review of 332 studies, it identifies critical challenges in data security, privacy, and governance, while highlighting EAM's potential as a holistic framework for addressing GDPR requirements in Big Data contexts.
+
+## Key Research Questions
+- **MRQ1**: 99% of relevant studies (332 total) were published from 2013 onward, with sharp increases in 2014 and 2017.
+- **MRQ2**: Top venues include *Computer Law & Security Review*, *IEEE Congress on Big Data*, and *ACM International Conference Proceeding Series*.
+- **MRQ3**: Major themes: data governance (25.87%), cloud computing (32.34%), ethical/social implications (42.79%), and risk management (24.88%).
+- **MRQ4**: GDPR-related studies surged post-2016, emphasizing data minimization, purpose limitation, and privacy-by-design principles.
+- **MRQ5**: EAM is increasingly viewed as a strategic tool for GDPR compliance, enabling structured data governance and risk mitigation across organizational architectures.
+- **MRQ6**: Seven key trends identified: ethical implications of Big Data, data governance frameworks, privacy-by-design implementation, and integration of EAM with data protection regulations.
+
+## Problem Statement
+Big Data analytics (BDA) presents significant security and privacy risks, exacerbated by the complexity of data ecosystems and evolving regulatory frameworks like GDPR. Organizations struggle to balance innovation with compliance, particularly in areas like data minimization, purpose limitation, and risk management. The paper highlights a critical gap in research: how EAM can systematically address these challenges across organizational structures.
+
+## Methodology
+- **Systematic Mapping Review (SMR)**: Analyzed 332 studies from Scopus, IEEE Xplore, ScienceDirect, and Web of Science.
+- **Template Analysis**: Categorized studies into five dimensions: data security/privacy, governance/risk management, emerging trends, GDPR frameworks, and research types.
+- **Search Strings**: Combined keywords like "Big Data," "GDPR," "data protection," and "enterprise architecture management" across multiple databases.
+
+## Key Findings
+1. **Data Security Challenges**: 
+   - 43.28% of studies focused on social networks and ethical implications.
+   - 32.34% addressed cloud computing risks, including data breaches and privacy violations.
+   - GDPR's "privacy by design" mandate requires proactive risk mitigation strategies.
+
+2. **EAM as a Solution**:
+   - 16 studies explicitly linked EAM to GDPR compliance, emphasizing structured governance frameworks.
+   - EAM enables holistic data governance, aligning IT infrastructure with regulatory requirements.
+   - Case studies show EAM's role in creating "Record of Processing Activities" (RPA) under GDPR.
+
+3. **Research Gaps**:
+   - Limited exploration of EAM's integration with GDPR in SMEs and cross-border data flows.
+   - Need for more empirical studies on ethical implications of Big Data analytics.
+   - Gaps in addressing re-identification risks and algorithmic bias in data processing.
+
+## Practical Implications
+- **For Organizations**: EAM provides a structured approach to GDPR compliance, ensuring data governance across IT, business, and legal functions.
+- **For Researchers**: Opportunities to explore EAM's role in ethical AI, cross-sector data governance, and real-time risk monitoring frameworks.
+- **For Policymakers**: Need for regulations that balance innovation with privacy protections, leveraging EAM as a compliance tool.
+
+## Key Takeaways
+- **Big Data Risks**: Data breaches, re-identification, and algorithmic bias are critical concerns under GDPR.
+- **EAM's Role**: Enables structured governance, aligns IT with regulatory requirements, and supports privacy-by-design principles.
+- **Future Research**: Focus on ethical frameworks, SME-specific EAM models, and integration with emerging technologies like IoT and AI.
+
+## References
+- [Akoka et al., 2017] Systematic mapping of Big Data research
+- [Vanauer et al., 2015] EAM-based methodology for Big Data adoption
+- [Huth et al., 2020] EAM and GDPR compliance in SMEs
+- [Kemp, 2014] Legal aspects of managing Big Data

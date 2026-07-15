@@ -1,0 +1,38 @@
+<Output>
+Forum Discussion: Azure Stack HCI Network Configuration Best Practices  
+**Expert Guidance for Deploying Azure Stack HCI Clusters**  
+
+Deploying an Azure Stack HCI cluster requires meticulous network configuration to ensure optimal performance and reliability. Below is a comprehensive guide based on Microsoft's recommended practices and industry standards, tailored for first-time administrators.  
+
+### **1. IP Address Assignment Strategy**  
+- **Management NICs (1 Gbps):** Use the `sconfig` interface to assign IP addresses. Log in to the cluster, navigate to the networking configuration screen (select option `8`), and configure static IPs within the **10.4.8.x** range.  
+- **Compute/VM Traffic NICs (25 Gbps):** Assign IPs in a **10.4.9.x** subnet to isolate compute traffic.  
+- **Storage NICs (25 Gbps):** Use **10.4.10.x** for dedicated storage traffic. This segmentation reduces broadcast domains and improves security.  
+
+### **2. Configuring SET for Compute NICs**  
+- **Step-by-Step:**  
+  1. Open PowerShell and run `New-VMSwitch -Name "Compute-SET" -NetAdapterName "NIC1" -EnableEmbeddedTeaming $true`.  
+  2. Verify the switch with `Get-VMSwitch`.  
+  3. Assign IP addresses to the SET interface, ensuring redundancy and load balancing.  
+
+### **3. Management NIC Configuration**  
+- **Recommendation:** Use **SET (Switch Embedded Teaming)** for redundancy. Deploy two NICs in a bonded configuration to ensure high availability. Avoid single-NIC setups for production environments.  
+
+### **4. SET Configuration for Mgmt NICs**  
+- Follow the same steps as above for the management NICs. Assign the IP address to the SET interface, mirroring conventional NIC teaming practices in Windows Server 2012 R2.  
+
+### **5. IP Address Scheming Best Practices**  
+- **Consistency:** Stick to a unified **10.4.x.x** range for simplicity. Subnetting (e.g., 10.4.8.0/24 for management, 10.4.9.0/24 for compute) optimizes IP usage while maintaining clarity.  
+- **Avoid Overlap:** Ensure no IP address conflicts across subnets.  
+
+### **6. Storage NIC IP Assignment**  
+- **Yes:** Assign **two distinct IPs** to each storage NIC. This ensures redundancy and avoids single points of failure.  
+
+### **7. Enabling iWARP RDMA for Storage NICs**  
+- **Configuration:** Enable iWARP RDMA via the physical NIC’s advanced settings using `Set-NetAdapterAdvancedProperty`. This aligns with Microsoft’s preference for iWARP over RoCE for storage performance and reliability.  
+
+### **8. Final Validation**  
+- After configuration, validate connectivity using `Test-NetConnection` and verify SET status with `Get-NetAdapterTeam`. Ensure all IPs are within the designated subnets and that RDMA is enabled for storage NICs.  
+
+**Note:** For production environments, consult Microsoft’s official documentation and engage certified partners for advanced configurations. This approach ensures compliance with Azure Stack HCI’s architectural requirements and minimizes operational risks.  
+</Output>

@@ -1,0 +1,50 @@
+<Output>
+Forum Discussion: Azure Stack HCI Network Configuration Guidance
+
+Guidance on Network Configurations for Azure Stack HCI Cluster
+
+Hello All,  
+I'm deploying my first Azure Stack HCI cluster and need expert guidance on network configuration. Here are my questions:
+
+**Network Adapter Details**  
+- 2x 25 Gbps NICs for Compute/Virtualization (VMs) traffic  
+- 2x 25 Gbps NICs for Storage  
+- 2x 1 Gbps NICs for Management  
+
+**Questions & Answers**  
+1. **IP Address Assignment**  
+   Use the 'sconfig' interface upon login (accessed by typing '8' for networking settings). Assign IP addresses based on your network architecture.
+
+2. **Compute NIC SET Configuration (Step-by-Step)**  
+   Create a Switch Embedded Teaming (SET) switch using the `New-VMSwitch` cmdlet in PowerShell. Follow Microsoft Learn documentation for detailed steps.
+
+3. **Management NIC Configuration**  
+   For production environments, use SET with two NICs for redundancy. Assign IP addresses to the SET interface, similar to conventional NIC teaming in Windows Server 2012 R2.
+
+4. **SET Configuration Process**  
+   Follow the same steps as question 2 for creating and configuring SET switches.
+
+5. **IP Address Scheming Recommendations**  
+   - **Management**: 10.4.8.x  
+   - **Storage**: 10.4.9.x / 10.4.10.x (use contiguous subnets for simplicity)  
+   - **Compute**: 10.4.11.x / 10.4.12.x  
+   Alternatively, use smaller subnets to conserve IP addresses while maintaining logical separation.
+
+6. **Storage NIC IP Assignment**  
+   Yes, assign two IP addresses per server for the dual Storage NICs (no SET required).
+
+7. **iWARP RDMA Enablement**  
+   Enable iWARP RDMA on the physical network card via `Set-NetAdapterAdvancedProperty`. This is preferred over RoCE by Microsoft engineers for Storage NICs.
+
+8. **Management NIC Workflow**  
+   Configure SET first, then assign the IP address to the SET interface. This mirrors traditional NIC teaming practices.
+
+**Additional Notes**  
+- For production environments, always use SET for critical workloads (Compute/Management).  
+- Consult Windows Admin Center for automated configuration guidance.  
+- Partner vendors can provide hands-on setup support for new Azure Stack HCI deployments.  
+
+Apologies for basic questions – this is my first Azure Stack HCI deployment. Thank you for the detailed guidance!  
+
+-- Darryl van der Peijl, Splitbrain  
+</Output>

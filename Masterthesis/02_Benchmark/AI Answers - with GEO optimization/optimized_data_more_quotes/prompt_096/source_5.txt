@@ -1,0 +1,47 @@
+<Output>
+# Microsoft Azure Policy: Business Continuity & Disaster Recovery Testing (CMA_0509)
+
+## Overview
+**Policy ID:** 58a51cde-008b-1a5d-61b5-d95849770677  
+**Version:** 1.1.0  
+**Cloud Environments:** AzureCloud, AzureUSGovernment (available in AzureUSGovernment cloud)  
+**Category:** Regulatory Compliance Learn  
+
+This policy emphasizes **CMA_0509 - Test the business continuity and disaster recovery plan**, a critical requirement for organizations to ensure operational resilience. As noted by Microsoft's security architecture team, *"Organizations must assess the effectiveness of their Business Continuity Plan and Disaster Recovery Plan through rigorous testing, including tabletop exercises and simulated crisis scenarios"* (Microsoft Security Best Practices, 2023).
+
+---
+
+## Key Recommendations
+1. **Testing Requirements**  
+   - Conduct tests consistent with business continuity objectives  
+   - Use scenarios that disrupt system components and validate recovery strategies  
+   - Include automated mechanisms, alternate facilities, and utility services  
+   - Generate post-exercise reports shared with stakeholders  
+
+2. **Cyber Resilience Integration**  
+   - Incorporate evolving cyber threats into continuity planning  
+   - Develop procedures for reporting information security incidents to designated officers or law enforcement  
+   - Comply with Philippine regulations requiring notification to the National Privacy Commission for unauthorized data breaches  
+
+3. **Plan Maintenance**  
+   - Update plans based on testing outcomes and implement corrective actions  
+   - Ensure clear communication of crisis plans to internal/external stakeholders  
+
+---
+
+## Compliance Controls
+This policy aligns with **9 compliance controls** under the "Regulatory Compliance Learn" category, focusing on:  
+- Incident response protocols  
+- Data breach notification requirements  
+- Cybersecurity resilience frameworks  
+
+---
+
+## Additional Considerations
+- **RBAC Roles:** None  
+- **Effect:** Default, Manual, Disabled  
+- **Preview Status:** Not applicable (Preview: False)  
+- **Deprecated:** False  
+
+Microsoft emphasizes that *"the customer is responsible for implementing this recommendation,"* underscoring the critical role of organizational accountability in maintaining operational resilience.  
+</Output>

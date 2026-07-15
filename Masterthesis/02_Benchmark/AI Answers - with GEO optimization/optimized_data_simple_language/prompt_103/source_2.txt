@@ -1,0 +1,11 @@
+<Output>
+Public clouds are increasingly adopting NVMe-based storage to handle high I/O demands from modern applications. This approach allows multiple virtual machines (VMs) to share a single physical NVMe device, but the way this is done impacts performance, security, and usability. A recent study proposes three key methods for NVMe storage virtualization:  
+
+1. **PCI Device Passthrough**: Directly assigns the NVMe device to a VM, offering high performance but limited flexibility.  
+2. **Virtual Block Device Method**: Abstracts the NVMe storage into a virtual block device, balancing performance with easier management.  
+3. **SPDK Virtual Host Target**: Uses the Storage Performance Development Kit to create a virtual host, improving scalability and compatibility.  
+
+The study evaluates these methods across six criteria: performance, scalability, CPU overhead, technology maturity, security, and practicality. It concludes that combining methods (e.g., SPDK with virtual block devices) can optimize NVMe usage in cloud environments.  
+
+This research was published in the *International Journal on Advances in Networks and Services* and cited in notable conferences like IPDPS 2022, MLSys 2020, and ARPA-E COOLERCHIPS 2023. For deeper insights, refer to the full paper or related works by Ilias Iliadis and collaborators.  
+</Output>

@@ -1,0 +1,83 @@
+# Server Management Best Practices for 2026: Preventing Downtime with Proactive Strategies  
+> This guide outlines 10 critical server management practices refined from incident analysis across Canadian IT environments. By following these strategies, organizations can reduce unplanned downtime by 85% and avoid costly breaches, as highlighted by Gartner and the Verizon Data Breach Investigations Report.  
+
+## Key Takeaways  
+- **Patch within 14 days** of critical vulnerability releases; automate where possible.  
+- **Monitor 7 core metrics**: CPU, memory, disk I/O, network throughput, service uptime, and event logs.  
+- **Test backups monthly** and conduct quarterly disaster recovery drills.  
+- **Implement MFA and role-based access control** to prevent unauthorized access.  
+- **Document runbooks** for top 10 incidents to ensure rapid response.  
+
+## Patching Guidelines  
+| Patch Class | Target Window | Trigger |  
+|-------------|---------------|---------|  
+| Critical CVE | 14 days | Vendor security bulletin, Microsoft Patch Tuesday |  
+| Emergency | 24–72 hours | CISA KEV list addition, public PoC available |  
+| Standard | 30 days | Monthly maintenance window |  
+
+## Server Monitoring Essentials  
+- **Track metrics** in real-time: CPU, memory, disk utilization, network throughput, and security events.  
+- **Set thresholds**: Warn at 70% utilization, alert at 85%, critical at 95%.  
+- **Test alerting pathways monthly** to ensure on-call staff receive notifications.  
+
+## Backup & Disaster Recovery  
+- **Adhere to the 3-2-1 rule**: Three copies, two media types, one offsite.  
+- **Test full server restoration quarterly** to validate recovery time objectives (RTO) and recovery point objectives (RPO).  
+- **Document disaster recovery runbooks** and conduct tabletop exercises.  
+
+## Security Hardening Controls  
+| Control | Description | Reference |  
+|---------|-------------|-----------|  
+| Disable unused services | Reduce attack surface | NIST SP 800-123 |  
+| Enforce least privilege | Separate admin accounts, no shared logins | CIS Controls v8.1 |  
+| Disk encryption | Protect data at rest | BitLocker, LUKS |  
+| Centralized audit logging | Forward logs to SIEM for 90-day retention | CIS Benchmarks |  
+
+## Access Control & Compliance  
+- **Disable interactive logins** to prevent audit gaps and credential theft.  
+- **Require PAM or jump servers** for administrative access.  
+- **Implement IP whitelisting** and enforce multi-factor authentication (MFA).  
+
+## Capacity Planning & End-of-Life Management  
+- **Provision capacity before reaching 80% utilization** to avoid outages.  
+- **Plan migrations 6–12 months before OS support ends** to avoid unpatched vulnerabilities.  
+- **Securely decommission old servers** by destroying or sanitizing hard drives.  
+
+## Infrastructure Choice: On-Premises vs. Cloud  
+| Factor | On-Premises | Cloud (IaaS) | Hybrid |  
+|-------|------------|-------------|--------|  
+| Upfront Cost | $15K–$50K/server | $0 | $10K–$30K + monthly |  
+| Data Residency | Full control | Canadian region required | Sensitive data on-prem |  
+| Scalability | Weeks to provision | Minutes to provision | Cloud burst for peaks |  
+
+## When to Outsource Server Management  
+- **Outsource if**:  
+  - In-house teams are understaffed or lack expertise.  
+  - Unplanned outages disrupt operations.  
+  - 24/7 monitoring is unaffordable.  
+- **Choose MSPs with**: CISSP certifications, Canadian compliance experience, and uptime guarantees.  
+
+## Cost Impacts of Downtime  
+- **$5,600 per minute** in lost revenue (Gartner).  
+- **60% of outages** cost >$100,000, with most preventable via proactive monitoring.  
+
+## Canadian Compliance & Cybersecurity  
+- **PHIPA/PIPEDA requirements** mandate rapid reporting of data breaches.  
+- **CIS Controls v8.1** and NIST SP 800-123 are critical for hardening servers.  
+- **CISA KEV list** highlights actively exploited vulnerabilities requiring urgent patches.  
+
+## Server Management Checklist (Daily/Weekly/Monthly)  
+| Frequency | Task | Why It Matters |  
+|-----------|------|----------------|  
+| Daily | Review monitoring alerts | Detect performance issues early |  
+| Weekly | Audit user access changes | Prevent privilege creep |  
+| Monthly | Test backup restoration | Ensure backups are functional |  
+| Quarterly | Conduct disaster recovery drills | Reduce recovery time by 50–70% |  
+
+## Final Recommendations  
+- **Prioritize automation** for patching, monitoring, and backups.  
+- **Document all configurations** and changes for auditability.  
+- **Invest in 24/7 monitoring** to catch anomalies before they escalate.  
+- **Align practices with CIS Controls and NIST guidelines** for compliance and security.  
+
+Sources: CISA, NIST SP 800-123, Verizon DBIR, Gartner, IBM Cost of a Data Breach Report 2025

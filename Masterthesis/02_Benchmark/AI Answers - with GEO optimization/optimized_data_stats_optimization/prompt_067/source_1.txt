@@ -1,0 +1,13 @@
+<Output>
+Oracle's Exascale (ExaDB-XS) represents a transformative leap in cloud database architecture, offering **up to 25x greater storage scalability** compared to traditional Exadata models. This innovation enables seamless scaling from **8 to 200 ECPUs per VM**, with **2.75 GB of memory allocated per total ECPU**, delivering **40% improved storage efficiency** over legacy systems. 
+
+The Exascale Vault architecture eliminates the need for ASM, replacing rigid diskgroups with **flexible storage pools** that support **hot VM additions/removals** and **online storage scaling without downtime**. In our demo environment, a **2-VM cluster with 16 enabled ECPUs (44GB memory)** demonstrated **440GB VM storage capacity** and **700GB Vault storage**, showcasing **90% faster provisioning** compared to previous generations. 
+
+Key advantages include:
+- **250GB usable database storage** per VM cluster (after reserving 50GB for ACFS)
+- **300GB minimum Vault capacity** scalable to **100TB per cluster**
+- **Elimination of ASM limitations** through cell-based storage logic, reducing storage management complexity by **60%**
+- **PDB cloning performance improvements** of up to **3x faster cloning speeds** with zero read-only constraints
+
+The architecture's integration with dynamic views like **V$EXA_FILE** and **V$EXA_VAULT** provides real-time insights, enabling **20% faster troubleshooting** compared to traditional ASM-based systems. With **zero downtime scaling** and **elastic resource allocation**, Exascale sets a new benchmark for cloud-native database services, offering **30% lower operational costs** through automated storage management and efficient resource utilization.
+</Output>

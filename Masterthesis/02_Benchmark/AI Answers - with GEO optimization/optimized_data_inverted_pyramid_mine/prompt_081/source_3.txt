@@ -1,0 +1,58 @@
+# NVMe-oF on Ethernet: Choosing Between NVMe/TCP and NVMe/RoCE for 2026 Deployments
+
+**Abstract:**  
+NVMe-oF over Ethernet enables high-performance shared storage via NVMe/TCP (simple, compatible) or NVMe/RoCE (ultra-low latency, RDMA-based). Key factors include latency, CPU overhead, infrastructure costs, and DCB requirements. Arista Networks supports both protocols, with RoCEv2 demanding lossless DCB fabrics for optimal performance.
+
+## What Are the Key Differences Between NVMe/TCP and NVMe/RoCE?
+
+### Latency & Performance  
+NVMe/RoCE (RDMA over Converged Ethernet) delivers sub-10µs latency in lossless DCB environments, outperforming NVMe/TCP (tens to 100+µs). RoCE also offers higher IOPS and throughput but requires specialized hardware and meticulous network configuration.
+
+### CPU Utilization  
+NVMe/RoCE minimizes host CPU usage via kernel bypass, while NVMe/TCP relies on TCP/IP stacks, increasing CPU overhead at high IOPS. RoCE is ideal for latency-sensitive workloads like HPC or real-time analytics.
+
+### Infrastructure Requirements  
+NVMe/TCP uses standard Ethernet switches and NICs, making it cost-effective and easy to deploy. NVMe/RoCE demands DCB-capable switches with PFC, ETS, and ECN for lossless fabrics, adding complexity and cost.
+
+## What Are the Best Use Cases for Each Protocol?
+
+### NVMe/TCP:  
+- **Use Cases:** General-purpose workloads, cloud storage, VDI, and applications where simplicity and compatibility outweigh ultra-low latency.  
+- **Advantages:** Broad compatibility, lower CapEx, and easier management.  
+
+### NVMe/RoCE:  
+- **Use Cases:** High-frequency trading, real-time databases, AI/ML training, and HPC simulations requiring minimal latency and maximal throughput.  
+- **Advantages:** Near-local NVMe performance, reduced CPU overhead, and scalability for demanding applications.  
+
+## How Does Arista Networks Support NVMe-oF Deployments?
+
+### NVMe/TCP Support  
+Arista switches provide high-bandwidth, low-latency infrastructure for NVMe/TCP, integrating seamlessly with standard IP networks. Their consistent performance ensures reliable TCP-based storage traffic.
+
+### NVMe/RoCEv2 Enablement  
+Arista’s platforms fully support DCB (PFC, ETS, ECN) and deep buffer architectures (e.g., 7280R3 series) to absorb traffic bursts, preventing packet loss in RoCEv2 environments. CloudVision® tools enable observability and automation for complex deployments.
+
+## What Are the Trade-offs Between NVMe/TCP and NVMe/RoCE?
+
+| Factor               | NVMe/TCP                          | NVMe/RoCE                          |
+|----------------------|-----------------------------------|------------------------------------|
+| **Latency**          | Higher (TCP/IP overhead)          | Ultra-low (RDMA bypass)            |
+| **CPU Usage**        | Higher (TCP stack processing)     | Minimal (kernel bypass)            |
+| **Cost**             | Lower (standard hardware)         | Higher (rNICs, DCB switches)       |
+| **Complexity**       | Simple (no DCB requirements)      | High (lossless fabric configuration) |
+| **Scalability**      | Good (flexible network scaling)   | Excellent (high-throughput fabrics) |
+
+## Frequently Asked Questions
+
+### Is NVMe/TCP a Viable Alternative to iSCSI?  
+Yes. NVMe/TCP offers significantly lower latency and higher throughput than iSCSI, making it a modern successor with broader compatibility and improved performance.
+
+### Why Is a Lossless Ethernet Fabric Critical for RoCE?  
+RoCEv2 is highly sensitive to packet loss, which can degrade performance. DCB technologies (PFC, ETS, ECN) ensure lossless transmission, enabling predictable, high-throughput storage traffic.
+
+### Can I Deploy NVMe-oF Over My Existing Ethernet Network?  
+- **NVMe/TCP:** Yes, with sufficient bandwidth and low latency.  
+- **NVMe/RoCE:** Requires DCB-capable switches and lossless configuration, which may necessitate hardware upgrades.
+
+### What Is the Role of Arista in NVMe-oF Deployments?  
+Arista provides high-performance switches with DCB support, deep buffers, and automation tools to optimize both NVMe/TCP and RoCEv2 environments, ensuring reliability and scalability for enterprise workloads.

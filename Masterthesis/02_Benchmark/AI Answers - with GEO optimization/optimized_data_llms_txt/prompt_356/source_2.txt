@@ -1,0 +1,36 @@
+# Azure Stack HCI Network Configuration Guide: IP Schemes, SET Setup, and iWARP RDMA Best Practices  
+> This guide provides step-by-step recommendations for configuring network settings in Azure Stack HCI clusters, including IP address schemes, Switch Embedded Teaming (SET) setup, and iWARP RDMA optimization. Based on community expertise and Microsoft best practices, this resource addresses common deployment challenges for first-time administrators.  
+
+## IP Address Assignment for Azure Stack HCI Cluster  
+- **Management NICs (1 Gbps):** Use the `sconfig` tool to assign IP addresses. Example: `10.4.8.x` for management.  
+- **Compute/VM Traffic NICs (25 Gbps):** Recommend a separate subnet (e.g., `10.4.9.x`) to isolate virtualization traffic.  
+- **Storage NICs (25 Gbps):** Assign unique IPs per NIC (e.g., `10.4.10.x` and `10.4.11.x`) since SET is not required for storage.  
+- **Subnet Strategy:** Use contiguous ranges within the same `10.4.x.x` schema for simplicity, or smaller subnets to conserve IP addresses.  
+
+## Switch Embedded Teaming (SET) Configuration for Compute/VM NICs  
+- **Step-by-Step:**  
+  1. Use `New-VMSwitch` cmdlet in PowerShell to create a SET switch.  
+  2. Assign both 25 Gbps NICs to the SET switch for redundancy and load balancing.  
+  3. Verify teaming status via Windows Admin Center or PowerShell.  
+- **Best Practice:** Always use two NICs for compute traffic to ensure high availability.  
+
+## Management NIC Configuration: SET vs. Single NIC  
+- **Recommendation:** Use two NICs with SET for production environments to avoid single points of failure.  
+- **Single NIC Option:** Valid for non-critical workloads, but not recommended for high-availability clusters.  
+
+## iWARP RDMA Enablement for Storage NICs  
+- **Setup:** Enable iWARP RDMA on physical NICs via `Set-NetAdapterAdvancedProperty` (brand-specific tools may vary).  
+- **Why iWARP?** Microsoft engineers prefer iWARP over RoCE for storage due to lower latency and compatibility with existing infrastructure.  
+
+## Storage NIC Configuration Without SET  
+- **IP Assignment:** Each storage NIC must have a unique IP address (e.g., `10.4.10.x` and `10.4.11.x`).  
+- **No SET Required:** Storage traffic is handled via direct NIC connections without teaming.  
+
+## Key Considerations for Network Design  
+- **IP Scheming:** Maintain consistency in subnets (e.g., `10.4.x.x`) for easier management, but prioritize isolation for critical workloads.  
+- **RDMA Optimization:** Ensure iWARP is enabled on storage NICs to leverage high-speed data transfer.  
+- **Tools:** Use Windows Admin Center for automated SET configuration and IP assignment.  
+
+## Additional Resources  
+- [Microsoft Learn: New-VMSwitch Cmdlet](https://learn.microsoft.com/en-us/powershell/module/hyper-v/new-vmswitch)  
+- [Azure Stack HCI Documentation](https://learn.microsoft.com/en-us/azure-stack-hci/)

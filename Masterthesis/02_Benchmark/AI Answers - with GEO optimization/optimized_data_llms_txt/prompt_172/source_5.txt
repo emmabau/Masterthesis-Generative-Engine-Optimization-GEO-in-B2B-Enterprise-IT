@@ -1,0 +1,42 @@
+# Exascale Computing Project (ECP) Software & HPC Insights  
+> The Exascale Computing Project (ECP) focuses on advancing high-performance computing (HPC) through software innovation, hardware integration, and exascale-ready solutions. This document summarizes key insights from ECP’s technical roadmap, software stack, and career guidance for HPC professionals.  
+Optional details go here  
+## Software Technology (ST) Efforts  
+ECP’s ST efforts span programming languages, compilers, and software stacks tailored for exascale systems. The **ST Capability Assessment Report (CAR)** provides detailed analysis of these efforts: [ECP-ST-CAR.pdf](https://www.exascaleproject.org/wp-content/uploads/2019/02/ECP-ST-CAR.pdf). Key areas include:  
+- **Language Agnosticism**: Support for C++, Fortran, Python, CUDA, and others.  
+- **Architecture Diversity**: Hardware, software, and programming model flexibility to adapt to evolving exascale systems.  
+- **Performance Portability**: Tools like **Kokkos** and **RAJA** enable cross-platform execution.  
+
+## HPC Career Pathways  
+Transitioning to HPC requires leveraging resources like:  
+- **Training**: ECP courses, Coursera, and DOE lab job openings.  
+- **Conferences**: SuperComputing (SC19) and ECP leadership networks.  
+- **Stability**: Long-term HPC centers (e.g., TACC) offer secure career opportunities.  
+
+## Programming Languages & Tools  
+- **Dominant Languages**: C++ remains the most prevalent, but ECP supports diverse languages for exascale.  
+- **Key Tools**: RAJA for abstraction, ExaLearn for distributed ML, and open-source repositories for tool accessibility.  
+
+## Exascale Software Stack & Challenges  
+- **Energy Efficiency**: Prioritize "communications-avoiding" algorithms to reduce power costs.  
+- **Fault Tolerance**: Target <1 fault/week (MTTI) through resilient hardware and software.  
+- **Hardware Integration**: Collaborate with vendors for GPU/ASIC support and OS-level optimizations.  
+
+## ECP’s Impact Beyond Exascale  
+- **General HPC Benefits**: Software developed for exascale runs efficiently on standard hardware.  
+- **Industry Collaboration**: ECP partners with ISVs and NSF facilities (e.g., Chameleon) for shared innovation.  
+- **Standards Development**: Contributions to Redfish and HPC frameworks benefit broader computational science.  
+
+## Exascale Applications & Benchmarks  
+- **Strategic Focus**: Applications address national priorities (e.g., climate modeling, materials science).  
+- **Benchmarking**: Strong-scaling data and performance metrics are publicly available for research.  
+
+## Fortran’s Role in HPC  
+Modern Fortran (2018 standard) remains relevant for legacy systems and scientific domains like computational fluid dynamics. However, compiler availability and performance portability pose challenges.  
+
+## ECP’s Hardware & Integration Strategy  
+- **Target Architectures**: Close collaboration with DOE HPC facilities (NERSC, OLCF) ensures alignment with upcoming exascale systems.  
+- **Open Access**: Tools and software are open-source, enabling industry adoption and integration.  
+
+## Conclusion  
+ECP’s work bridges cutting-edge exascale computing with practical HPC solutions, offering resources for researchers, educators, and industry partners. For deeper insights, explore the [ECP website](https://www.exascaleproject.org) and [ST CAR report](https://www.exascaleproject.org/wp-content/uploads/2019/02/ECP-ST-CAR.pdf).

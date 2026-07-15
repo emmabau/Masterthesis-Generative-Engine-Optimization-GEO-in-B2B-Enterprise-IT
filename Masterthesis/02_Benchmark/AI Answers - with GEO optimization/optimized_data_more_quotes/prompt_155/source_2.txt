@@ -1,0 +1,26 @@
+<Output>
+In the era of event-driven retail, traditional infrastructure stacks are no longer sufficient. As Gartner’s 2026 Infrastructure and Operations trends highlight, "hybrid computing and a composable and extensible compute fabric" represent the future of orchestration across diverse mechanisms. This shift demands a paradigm change: moving from rigid "one-size-fits-all" stacks to **policy-defined composable infrastructure** that balances speed with governance.
+
+The core of this transformation lies in four pillars:  
+1. **Catalog of building blocks** (compute, storage, security, data services)  
+2. **Declaration of intent** (what the workload needs, not how to wire it)  
+3. **Policy engine** to enforce guardrails across provisioning and runtime  
+4. **Automation** to provision, enforce, and reconcile resources consistently  
+
+As NIST’s Zero Trust Architecture emphasizes, "continuous authentication and authorization per request" must become the baseline for security. This is where tools like Open Policy Agent (OPA) shine, enabling rules such as "no public load balancers without approved tags" or "mandatory encryption for data stores containing customer identifiers."  
+
+A retail use case illustrates this in action: during peak-week promotions, composable infrastructure allows teams to declare intent like, "Create a globally distributed commerce lane with real-time inventory reservations and fraud-resistant payments." The control plane then assembles microservices tiers, segmented network connectivity, and tiered data services—all governed by policies that enforce cost ceilings, tagging, and compliance.  
+
+Key sprawl prevention mechanisms include:  
+- **Time-to-live** for composed environments (auto-retirement if not renewed)  
+- **Deny-by-default** network exposure (public endpoints require explicit approval)  
+- **Policy-driven tagging** (application, cost center, data classification)  
+- **Reconciliation loops** to correct drift and revert manual changes  
+
+Leaders must ask critical questions before adopting composable infrastructure:  
+- Can we translate intent into consistent builds?  
+- Does our policy engine enforce guardrails across pipelines and runtime?  
+- How do we prevent orphaned resources and environment sprawl?  
+- Can we measure business outcomes (e.g., fraud loss avoidance) rather than just cluster health?  
+
+The ultimate goal is to shift from "building infrastructure" to "operating a control system." As the author concludes, "build-to-fit IT" means enterprises gain flexibility without losing control—because the controls are part of the platform, not an afterthought. This is the future of infrastructure: **modular, governed, and intent-driven**.

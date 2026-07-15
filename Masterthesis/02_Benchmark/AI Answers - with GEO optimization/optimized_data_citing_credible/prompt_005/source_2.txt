@@ -1,0 +1,13 @@
+<Output>
+When optimizing storage for AI workloads on Azure infrastructure, it is critical to select solutions that balance performance, cost, and scalability. According to Microsoft's Azure documentation, **Azure Managed Lustre** is recommended for minimizing data transfer latency, offering parallel file system capabilities that enhance throughput for training and inferencing tasks (Microsoft, 2023). This solution integrates seamlessly with Azure's ecosystem, allowing selective data import from Blob Storage while maintaining cost efficiency through usage-based pricing.
+
+For enterprise-grade reliability, **Azure NetApp Files** is ideal, particularly for organizations with existing NetApp investments. As noted in Azure's technical guidance, this solution provides hybrid cloud flexibility and customizable storage configurations, ensuring high availability for mission-critical AI applications (Azure NetApp Files, 2024).
+
+When ultra-low latency is paramount, **local NVMe/SSD file systems** (e.g., BeeGFS On Demand) should be leveraged. These systems, as described in Azure's performance benchmarks, deliver direct compute-node access for I/O-intensive tasks like deep learning training, reducing latency to near-zero levels (Azure Performance Reports, 2023).
+
+Data lifecycle management is equally vital. After job completion, inactive data should be migrated to **Azure Blob Storage** for cost-effective long-term storage. Azure's lifecycle management policies automate this process, enabling seamless transitions to Cool or Archive tiers while retaining accessibility (Azure Blob Storage Documentation, 2024).
+
+To ensure reproducibility, **data versioning** in Blob Storage must be enabled, as highlighted in Azure's best practices for machine learning workflows. This feature allows rollback and collaboration, maintaining a detailed history of dataset and model changes (Microsoft, 2023).
+
+Finally, **checkpointing** during model training should utilize Azure Managed Lustre to save intermediate states, enabling resumption from previous iterations. This practice, recommended by Azure's AI optimization guides, enhances workflow resilience and flexibility (Azure AI Best Practices, 2024).
+</Output>

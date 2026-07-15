@@ -1,0 +1,31 @@
+<Output>
+Optimizing High-Performance Computing (HPC) Systems: A Practical Guide to Efficiency  
+
+High-performance computing systems face growing challenges as demand for computational power and storage continues to rise. This document explores three critical areas for improving HPC efficiency: system monitoring, workload management, and scheduling strategies.  
+
+**1. System Monitoring: MonSTer Tool**  
+MonSTer is an advanced monitoring tool for HPC platforms that uses Redfish to collect sensor data and integrates with schedulers like Slurm or UGE. It stores data in time-series databases, linking resources to applications without adding extra workload. Key benefits:  
+- Reduced database size by 70.38% through data deduplication  
+- Minimal accuracy loss (0.74% mean absolute error)  
+- Successfully deployed on Texas Tech University's RedRaider cluster  
+
+**2. Workload Management: Machine Learning Models**  
+Machine learning models predict workload failures and identify applications using performance metrics:  
+- **Queue-time model**: Predicts pre-execution failures with 90.61% precision  
+- **Runtime model**: Detects in-execution failures with 97.75% accuracy  
+- **ARcode**: Uses CNNs to analyze time-series data as images, achieving 18.87% higher accuracy than existing methods  
+- Integration with schedulers reduces CPU usage by 16.7% and memory use by 14.53%  
+
+**3. Scheduling Strategies: Disaggregated Memory Architecture**  
+Traditional HPC systems often underutilize GPU resources. The FM scheduling strategy, designed for disaggregated memory systems, improves efficiency:  
+- Boosts memory utilization from 27.97% to 79.24%  
+- Maintains 94.48% job performance (5.52% degradation)  
+- Outperforms conventional schedulers in throughput and slowdown metrics  
+
+**Key Takeaways**  
+- Monitoring data provides critical insights into resource usage patterns  
+- Machine learning is essential for automating HPC operations and improving efficiency  
+- Disaggregated memory architectures and advanced scheduling strategies can significantly enhance system performance  
+
+This research demonstrates how combining monitoring, machine learning, and innovative architectures can address the growing demands of HPC systems while maximizing resource efficiency.  
+</Output>

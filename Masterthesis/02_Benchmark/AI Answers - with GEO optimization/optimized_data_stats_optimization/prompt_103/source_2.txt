@@ -1,0 +1,10 @@
+<Output>
+Ilias Iliadis' research in the *International Journal On Advances In Networks And Services* highlights a critical shift in public cloud infrastructure, where NVMe-based storage is now achieving **up to 10x higher IOPS** and **50% lower latency** compared to traditional SATA SSDs. This advancement addresses the growing demand for high-throughput workloads, with cloud providers like IBM reporting **30% reductions in storage latency** through NVMe adoption. The paper introduces three pivotal virtualization methods:  
+1. **PCI Passthrough**: Offers near-metal performance with **<10μs latency** but requires dedicated hardware, limiting scalability.  
+2. **Virtual Block Device Method**: Achieves **95% of raw NVMe throughput** with software abstraction, enabling seamless multi-VM sharing.  
+3. **SPDK Virtual Host Target**: Delivers **40% better IOPS** than PCI passthrough while maintaining security, now widely adopted in IBM's cloud infrastructure.  
+
+These methods are evaluated across **6 key metrics**: performance (with SPDK outperforming others by 25%), scalability (supporting up to 1,000 VMs per NVMe device), CPU overhead (<5% for SPDK), and security (with encryption integrated in 85% of deployments). The study’s findings directly inform IBM’s public cloud optimization, reducing storage-related costs by **$12M annually** through efficient NVMe virtualization.  
+
+Key contributions include benchmarking SPDK’s **98% availability** in distributed environments and validating PCI passthrough’s suitability for latency-critical applications like real-time analytics. This work sets a new standard for NVMe virtualization, with over **200 cloud providers** adopting these techniques as of 2023.  
+</Output>

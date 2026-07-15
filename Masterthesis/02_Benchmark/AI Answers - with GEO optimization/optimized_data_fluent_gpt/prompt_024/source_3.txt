@@ -1,0 +1,42 @@
+<Output>
+To address pressing scientific and engineering challenges such as climate change, energy optimization, biosecurity, and stockpile stewardship, researchers require faster, massively parallel computing systems capable of performing billions or trillions of calculations simultaneously, processing vast datasets efficiently, and running complex simulations to assess uncertainties. Transitioning from today’s petaflop (10¹⁵ floating-point operations per second) systems to exascale (10¹⁸ flops) systems demands breakthroughs in hardware, software, and scientific codes. These advancements are critical for leveraging increasingly complex architectures, minimizing power consumption, and ensuring system reliability.  
+
+As systems scale, power demands grow exponentially. For example, an exascale machine could require up to 100 megawatts to operate, with 70–100 million cores—far exceeding current systems. While lower core speeds reduce energy use, they also increase the risk of hardware failures due to the sheer number of components. Programmers must redesign codes to maximize parallelism, maintain accuracy, and adapt to these massive architectures.  
+
+The U.S. Department of Energy (DOE) is spearheading efforts to prepare for exascale computing within the next decade, tackling hardware-software challenges. Lawrence Livermore National Laboratory (LLNL) contributes through its Advanced Simulation and Computing (ASC) Program, DOE Office of Science initiatives, and LDRD-funded projects. As Lori Diachin notes, “HPC is undergoing a fundamental architectural shift, creating uncertainty. LDRD investments help explore options, develop solutions, and shape the future of computing.”  
+
+**Power Efficiency Innovations**  
+DOE aims for exascale systems to consume 20 megawatts or less. Researchers are exploring ways to reduce data movement, a major power drain, and new methods for power monitoring. Barry Rountree highlights that benchmark codes and flops-intensive applications are power hogs, while many physics codes struggle with inefficient resource use.  
+
+LLNL’s Vulcan supercomputer, for instance, typically uses 60% of its peak power. Rewriting all scientific codes to match flops-intensive models is impractical, so Rountree’s team proposes overprovisioning hardware—building a 40-megawatt machine with a 20-megawatt power cap. This allows processors to run at reduced power levels, improving performance without exceeding energy limits.  
+
+Their system software tools for power management are now integrated into NNSA laboratories. Future work focuses on dynamically reallocating power to slow calculation components, further boosting efficiency.  
+
+**Fault Tolerance and Recovery**  
+Exascale systems will face frequent hardware failures due to their scale. Ignacio Laguna explains, “Failures could occur every few hours, compared to once every two days in current systems.” Resilience requires both hardware improvements and software changes to handle errors without disrupting computations.  
+
+Traditional “backward” recovery methods restart from the last checkpoint, wasting time and resources. Laguna’s team is developing programming abstractions to simplify recovery. Their “Reinit” backward approach outperforms forward recovery methods by being efficient, easy to implement, and broadly applicable.  
+
+**Memory and Data Access Optimization**  
+Reduced on-chip memory in exascale chips forces data to be fetched from external sources, increasing access times and memory bandwidth strain. Scott Lloyd notes that irregular data patterns in modern applications are especially sensitive to these delays.  
+
+LLNL researchers are exploring 3D memory technologies like the Hybrid Memory Cube, which offers higher bandwidth and faster access. Their data rearrangement engine (DRE) dynamically organizes data for optimal use, reducing memory bandwidth usage by up to 4 times and improving performance in irregular access scenarios.  
+
+**Parallel Computing Breakthroughs**  
+Livermore experts are developing algorithms for exascale systems, focusing on reducing data movement and enabling massive parallelism. Rob Falgout and Jacob Schroder’s XBraid code solves time-dependent problems by processing all time steps simultaneously, reducing solution times by up to 49x without requiring full code overhauls.  
+
+XBraid’s parallel-in-time approach accelerates simulations by using coarser problem versions to refine solutions iteratively. This method matches sequential time-stepping accuracy while exploiting HPC capabilities. Future work includes integrating XBraid with Livermore’s physics codes and enhancing spatial-temporal resolution.  
+
+**High-Order Numerical Methods**  
+Tzanio Kolev’s team developed a high-order Arbitrary Lagrangian–Eulerian (ALE) framework for simulating shock hydrodynamics. This method uses curved mesh elements and more control points, improving accuracy and reducing data movement costs. The BLAST code, incorporating this framework, now simulates complex material interactions with greater fidelity, even in multi-material scenarios.  
+
+**First-Principles Molecular Dynamics**  
+Jean-Luc Fattebert’s team is advancing first-principles molecular dynamics (FPMD) to simulate millions of atoms efficiently. Their novel algorithm reduces computational complexity by focusing on local electron interactions, enabling simulations of 1.2 million atoms in under 3 hours on Sequoia. This approach avoids the exponential cost of traditional methods, earning recognition as a Gordon Bell Prize finalist.  
+
+**Beyond Exascale**  
+While exascale is a critical milestone, LLNL is already planning for “beyond Moore’s Law” innovations. Investments in neuromorphic computing (e.g., IBM’s TrueNorth platform) and quantum computing aim to address future challenges. These efforts reflect LLNL’s commitment to shaping the next generation of high-performance computing.  
+
+—Rose Hansen  
+Key Terms: Advanced Simulation and Computing (ASC) Program, algorithm, Arbitrary Lagrangian–Eulerian (ALE), BLAST code, data rearrangement engine (DRE), domain decomposition molecular dynamics (ddcMD) code, exascale, extreme-scale computing, FastForward-2 Program, first-principles molecular dynamics (FPMD), floating-point operations per second (flops), Laboratory Directed Research and Development (LDRD) Program, Message-Passing Interface (MPI), MGmol code, neuromorphic computing, programming abstraction, QBox code, quantum computing, Reinit code, Sequoia, Sierra, three-dimensional (3D) memory, Vulcan, XBraid code.  
+For further information, contact Lori Diachin (925) 422-7130 (diachin2 [at] llnl.gov).  
+</Output>

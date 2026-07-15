@@ -1,0 +1,88 @@
+Q&A from TechTalk: Exascale Computing and HPC Insights
+
+**1. Software Technology (ST) Efforts**  
+The ECP's ST efforts cover programming languages, math libraries, compilers, debuggers, and open-source vs. closed-source tools. For detailed insights, refer to the [ECP ST Capability Assessment Report](https://www.exascaleproject.org/wp-content/uploads/2019/02/ECP-ST-CAR.pdf).
+
+**2. Transitioning to HPC**  
+To switch to HPC, leverage ECP training courses, online resources like Coursera, and job openings at DOE labs and universities. Attend conferences like SC19 or contact ECP leadership for guidance.
+
+**3. System Architectures**  
+The "diverse system architectures" mentioned refer to hardware designs (e.g., CPU vs. co-processors) and software stacks. Architectural diversity includes hardware, software, and programming models.
+
+**4. Computer Graphics Tools**  
+For graphics tools, animation controls, and data storage, consult the [ECP ST Capability Assessment Report](https://www.exascaleproject.org/wp-content/uploads/2019/02/ECP-ST-CAR.pdf).
+
+**5. HPC Programming Languages**  
+Common languages include C++, Fortran, Python, and CUDA. C++ is most prevalent, but ECP supports multiple languages through "language-agnostic" software stacks.
+
+**6. Open-Source Tools for Non-DOE Users**  
+Most ECP tools are open-source, accessible via the [ECP website](https://www.exascaleproject.org) and the [ST Capability Assessment Report](https://www.exascaleproject.org/wp-content/uploads/2019/02/ECP-ST-CAR.pdf).
+
+**7. Application Portfolio Selection**  
+Applications were chosen based on their alignment with DOE missions and national interests. They aim to solve broad scientific problems while demonstrating exascale readiness.
+
+**8. Benefits for the HPC Community**  
+Even without exascale access, developers benefit from tools designed for laptops/desktops, which emulate exascale hardware for efficient software testing.
+
+**9. HPC Career Stability**  
+HPC careers are stable, with long-term investments in DOE facilities like TACC, which has operated for over 25 years.
+
+**10. Parallel Computing Approaches**  
+ECP focuses on distributed memory for large-scale simulations and shared memory for multi-threaded tasks, balancing computational and communication efficiency.
+
+**11. HPC in Education**  
+ECP applications can be used in advanced courses, but simpler "proxies" are recommended for introductory classes. Contact ECP leadership for tailored resources.
+
+**12. Data Organization in MPP Grids**  
+Directed graphs (DAGs) are practical for task-based models in MPP systems. For deeper insights, reach out to ECP Software Technology leaders.
+
+**13. Energy Efficiency in HPC**  
+Reducing energy use focuses on minimizing data movement (which consumes 20–100x more power than computation). ECP prioritizes "communications-avoiding" software.
+
+**14. GPU-Driven Software**  
+ECP software adapts to GPU availability, optimizing compute kernels for hardware-specific performance.
+
+**15. Building Exascale Stacks Without Hardware Specs**  
+ECP collaborates with DOE HPC facilities and vendors to anticipate hardware trends, ensuring software aligns with upcoming exascale systems.
+
+**16. Hardware and OS Integration**  
+ECP software works with robust OSes and hardware, allowing deep integration with vendors where it enhances performance or efficiency.
+
+**17. Strong Scaling Benchmarks**  
+ECP provides strong-scaling data to help researchers optimize simulations, from continuum models to quantum calculations.
+
+**18. Job Opportunities in HPC**  
+Explore DOE lab websites, HPC center pages, and SIGHPC for job listings. Contact [vicechair@sighpc.org](mailto:vicechair@sighpc.org) for guidance.
+
+**19. Fault Tolerance Metrics**  
+The "<1 fault/week" metric (MTTI) reflects hardware-software resilience. ECP aims for reliable systems through combined fault-tolerant designs.
+
+**20. Modern Fortran in Exascale**  
+Fortran remains critical for legacy DOE applications, with the 2018 standard (COARRAYs) supporting parallelism. However, compiler availability is a challenge.
+
+**21. RAJA vs. Kokkos**  
+RAJA and Kokkos both enable performance portability. For details, see [Kokkos - Performance Portability](https://www.exascaleproject.org/project/exalearn-co-design-center-for-exascale-machine-learning-technologies/).
+
+**22. Engaging with ECP on Redfish Standards**  
+NSF-funded projects can collaborate with ECP’s hardware team via John West or ECP leadership for data center control standards.
+
+**23. ECP Hardware Details**  
+Visit DOE ASCR, ASC, or HPC facility websites (e.g., NERSC, OLCF) for hardware specifics.
+
+**24. Benefits Beyond DOE**  
+ECP technologies benefit universities, companies, and researchers through open standards and collaborative frameworks.
+
+**25. ExaML vs. Industry ML**  
+ExaML complements industry frameworks by enhancing them with exascale-specific capabilities, avoiding duplication.
+
+**26. ISV Collaboration**  
+ISVs (e.g., CAE, CFD) partner with ECP to integrate tools into their products, avoiding direct competition.
+
+**27. ECP and Chameleon**  
+ECP plans to deploy tools on Chameleon for testing and collaboration with NSF facilities like TACC.
+
+**28. Performance Portability**  
+ECP prioritizes performance portability across DOE systems, using abstractions like Kokkos and RAJA to ensure broad compatibility.
+
+**29. Exascale for National Challenges**  
+Exascale systems enable faster simulations, better statistical accuracy, and reduced model assumptions, aiding decisions on climate, economics, and more.

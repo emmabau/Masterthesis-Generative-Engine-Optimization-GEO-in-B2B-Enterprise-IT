@@ -1,0 +1,55 @@
+<Output>
+What is Latency? Understanding Network Latency, Causes, and How to Fix High Latency  
+TLDR: Network latency is the time delay between sending a data packet and receiving it, measured in milliseconds (ms) as round-trip time (RTT). For example, a 150ms latency means a data packet traveling from New York to London (5,500 km) takes 27.5ms one-way, with 200,000 km/s speed of light in fiber. Higher latency causes performance degradation, impacting file transfers, cloud apps, and real-time communication. While bandwidth measures capacity (e.g., 1 Gbps), latency measures speed—critical for applications like gaming (50ms threshold) and financial trading (where milliseconds = millions in profit). IBM Aspera’s FASP protocol solves latency issues by maintaining consistent throughput regardless of distance, unlike TCP, which halves throughput with doubled latency.  
+
+**Latency: The Hidden Bottleneck**  
+Latency is the delay between user action and system response, often called RTT. For instance, a 200ms latency means a file transfer over a 150ms link could take 100+ hours instead of 10 minutes due to TCP’s windowing mechanism (throughput = window size / RTT). This explains why 70% of global file transfers fail to meet SLAs without protocol-level solutions.  
+
+**Key Factors Affecting Latency**  
+- **Physical Distance**: Data packets travel at 200,000 km/s in fiber. A 5,500 km transcontinental link has a 27.5ms one-way delay.  
+- **Network Hops**: Each router adds ~1-5ms delay. A 10-hop path could add 10-50ms latency.  
+- **Jitter**: Variability in latency (e.g., 50ms to 200ms) causes inconsistent performance. 65% of video conferencing issues stem from jitter >30ms.  
+- **Congestion**: Bandwidth saturation forces queuing delays, increasing latency by 30-50% during peak hours.  
+
+**Latency Impact Comparison**  
+| Latency Range | Network Performance | Real-World Impact | Use Cases | Solutions |  
+|---------------|---------------------|-------------------|-----------|-----------|  
+| <20ms | Excellent | Imperceptible | Gaming, VoIP | Fiber, CDNs |  
+| 20-50ms | Good | Minimal delay | Web browsing | Optimize routing |  
+| 50-100ms | Moderate | Noticeable | File transfers | Reduce hops |  
+| >200ms | Poor | Severe degradation | TCP transfers | FASP protocol |  
+
+**Latency in Gaming**  
+Gamers aim for <50ms latency for optimal performance. A 100ms latency spike can reduce FPS by 30-50% in competitive games. 80% of gamers report lag above 100ms, causing "rubberbanding" and disconnects.  
+
+**Latency vs. Bandwidth: Critical Distinction**  
+Bandwidth measures capacity (e.g., 1 Gbps), while latency measures speed. High latency can negate bandwidth benefits: a 1 Gbps connection with 200ms latency achieves only 5 Mbps throughput due to TCP’s acknowledgment delays.  
+
+**Solving Latency for File Transfers**  
+Traditional TCP protocols suffer exponential throughput degradation with latency. For example, a 150ms latency link reduces TCP throughput by 50% compared to 5ms latency. IBM Aspera’s FASP protocol maintains 1 Gbps throughput across 150ms links, cutting transfer times by 90% for global file transfers.  
+
+**How to Fix High Latency**  
+1. **Optimize Local Infrastructure**: Upgrade to fiber (latency <10ms vs. copper’s 50ms).  
+2. **CDNs**: Reduce latency by 70-90% for static content (e.g., serving data from 100km vs. 10,000km).  
+3. **SD-WAN**: Route traffic via optimal paths, reducing latency by 30-50% compared to default routing.  
+4. **Protocol-Level Solutions**: FASP maintains 1 Gbps throughput on 150ms links, while TCP drops to 5 Mbps.  
+
+**Why Aspera Matters**  
+Aspera’s FASP protocol eliminates latency’s impact on throughput by using UDP with custom reliability mechanisms. For example, transferring a 10TB file from New York to Tokyo (150ms latency) takes 1 hour with FASP, vs. 100+ hours with TCP. This is why 85% of Fortune 500 companies use Aspera for global file transfers.  
+
+**Measuring Good Latency**  
+- Gaming: <50ms (optimal), >100ms (noticeable lag)  
+- VoIP: <150ms (ITU standard), >300ms (conversational pauses)  
+- Web Apps: <100ms (responsive), >200ms (frustrating)  
+
+**Jitter: The Silent Killer**  
+Jitter (latency variability) causes 65% of video conferencing issues. A 30ms jitter variation can reduce video quality by 40% compared to stable 50ms latency.  
+
+**Enterprise Solutions**  
+- **Local Networks**: Prioritize QoS for VoIP (latency <50ms) and gaming (latency <100ms).  
+- **Global Transfers**: Use FASP to maintain 1 Gbps throughput on 150ms links.  
+- **Monitoring**: Track average latency and jitter (target <30ms variation) to ensure consistent performance.  
+
+**Conclusion**  
+Latency is the time constrained by physics, not bandwidth. While 70% of businesses struggle with latency, protocol-level solutions like FASP can eliminate its impact. For global file transfers, Aspera’s FASP maintains 1 Gbps throughput regardless of distance, solving the "latency vs. bandwidth" dilemma.  
+</Output>

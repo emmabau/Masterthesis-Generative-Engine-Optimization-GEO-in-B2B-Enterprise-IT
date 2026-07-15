@@ -1,0 +1,31 @@
+<Output>
+- Article
+Demystifying Composability on Cloud-Native Platforms: Extending Platforms to Business Needs
+Introduction
+A cloud-native platform, as defined by the Cloud Native Computing Foundation (CNCF) Platforms White Paper, is an integrated collection of capabilities designed to meet the dynamic needs of stakeholders. These capabilities are not static but evolve based on user requirements, with platform teams focusing on abstraction and orchestration rather than direct implementation of infrastructure components. This approach aligns with the principles of Infrastructure-as-Code (IaC) and microservices architecture, enabling modular scalability.
+
+Composable platforms leverage loose coupling and interoperability to allow modular integration of components such as CI/CD pipelines, artifact repositories, and security tools. This composability is critical for achieving technical agility and business value, as it enables teams to select and combine capabilities that align with specific use cases. For instance, a development team might integrate build and scan capabilities using tools like Jenkins or GitLab CI, while another team might prioritize artifact storage with a Nexus repository, demonstrating the flexibility of composable systems.
+
+Fig 1. Platform Capabilities
+The concept of personas is central to understanding platform design. A persona represents a stakeholder group with distinct technical and operational needs. Unlike roles, personas are broader and reflect cross-functional responsibilities within team topologies. For example, a "Builder" persona might focus on infrastructure abstraction using Kubernetes or Terraform, while an "Enabler" persona could prioritize DevSecOps practices to integrate security into the development lifecycle.
+
+Characteristics of a Composable Platform According to Personas
+- **Builders**: Focus on infrastructure abstraction and extensibility. They ensure compatibility with diverse environments (on-premise, hybrid, cloud) using tools like Docker, Kubernetes, and service meshes. This enables dynamic resource allocation and workload isolation.
+- **Enablers**: Drive platform extensibility by integrating application-specific capabilities such as observability (Prometheus, Grafana) and database orchestration. They prioritize CI/CD pipelines and automated testing frameworks (e.g., JUnit, Selenium) to enhance developer productivity.
+- **Consumers (Developers)**: Utilize platform components to implement business logic, leveraging tools like PostgreSQL, Redis, and distributed tracing systems (Jaeger). They benefit from reduced lead times through pre-configured environments and automated deployment pipelines.
+- **End-Users (Customers)**: Indirectly benefit from platform capabilities through improved application reliability and performance. Metrics like Mean Time to Recovery (MTTR) and system availability are critical for measuring value, as they directly impact customer trust and business outcomes.
+
+How Do Personas View a Platform?
+From a **Builder** perspective, the platform's infrastructure is abstracted via IaC and orchestration tools, allowing modular expansion. For example, a Kubernetes-based platform might dynamically scale compute resources using Horizontal Pod Autoscalers (HPA) while integrating security policies via Network Policies.
+
+From an **Enabler** standpoint, platform growth involves enhancing capabilities through modular extensions. Post-cluster installation, teams focus on governance frameworks (e.g., Open Policy Agent) and security automation (e.g., Trivy, Clair) to ensure compliance and resilience.
+
+Developers (platform end-users) interact with the platform through CI/CD pipelines, leveraging tools like ArgoCD for declarative deployments. They benefit from pre-integrated tools for database management, observability, and security, reducing time-to-market for applications.
+
+Customers (platform end-users) derive value through enhanced reliability and scalability, as measured by Service Level Agreements (SLAs). Composability enables cost optimization by allowing selective adoption of capabilities, such as serverless functions for event-driven workloads or edge computing for low-latency applications.
+
+Conclusion
+Composability in cloud-native platforms enables stakeholders to align technical capabilities with business objectives without over-investing in non-essential components. By abstracting infrastructure complexity and enabling modular integration, composable platforms drive innovation in cloud-native ecosystems, as evidenced by CNCF's emphasis on extensibility and interoperability.
+
+Learn more about personas: https://tag-app-delivery.cncf.io/blog/paap-personas/
+</Output>

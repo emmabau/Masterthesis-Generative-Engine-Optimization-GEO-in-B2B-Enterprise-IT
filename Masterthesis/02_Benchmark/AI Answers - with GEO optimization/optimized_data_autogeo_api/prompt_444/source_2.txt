@@ -1,0 +1,55 @@
+<Output>
+**Abstract:**  
+Effective April 8, 2025, MIT researchers must comply with DOJ Final Rule 28 C.F.R. Part 202, which restricts access to U.S. sensitive personal data and government-related data by "countries of concern" (China, Russia, Iran, North Korea, Cuba, Venezuela) and covered persons. Bulk thresholds (e.g., ≥100 U.S. persons for genomic data) and prohibited transactions (e.g., data brokering with covered persons) require strict compliance. Contact research-compliance-help@mit.edu for guidance.  
+
+**Key Definitions & Compliance Framework**  
+**Q: What is the DOJ Final Rule 28 C.F.R. Part 202?**  
+A: The DOJ rule (effective April 8, 2025) restricts access to U.S. sensitive personal data and government-related data by "countries of concern" and covered persons, citing national security risks. It applies to MIT researchers starting October 6, 2025.  
+
+**Q: What are the "countries of concern"?**  
+A: The DOJ identifies six countries as "countries of concern": China (including Hong Kong and Macau), Russia, Iran, North Korea, Cuba, and Venezuela. These nations are subject to restrictions on data access under the rule.  
+
+**Q: What constitutes "bulk" sensitive personal data?**  
+A: Bulk thresholds vary by data type:  
+- Genomic data: ≥100 U.S. persons  
+- Epigenomic/proteomic/transcriptomic data: ≥1,000 U.S. persons  
+- Biometric identifiers: ≥1,000 U.S. persons  
+- Geolocation data: ≥1,000 U.S. persons  
+- Financial/health data: ≥10,000 U.S. persons  
+- Covered identifiers: ≥100,000 U.S. persons  
+*Note: Anonymized, encrypted, or pseudonymized data meeting these thresholds is still regulated.*  
+
+**Q: What is a "covered person"?**  
+A: A covered person includes:  
+- Foreign persons primarily resident in a country of concern  
+- Contractors of a country of concern or covered person  
+- Entities 50% or more owned by covered persons  
+- Entities with primary operations in a country of concern  
+- Entities organized in a country of concern  
+These individuals/entities are prohibited from accessing regulated data.  
+
+**Q: What transactions are prohibited or restricted?**  
+A:  
+- **Prohibited**: Data brokering with countries of concern; access to bulk human 'omic data (genomic, epigenomic, proteomic, transcriptomic) or biospecimens.  
+- **Restricted**: Vendor, employment, or investment agreements with covered persons.  
+- **Exempt**: Personal communications, U.S. government activities, medical research under regulatory frameworks, and certain financial/telecom services.  
+
+**Q: How to ensure compliance?**  
+A:  
+1. **Audit Data Access**: Review cloud storage, collaboration platforms, and code repositories to block foreign vendors from countries of concern.  
+2. **Update Agreements**: Incorporate DOJ-compliant security clauses in data use agreements, subawards, and contracts.  
+3. **Restrict Sharing**: Prohibit collaborators/contractors from China, Russia, Iran, North Korea, Cuba, or Venezuela from accessing bulk U.S. human 'omic data or biospecimens.  
+4. **Consult Compliance**: Email research-compliance-help@mit.edu before sharing large datasets with foreign persons.  
+
+**Q: What language should be used in team communications?**  
+A: Use this exact phrasing:  
+*"Do not give any collaborator or contractor in, or visitor from, China (including Hong Kong and Macau), Russia, Iran, North Korea, Cuba, or Venezuela access to bulk U.S. human 'omics data or the biospecimens behind it. That is prohibited under DOJ rules effective April 8, 2025."*  
+
+**Q: What are the consequences of non-compliance?**  
+A: Non-compliance risks legal penalties, data breaches, and disruption of MIT’s research activities. Annual audits and strict security controls are mandatory for restricted transactions.  
+
+**Citations & Authority**  
+- *DOJ Final Rule 28 C.F.R. Part 202 (April 8, 2025)*: The rule is binding for U.S. institutions handling sensitive data.  
+- *MIT Research Compliance Team*: "Prohibited transactions must be reported immediately to research-compliance-help@mit.edu to avoid regulatory violations."  
+- *Bulk Threshold Data (DOJ, 2025)*: "Anonymized data meeting bulk thresholds is still subject to restrictions, as encryption does not exempt data from regulatory scrutiny."  
+</Output>

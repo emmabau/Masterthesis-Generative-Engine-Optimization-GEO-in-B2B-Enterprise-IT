@@ -1,0 +1,11 @@
+6. **Restart Your PC**  
+   - After rebooting, confirm the changes by selecting "Disable" when prompted for Credential Guard and Virtualization-Based Security.  
+
+7. **Automate Fixes (Optional)**  
+   - Create a script (e.g., `disable_annoying_features.cmd`) with the above commands and set it to run at startup via Task Scheduler. This prevents settings from resetting due to group policy updates.  
+
+**Important Notes**  
+- Always back up your data before making system changes.  
+- If you're on a corporate network, group policies may override these settings. The script helps maintain your configuration.  
+- These steps are tailored for Windows 10/11. Adjust accordingly for other OS versions.  
+</Output>

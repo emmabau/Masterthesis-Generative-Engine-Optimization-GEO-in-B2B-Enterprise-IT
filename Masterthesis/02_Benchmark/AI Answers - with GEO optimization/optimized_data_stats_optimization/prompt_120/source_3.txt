@@ -1,0 +1,19 @@
+<Output>
+Building a Capable Computing Ecosystem for Exascale and Beyond  
+The exascale computing era has arrived, marked by the deployment of the U.S. Department of Energy’s (DOE’s) first exascale system, **Frontier**, in 2022. This system, capable of performing **over 1.5 exaflops** (1.5 quintillion operations per second), is **1,000 times faster** than its petascale predecessors, enabling unprecedented simulations of complex physical phenomena. By 2024, the deployment of **Aurora** and **El Capitan** will further solidify the U.S. leadership in high-performance computing (HPC), with these systems projected to deliver **up to 10 exaflops** combined.  
+
+The **Exascale Computing Project (ECP)**, a **$1.8 billion, seven-year initiative**, has been pivotal in bridging the gap between hardware and software to unlock exascale potential. By fostering collaboration among **1,000+ team members** across **25 mission-critical applications** (spanning energy, materials science, and data science), **70 unique software products**, and integrated testing on DOE systems, ECP has achieved **50 times the performance** of 2016’s 20-petaflop systems and **5 times the performance** of the 200-petaflop Summit supercomputer.  
+
+A Computing Symphony  
+ECP’s success lies in its **co-design model**, which unites application developers, software engineers, and hardware vendors under a shared mission. This synergy has enabled the creation of **Kokkos** and **RAJA**, two production-level software frameworks that allow applications to run **hardware-agnostically** across GPUs from **three different vendors** (NVIDIA, AMD, Intel). For example, the **EXAALT** application achieved a **500x speedup** when ported to Frontier, surpassing its 2016 baseline by a factor of **~10**, while **WarpX**—a plasma simulation tool—exceeded its goal by **500x** on Frontier, winning the **2022 Gordon Bell Prize** for its performance on **4 of the 10 fastest supercomputers** globally.  
+
+Collaboration Pays Dividends  
+Adapting codes to **heterogeneous architectures** (GPUs + CPUs) posed a major challenge. Exascale systems rely on GPUs for **>95% of their performance**, with CPUs contributing <5%. ECP’s cross-project collaboration allowed teams to develop **performance-portable programming models**, such as **Kokkos** and **RAJA**, which abstracted hardware-specific details. For instance, the **EQSIM** earthquake simulation project leveraged RAJA to port its code to Frontier, achieving **>500x speedup** while maintaining portability across systems.  
+
+The **AMReX** co-design project, focused on adaptive mesh refinement, has enabled breakthroughs in fields like **astrophysics** and **combustion** by optimizing computational resources to target high-impact simulation regions. Its integration with **WarpX** (a plasma physics tool) demonstrated exascale capabilities in modeling **particle accelerators**, with potential applications in **cancer treatment** and **fundamental science**.  
+
+Sustainability for the Future of Computing  
+ECP’s legacy is evident in its **100+ projects** leveraging Kokkos, including **100+ HPC applications** and **external community adoption** via open-source platforms like GitHub. As ECP concludes, its model of **shared fate**—where teams collaborate to align software, hardware, and scientific goals—has set a new standard for HPC innovation. This approach has already influenced **next-generation exascale systems**, ensuring that the U.S. remains at the forefront of computational science, driving advancements in **energy, national security, AI, and materials science**.  
+
+The ECP’s success underscores that **collaborative ecosystems** are critical to unlocking exascale potential. By uniting diverse expertise, the project has created a foundation for **decades of innovation**, proving that **integration > silos** in the pursuit of scientific breakthroughs.
+</Output>

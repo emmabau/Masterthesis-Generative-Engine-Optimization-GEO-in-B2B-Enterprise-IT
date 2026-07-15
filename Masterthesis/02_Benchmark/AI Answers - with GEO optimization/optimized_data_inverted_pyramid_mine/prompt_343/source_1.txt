@@ -1,0 +1,104 @@
+<Output>
+# How to Achieve Composable Architecture: A Practical Guide
+
+## Core Summary
+Composable architecture enables modular, flexible platforms by combining reusable components and declarative configuration. This guide outlines its benefits, implementation pillars, and a 5-step roadmap to adopt it, helping enterprises reduce vendor lock-in, accelerate delivery, and manage multi-cloud environments effectively.
+
+## What Is Composable Architecture?
+### Definition
+Composable architecture is a design approach that combines modular components, infrastructure abstraction, and declarative configuration to build tailored platforms from reusable building blocks.
+
+### Benefits
+It offers flexibility, faster time-to-market, reduced vendor lock-in, cost optimization, and consistent standards across environments.
+
+### Key Components
+Includes declarative templates, component catalogs, multi-cloud abstraction, and unified control/observability.
+
+## Why Composable Architecture Matters
+### Addressing Enterprise Pressures
+Reduces legacy monoliths, vendor lock-in, slow delivery, and multi-cloud complexity through modular, cloud-native designs.
+
+### Multi-Cloud and Hybrid Complexity
+Simplifies operations across public/private clouds and hybrid environments with declarative config and single control planes.
+
+## Top 5 Benefits of Composable Architecture
+### 1. Enhanced Flexibility and Customization
+Teams pick components for workloads, avoiding one-size-fits-all stacks. 68% of platform teams prioritize standardizing infrastructure via internal developer platforms.
+
+### 2. Faster Time to Market and Innovation
+Aligns with GitOps by treating infrastructure/apps as versioned components. 93% of organizations plan to increase GitOps adoption.
+
+### 3. Reduced Vendor Lock-In and Portability
+Open interfaces and portable components enable cross-cloud migrations. Templates and Helm charts simplify workload portability.
+
+### 4. Cost Optimization and Resource Efficiency
+Right-sizing and standardization lower waste. 30% of organizations still need container rightsizing, but composable platforms enable efficient resource policies.
+
+### 5. Platform Standardization and Consistency
+Reusable templates and centralized governance ensure consistent security, reliability, and operations across teams.
+
+## Key Pillars of Implementation
+### Declarative Template-Based Assembly
+Define platforms via YAML/Helm templates, not imperative scripts. Terraform, Crossplane, and graph-based backends enable scalable provisioning.
+
+### Component Catalog and Validation
+Curated catalogs of validated Helm charts reduce drift and risk. Mirantis k0rdent provides a large catalog of templates and validated charts.
+
+### Multi-Cloud and Infrastructure Abstraction
+Run on any cloud or managed Kubernetes (EKS, AKS, GKE) via declarative templates and control planes.
+
+### Unified Control and Observability
+Single control plane for lifecycle management and observability. Prometheus and related tools are integrated as standard components.
+
+## 5 Steps to Achieve Composable Architecture
+### Step 1: Define Platform Requirements
+Identify workloads, clouds, and capabilities. Align with stakeholders to establish clear success criteria.
+
+### Step 2: Assess and Select Components
+Evaluate components for security, maintainability, and compatibility. Use curated catalogs to narrow choices.
+
+### Step 3: Design Declarative Templates
+Create modular templates (Helm, Kustomize) with versioning. Define component dependencies and configuration injection.
+
+### Step 4: Build and Deploy
+Use orchestration layers with GitOps (Argo CD, Flux) for consistent, audit-able deployments. Validate in staging before production.
+
+### Step 5: Establish Continuous Management
+Integrate observability for metrics/logs/traces. Regularly update catalogs and templates based on feedback.
+
+## Challenges and Solutions
+### Component Integration and Compatibility
+Mitigate version/API mismatches with curated catalogs, CI validation, and pre-validated stacks (e.g., Mirantis-validated Helm charts).
+
+### Template Design and Maintenance
+Keep templates modular and documented. Prioritize backend orchestration design to centralize composable logic.
+
+### Skill Gaps and Learning Curve
+Address through training, documentation, and gradual rollout. Platform engineering reduces cognitive load for developers.
+
+### Catalog Management and Validation
+Automate catalog updates with Nova-style checks. Vendors with validated catalogs reduce risk of outdated Helm charts/images.
+
+## Mirantis Solution: k0rdent
+### Open, Secure, Composable Kubernetes Platform
+Mirantis k0rdent delivers declarative YAML-based templating, a large catalog of templates, and validated Helm charts. It enables portable, flexible platforms across clouds, managed Kubernetes, and bare metal.
+
+### Key Advantages
+- Large composable catalog: Templates and validated Helm charts at catalog.k0rdent.io
+- Declarative, portable platforms: YAML-based templates and Cluster API enable cross-cloud consistency
+- Single control and visibility: Unified management of clusters and environments
+- Open and validated stack: Mirantis-validated components ensure security and consistency
+
+## Frequently Asked Questions
+### How Does Composable Architecture Differ from Monolithic?
+Composable breaks platforms into modular, loosely coupled components defined declaratively. Changes to one component don't require rebuilding the whole system.
+
+### What Infrastructure Is Required?
+Runs on public/private clouds, hybrid environments, or managed Kubernetes (EKS, AKS, GKE). Requires orchestration layers to consume declarative templates.
+
+### Can Smaller Organizations Adopt It?
+Yes. Start with minimal components and scale incrementally. Managed Kubernetes and open-source tools make it feasible without large upfront investment.
+
+### How Does Mirantis Help?
+Mirantis provides k0rdent for composable Kubernetes platform engineering, offering a single control plane, portable platforms, and zero vendor lock-in.
+</Output>

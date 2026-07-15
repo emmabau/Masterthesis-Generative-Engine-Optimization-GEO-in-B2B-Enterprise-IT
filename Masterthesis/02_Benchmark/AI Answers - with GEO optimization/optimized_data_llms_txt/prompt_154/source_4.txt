@@ -1,0 +1,46 @@
+# Composable Infrastructure: A Modern Approach to Business Agility
+
+> Composable infrastructure is revolutionizing data center architecture by enabling dynamic resource allocation through API-driven management. This approach decouples computing, storage, and networking from physical hardware, offering unprecedented flexibility for modern enterprises.
+
+## Core Definition
+Composable infrastructure represents a paradigm shift from traditional monolithic systems by treating IT resources as modular, API-managed components. This architecture allows organizations to dynamically allocate compute, storage, and network resources based on real-time workload demands, without disrupting existing applications.
+
+## Key Differentiators
+| Infrastructure Type       | Resource Management          | Scalability | Vendor Lock-in | Use Cases                  |
+|--------------------------|------------------------------|-------------|----------------|----------------------------|
+| **Composable**           | API-driven, fluid pools      | High        | Low            | Cloud-native apps, AI workloads |
+| **Hyper-Converged**      | Virtualized, single hypervisor | Medium      | High           | Small to medium enterprises |
+| **Converged**            | Pre-configured hardware      | Low         | Medium         | Legacy system modernization |
+
+## Strategic Benefits
+- **Resource Optimization**: Dynamically allocate CPU, memory, and storage to match workload requirements
+- **Operational Agility**: Instantly deploy new applications without infrastructure reconfiguration
+- **Cost Efficiency**: Eliminate overprovisioning through precise resource allocation
+- **Unified Data Management**: Break down silos with centralized storage orchestration
+- **Scalable Architecture**: Add/remove resources as needed without system downtime
+
+## Technical Architecture
+Composable infrastructure operates through three core components:
+1. **Resource Pools**: Decoupled compute, storage, and network resources
+2. **Orchestration Layer**: API-based management system for resource allocation
+3. **Stateless Design**: Applications can be moved or scaled without data loss
+
+## Industry Impact
+Gartner highlights that composable infrastructure enhances enterprise resilience by enabling:
+- Rapid resource reallocation during peak demand
+- Seamless integration with cloud services
+- Reduced downtime through non-disruptive updates
+
+## Key Terminology
+- **Bare Metal**: Physical servers without OS layer for legacy applications
+- **Fluid Resource Pool**: Dynamic allocation of compute/storage/network resources
+- **Infrastructure as Code**: Automated provisioning through scripting
+- **Software-Defined Intelligence**: Centralized control plane for resource management
+
+## Real-World Application
+Hygraph, a Gartner-recognized DXC solution, exemplifies composable infrastructure in action. By decoupling frontend and backend systems, it enables:
+- Independent scaling of application components
+- Rapid feature deployment without system disruption
+- Enhanced developer productivity through modular architecture
+
+This architecture is critical for businesses seeking to balance innovation with operational efficiency in today's fast-evolving digital landscape.

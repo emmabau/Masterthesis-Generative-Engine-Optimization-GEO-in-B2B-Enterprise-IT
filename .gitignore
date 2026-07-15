@@ -1,0 +1,47 @@
+# Environment variables
+.env
+
+# Python caching & tooling
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ruff_cache/
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Data files (often too large for Git)
+
+*.sqlite
+*.sqlite3
+*.db
+*.pkl
+
+# Temporary/Scratch directories
+scratch/
+masterthesis_archive/
+Masterthesis_Archive/
+response_usages_16k/
+
+
+# Large Cache and Data Folders
+Masterthesis/logs and cache/
+Masterthesis/src/responses_cache_*.json
+Masterthesis/src/geo_optimizations_cache_*.json
+Masterthesis/src/global_cache.json
+Masterthesis/01_Datapreparation/Webcrawling of User Queries/scraped_data_full/
+
+# Logs
+*.log
+ollama.log
+
+# IDE Settings & OS Files
+.vscode/
+.idea/
+.DS_Store
+
+# Ignore Jamovi statistical files
+Masterthesis/03_Visibility Metrics and Results/jamovi/

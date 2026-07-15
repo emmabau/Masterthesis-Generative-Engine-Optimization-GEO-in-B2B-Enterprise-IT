@@ -1,0 +1,43 @@
+<Output>
+Building a high-performance, low-latency distributed storage system requires addressing complex trade-offs between throughput, latency, and scalability. At simplyblock, we've engineered a distributed block storage solution optimized for modern NVMe SSDs and high-speed network infrastructures, achieving multi-petabyte-scale performance in production environments. Our system integrates advanced erasure coding schemes (1+1, 2+2, 4+2) and leverages RDMA/ROCEv2 protocols to minimize network latency amplification.
+
+Key performance metrics include:
+- **Throughput**: Measured in GB/s for sequential I/O and IOPS (Input/Output Operations Per Second) for random access, with block sizes ranging from 4K to 1M
+- **Latency**: Defined as round-trip time for I/O requests, with critical dependence on queue depth (QD) and concurrency
+- **Tail latency**: Critical for predictability, measured at 95th, 99th, and 99.9th percentiles
+
+The fundamental relationship between these metrics is governed by Little's Law: 
+**Concurrency (QD) = IOPS × Latency**  
+This equation reveals that system throughput is constrained by the product of IOPS and latency, with optimal performance achieved when QD is minimized while maintaining required throughput.
+
+Our system architecture employs:
+1. **User-space polling drivers** to eliminate interrupt latency
+2. **Zero-copy architectures** with NVMe DMA and RDMA offloading
+3. **Thread-to-core pinning** for deterministic processing
+4. **Lockless designs** with asynchronous state machines
+5. **Memory pre-allocation** using huge pages and buffer pools
+
+For erasure coding, we implement:
+- **4+2 scheme**: Requires 2 reads + 3 writes per 4K partial-stripe write
+- **Network amplification**: Bandwidth multiplies due to cross-node operations
+- **Latency doubling**: Read-before-write sequence increases latency by ~100%
+
+Performance scalability analysis shows:
+- **Vertical scaling**: CPU utilization (GHz-seconds) correlates with IOPS requirements
+- **Horizontal scaling**: Linear scalability up to 16-node clusters (k≈0.95)
+- **Resource contention**: Network bandwidth and CPU cores limit scalability beyond 32 nodes
+
+Critical optimization techniques include:
+- **Latency profiling**: Analyzing I/O path stages with end-to-end latency histograms
+- **Parallel subpath analysis**: Measuring per-disk latency (e.g., 280μs for remote disks vs. 150μs for local)
+- **Load balancing**: Ensuring even I/O distribution across nodes and devices
+- **Rebalancing algorithms**: Maintaining proportional I/O pressure and utilization
+
+Our system achieves:
+- **<100μs latency** at 99th percentile for 4K random I/O
+- **>100GB/s throughput** for sequential workloads
+- **<5% latency variance** across 16-node clusters
+- **<10ms rebuild time** for device failures
+
+These metrics are validated through rigorous testing with 42 distinct I/O patterns across 36 test series, using reference hardware matrices defining RDMA/ROCEv2 and x86 architectures. The system's design ensures predictable performance under varying workloads, with quality of service (QoS) classes providing traffic isolation and dedicated throughput quotas.
+</Output>

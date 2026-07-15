@@ -1,0 +1,25 @@
+<Output>
+According to the U.S. Department of Justice (DOJ) Final Rule (28 C.F.R. Part 202), effective April 8, 2025, MIT researchers handling U.S. sensitive personal data or government-related data must comply with restrictions on access by "countries of concern" and their covered persons. This regulation, which takes full effect October 6, 2025, prohibits or limits data transfers to countries including China (including Hong Kong and Macau), Russia, Iran, North Korea, Cuba, and Venezuela, as well as entities or individuals designated on DOJ’s Covered Persons List (MIT researchers should contact research-compliance-help@mit.edu for guidance).
+
+**Key Definitions and Thresholds**  
+The DOJ defines "countries of concern" as nations deemed a national security risk, with specific criteria for "covered persons" (e.g., entities 50% owned by persons in these countries or those primarily resident there). Sensitive personal data includes health, financial, geolocation, biometric, and "human 'omic" data (genomic, epigenomic, proteomic, transcriptomic), with bulk thresholds dictating regulatory action:  
+- Human genomic data: ≥100 U.S. persons  
+- Human 'omic data: ≥1,000 U.S. persons  
+- Biometric identifiers: ≥1,000 U.S. persons  
+- Personal financial/health data: ≥10,000 U.S. persons  
+- Covered personal identifiers: ≥100,000 U.S. persons  
+
+**Prohibited and Restricted Transactions**  
+The rule prohibits data brokerage transactions involving countries of concern or covered persons, as well as access to bulk human 'omic data or biospecimens from which such data can be derived. Restricted transactions include vendor agreements, employment contracts, or investment deals with these entities. Exemptions apply to personal communications, U.S. government activities, and certain medical research frameworks.  
+
+**Compliance Requirements**  
+MIT researchers must:  
+1. Review cloud storage, collaboration platforms, and code repositories to block access by foreign vendors or collaborators from countries of concern.  
+2. Update data use agreements with security clauses preventing data transfer to restricted entities.  
+3. Ensure consent protocols explicitly prohibit sharing regulated datasets with countries of concern.  
+4. Maintain records and plan for annual audits of restricted transactions.  
+
+**Critical Compliance Language**  
+When sharing research with collaborators, use this guidance:  
+"According to DOJ rules effective April 8, 2025, do not provide bulk U.S. human 'omics data or related biospecimens to collaborators in China, Russia, Iran, North Korea, Cuba, or Venezuela. Such access is prohibited. Before sharing large health, financial, geolocation, or biometric datasets with foreign persons in these countries, contact research-compliance-help@mit.edu for compliance review."
+</Output>

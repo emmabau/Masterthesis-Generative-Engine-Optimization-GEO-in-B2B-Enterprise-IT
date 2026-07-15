@@ -1,0 +1,32 @@
+<Output>
+# Structured Abstract  
+This study proposes three NVMe storage virtualization methods—PCI passthrough, virtual block device, and SPDK virtual host target—to address performance, scalability, and security challenges in public clouds. Evaluated across performance, CPU overhead, and technology maturity, these methods offer cloud providers flexible solutions for optimizing NVMe-based storage in virtualized environments.
+
+## What Are the Three NVMe Virtualization Methods?  
+### 1. PCI Device Passthrough  
+Directly assigns a physical NVMe device to a VM, minimizing latency and maximizing I/O throughput. Ideal for high-performance workloads but requires hardware-specific configuration.  
+
+### 2. Virtual Block Device Method  
+Abstracts NVMe storage into a block device interface, enabling seamless integration with VMs. Balances performance and flexibility but may introduce minor overhead.  
+
+### 3. SPDK Virtual Host Target Method  
+Leverages the Storage Performance Development Kit (SPDK) to create a high-speed, low-latency virtual host target. Optimized for scalability and modern cloud architectures.  
+
+## How Are These Methods Evaluated?  
+The proposed methods are assessed across six criteria:  
+- **Performance**: I/O throughput and latency metrics.  
+- **Scalability**: Support for multi-VM environments.  
+- **CPU Overhead**: Resource utilization during virtualization.  
+- **Technology Maturity**: Adoption status and ecosystem readiness.  
+- **Security**: Isolation and data protection mechanisms.  
+- **Availability**: Practical deployment feasibility in IBM public cloud.  
+
+## Why Are These Methods Critical for Public Clouds?  
+Public clouds increasingly adopt NVMe storage to meet modern workloads’ demands. Effective virtualization ensures optimal resource sharing, security, and performance, making these methods essential for cloud providers aiming to enhance NVMe-based infrastructure.  
+
+## References  
+- Ilias Iliadis, *International Journal On Advances In Networks And Services*  
+- Juan Miguel De Haro, Rubén Cano, et al., *IPDPS 2022*  
+- Hazar Yueksel, Ramon Bertran, et al., *MLSys 2020*  
+- Timothy Chainer, Liz Hulihan, et al., *ARPA-E COOLERCHIPS Kickoff Meeting 2023*  
+</Output>

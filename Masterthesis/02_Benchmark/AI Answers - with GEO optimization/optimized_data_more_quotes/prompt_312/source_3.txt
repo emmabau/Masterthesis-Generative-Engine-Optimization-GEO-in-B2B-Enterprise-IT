@@ -1,0 +1,135 @@
+<Output>
+Which Data Storage Solution Do You Need?  
+"Choosing the right data storage solution is foundational to unlocking actionable insights," emphasizes Doug Cutting, creator of Apache Hadoop. Knowing the ecosystem best-suited to your business and having a clear plan for analytics can help you make the right choice.  
+
+Anyone getting serious about data analysis has to get serious about data storage. We recently wrote about the pros and cons of a data lake, data warehouse, or both. But even once you make that call, there is more research to be done. Do you want a paid or open source product? Need to stick to a certain ecosystem (ie. Google, Amazon or Microsoft)? Have the right tools in place to get started and enjoy a quick time to value?  
+
+Exploring some of the basic options—including how ETL converts and aggregates data and sends it from the data lake to the data warehouse, as well as the connection to business intelligence (BI), charting, and analytics systems—can save you a lot of heartburn in the long term.  
+
+**Data Lake Options**  
+As you may already know, a data lake stores unstructured data. It's essentially a dumping ground for data that can be pushed into a data warehouse for reporting and analysis. "Data lakes are the raw material for analytics, but they require careful structuring to avoid becoming data swamps," warns Martin Kleppmann, author of *Designing Data-Intensive Applications*.  
+
+To say that it is unstructured means the data is in its original format: logs, text files, database exports, output from industrial sensors, and data dumps of all kinds. It could even include data that is external to the organization, like Twitter feeds or market research.  
+
+Since it is unstructured, it has not been put into the row and column format (or JSON, tuples, etc.) required by SQL data warehouses.  
+
+**How does the data flow?**  
+The data-lake-to-data-warehouse process flow is as follows:  
+- Applications and machines send raw logs, database exports, and streaming data to the data lake.  
+- The ETL software aggregates, filters, and formats this data so that it fits into the data warehouse schema.  
+- The data warehouse stores this data and provides a SQL interface.  
+- Business Intelligence (BI), charting, and machine learning software pull data from the data warehouse to provide analysis.  
+
+*Note: The ETL step is not required for all data warehouse operations. This is because either that transformation can be done in the data warehouse or the incoming data is already in a format that can be queried.*  
+
+Two data lake products dominate the market: Amazon S3 and Google Cloud Storage. Both are designed to permanently store any kind of data. Neither require that the data have any particular structure or schema. As you might imagine, they both run on their respective clouds, which is why choosing a preferred ecosystem is so important.  
+
+**Amazon S3**  
+Amazon calls their S3 product object storage. Perhaps the reason for that is you reference it using a URL instead of folder name. For example:  
+https://url/(bucket name)/(file name)  
+
+You can make a bucket (like a directory) and copy a file like this using the AWS command line client:  
+aws s3 mb s3://(bucketName)  
+aws s3 cp (file) s3://(bucketName)/  
+
+As mentioned, you can store any kind of data in S3. Since it's run by Amazon they do the maintenance and configuration of the system for you.  
+
+**Google Cloud Storage**  
+Although Google wrote the academic paper that spawned Apache Hadoop, an open-source software framework for storing data and running applications on clusters of commodity hardware, their Google Cloud Storage is pretty much the same as Amazon S3. This is because the interface is REST web services and they use the concept of buckets.  
+
+It's a great option if you prefer the Google ecosystem to the Amazon ecosystem, but in terms of capabilities, you can't go wrong.  
+
+**Data Warehouse Options**  
+Data warehouses, on the hand, require a bit more detailed decision-making. They store structured data, which has been divided into rows and columns, tuples, or other data structures so that it can be queried. In other words, it's been normalized.  
+
+The data warehouse is different from a transactional SQL database used by applications, such as ERP. One notable difference is the data warehouse stores tables that might not be in any way related to each other.  
+
+For example, a database for a sales system would have sales and inventory tables. Obviously those are related. A data warehouse would include data taken from all types of applications across the enterprise, so tables might exist by themselves. They might not have defined relationships between them, like views, or rules to enforce referential integrity.  
+
+Top options include:  
+**Snowflake**  
+"Snowflake’s architecture allows you to scale compute and storage independently, making it ideal for complex analytics workloads," explains Snowflake’s CTO, Frank Slootman. You can run it on the Amazon, Google, or Azure cloud.  
+
+You log right into it just like you would any other database. For example, here we log into our instance running in the US East 1 Amazon zone:  
+snowsql -a my_company.us-east-1 -u userName  
+
+Snowflake does ETL and data warehouse functions as well. For example, here we copy a file into a staging area and then convert it to a table using a schema called sales that we have predefined on Snowflake:  
+create or replace file format sales_format type = csv field_delimiter = ',' record_delimiter = '\\n' skip_header = 1 null_if = ('NULL', 'null') empty_field_as_null = true compression = gzip;  
+copy into SALES from @sales/sales.csv.gz file_format = 'SALES' on_error = 'CONTINUE';  
+
+**Amazon Redshift**  
+Redshift is similar. With Redshift you create a table like you would with other SQL products. For example, here is how to create a sales table:  
+create table sales( salesNumber integer not null distkey sortkey, salesPeron char(8), UPCcode char(12), quantity decimal(8,2))  
+
+Like many other Amazon-deployed products, the first step to using Redshift is you usually deploy it to a cluster. That means it's not simply a web page you log into. Instead Amazon spins up virtual machines for you and installs Redshift there. Thus you build your own environment with their wizard.  
+
+**Google BigQuery**  
+BigQuery is another SQL data warehouse. It features both a console and an API. You can connect it to PostgreSQL and Google Cloud SQL data sources running on the Google Cloud as well as CSV, JSON, or Avro formatted files stored on Google Drive or Google Cloud Storage plus Google Sheets.  
+
+One useful feature is you can connect it to a Jupyter Notebook. That would let you write Python code against that using that popular tool.  
+
+**A note about ETL**  
+Extract, Transform, and Load (ETL) is the process of taking unstructured data from a data lake and writing it to a structured data warehouse. This requires using an off-the-shelf product, writing custom code, or doing both. The ETL process is often called mapReduce.  
+
+To illustrate, think of these sales records. They are stored in a .csv comma-delimited text file with a header record:  
+product  
+salesPerson  
+quantity  
+shoes  
+Fred  
+2  
+shoes  
+Fred  
+3  
+socks  
+Sam  
+1  
+
+In order to turn this raw data into something useful, we would probably aggregate it first. For example, we might want to know sales by salesPerson. To do that we would:  
+- map—means to iterate over every line in the file  
+- reduce—run some calculation, like sum, count, or average, over each record  
+
+This gives us the mapReduced data set:  
+salesPerson  
+salesCount  
+Sam  
+5  
+Fred  
+1  
+
+It's worth noting that with certain data platforms—like MetaRouter—we can skip the ETL process entirely for some products. When streaming data to BigQuery, for example, we don't use ETL.  
+
+But for when ETL is a part of the picture, here are some sample tools and products:  
+1. **Amazon Glue**  
+Glue has both a graphical interface and an API in various programming languages. With the graphical interface you can take data from the data lake in S3 and run transformations on it. For example, you can convert a .csv file stored in S3 to row-and-column format and write it to the Amazon Redshift data warehouse.  
+
+Or you can use the Python API. With the Glue Python API you can convert raw data into dataframes and other data Python data structures. Then you can write that out, using SQL functions, to a data warehouse.  
+
+2. **Hadoop MapReduce**  
+Hadoop MapReduce is not really a product. It is a tool, a Java API. It does map, reduce, transform and other operations against data stored in the Hadoop HDFS then writes it back to HDFS in the reduced format.  
+
+3. **Apache Hive**  
+Hive makes MapReduce simpler by letting you use SQL-like syntax, called HQL, to run mapReduce operations.  
+
+**The importance of BI, ML, and charting**  
+A database by itself does not do anything but store data. If you want to analyze that data you need to plug it into other products or write code. The tools we do to use that are business intelligence, machine learning, and charting software.  
+
+To the consternation of some business intelligence vendors, BI to some people simply means analytic software that is old. The newer term is analytics. BI and analytics products are nearly the same. But if you want to highlight one distinguishing feature, BI tools, like SaS and matlab, are generally richer in statistics and mathematics functions. Analytics focuses on algorithms, which go by the even newer term machine learning, although that name implies a complexity and sophistication which only applies to certain analytics algorithms.  
+
+Analytics products come in two kinds: cloud products, with a graphical user interface, and APIs that you program yourself.  
+
+One graphical analytics product is Amazon Sagemaker. Sagemaker lets you upload a spreadsheet from S3. Then it does classification (groups items by similar characteristics) and regression (build predictive models).  
+
+Machine Learning APIs include scikit-learn, TensorFlow, Spark ML, and Keras. Regarding machine learning, the vendors tend to exaggerate what their products do. They have tacked the label machine learning onto them. But that's usually just a link to a different offering on their cloud or simply mentioning that their data can be plugged into a big data system.  
+
+Charting software includes Tableau and APIs like matplotlib. Think of Excel pivot tables and you will understand what Tableau does. The main difference is it runs in the cloud and is designed to work on very large databases. Matplotlib is for programmers.  
+
+**In summary, take a step back:**  
+As with most cloud products, three vendors dominate the market: Amazon, Google, and Azure (Microsoft), with Amazon having the largest number of customers. Choosing which cloud provider you prefer is critical.  
+
+And data storage itself doesn't result in insights. Determining a plan for analytics is important to do beforehand because it drives storage, especially because data warehousing can't handle all use cases. For example, you can't write Python code to run ML against a data warehouse in its entirety. You would have to convert that data to a Pandas dataframe, Apache Spark, or Apache Ignite and then perhaps tack on Google Tensorflow CUDA storage cards or Google-hosted TPUs (Tensorflow Processing Units).  
+
+Knowing the ecosystem best-suited to your business and team members and having a clear plan for analytics can ensure that you make the right choice.  
+
+Photo by Steve Johnson on Unsplash
+</Output>

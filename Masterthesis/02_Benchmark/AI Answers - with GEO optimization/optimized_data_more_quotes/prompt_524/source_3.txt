@@ -1,0 +1,99 @@
+<Output>
+A service-level agreement (SLA) defines the level of service expected from a vendor, laying out metrics by which service is measured, as well as remedies should service levels not be achieved. It is a critical component of any technology vendor contract. As Gartner notes, "SLAs are the cornerstone of effective vendor management, ensuring accountability and alignment between parties."  
+
+SLAs are a critical component of any outsourcing and technology vendor contract. Beyond listing expectations of service type and quality, an SLA provides remedies when requirements aren’t met. According to Forrester, "A well-structured SLA transforms vague service promises into measurable outcomes, reducing ambiguity and fostering trust."  
+
+Following are answers to common questions about SLAs and tips on how your organization can craft effective SLAs with your vendors and partners.  
+
+**What is an SLA?**  
+A service-level agreement (SLA) defines the level of service expected by a customer from a supplier, laying out metrics by which that service is measured, and the remedies or penalties, if any, should service levels not be achieved. Usually, SLAs are between companies and external suppliers, but they may also be between two departments within a company.  
+
+**Why do I need an SLA?**  
+SLAs are an integral part of an IT vendor contract. An SLA pulls together information on all the contracted services and their agreed-on expected reliability into a single document. They clearly state metrics, responsibilities, and expectations so that, in the event of issues with the service, neither party can plead ignorance. It ensures both sides have the same understanding of requirements.  
+
+Any significant contract without an associated SLA (reviewed by legal counsel) is open to deliberate or inadvertent misinterpretation. The SLA protects both parties in the agreement.  
+
+Ideally, SLAs should be aligned to the technology or business objectives of the engagement. Misalignment can have a negative impact on deal pricing, quality of service delivery, and customer experience.  
+
+**Who provides the SLA?**  
+Most service providers have standard SLAs — sometimes several, reflecting various levels of service at different prices — that can be a good starting point for negotiation. These should be reviewed and modified by the customer and legal counsel, however, since they are usually slanted in favor of the supplier.  
+
+When sending out an RFP, the customer should include expected service levels as part of the request; this will affect supplier offerings and pricing and may even influence the supplier’s decision to respond. For example, if you demand 99.999% availability for a system, and the supplier is unable to accommodate this requirement with your specified design, it may propose a different, more robust solution.  
+
+**What’s in an SLA?**  
+The SLA should include not only a description of the services to be provided and their expected service levels, but also metrics by which the services are measured, the duties and responsibilities of each party, the remedies or penalties for breach, and a protocol for adding and removing metrics.  
+
+Metrics should be designed so bad behavior by either party is not rewarded. For example, if a service level is breached because the client did not provide information in a timely manner, the supplier should not be penalized.  
+
+**What are the benefits of an SLA?**  
+SLAs offer numerous benefits, including:  
+- **Accountability**: An SLA establishes responsibilities and obligations for both parties in the relationship, thereby ensuring accountability.  
+- **Clarity of expectations**: By spelling out agreed-on services, performance levels, and metrics for validating service levels, SLAs ensure customers can expect a specified level of service, or have remediation possibilities should the service fail to meet obligations, and provide clarity to vendors as to what is expected of them.  
+- **Conflict resolution**: By providing a framework for remediating issues, SLAs provide predefined processes for addressing disruptions in ways that can help circumvent conflict between parties as issues arise.  
+- **Customer experience**: SLA benchmarks help ensure customer satisfaction.  
+- **Legal protection**: The contractual nature of SLAs provides legal protection for both parties by outlining conditions, processes for mitigating disputes, and clear responsibilities and expectations for both parties.  
+
+**What are the different types of SLAs?**  
+There are several types of SLAs that clients and vendors can choose from to base their relationship, including:  
+- **Customer-based SLA**, in which the SLA is tailored to meet the needs of a specific customer, including metrics relevant to the customer’s requirements.  
+- **Service-based SLA**, which focuses on a specific service provided to a range of customers, defining levels of service for that offering.  
+- **Operational SLA**, which defines performance related to daily service operations such as uptime and maintenance scheduling.  
+- **Multi-level SLA**, which includes a variety of layers to address a customer’s requirements, potentially blending customer-based aspects and service-based aspects.  
+
+**What are key components of an SLA?**  
+The SLA should include components in two areas: services and management.  
+
+Service elements include specifics of services provided (and what’s excluded, if there’s room for doubt), conditions of service availability, standards such as time window for each level of service (prime time and non-prime time may have different service levels, for example), responsibilities of each party, escalation procedures, and cost/service tradeoffs.  
+
+Management elements should include definitions of measurement standards and methods, reporting processes, contents and frequency, a dispute resolution process, an indemnification clause protecting the customer from third-party litigation resulting from service level breaches (this should already be covered in the contract, however), and a mechanism for updating the agreement as required.  
+
+This last item is critical; service requirements and vendor capabilities change, so there must be a way to make sure the SLA is kept up-to-date.  
+
+**What is an indemnification clause?**  
+An indemnification clause is an important provision in which the service provider agrees to indemnify the customer company for any breaches of its warranties. Indemnification means that the provider will have to pay the customer for any third-party litigation costs resulting from its breach of the warranties.  
+
+**Is an SLA transferable?**  
+Should the service provider be acquired by or merge with another company, the customer may expect that its SLA will continue to be in force, but this may not be the fact. The agreement may have to be renegotiated.  
+
+**How can I verify service levels?**  
+Most service providers make statistics available, often via an online portal. There, customers can check whether SLAs are being met, and whether they’re entitled to service credits or other penalties as laid out in the SLA.  
+
+**What kind of metrics should be monitored?**  
+The types of SLA metrics required will depend on the services being provided. Many items can be monitored as part of an SLA, but the scheme should be kept as simple as possible to avoid confusion and excessive cost on either side.  
+
+Depending on the service, the types of metric to monitor may include:  
+- **Service availability**: the amount of time the service is available for use.  
+- **Defect rates**: Counts or percentages of errors in major deliverables.  
+- **Technical quality**: in outsourced application development, measurement of technical quality by commercial analysis tools.  
+- **Security**: Measuring controllable security measures such as anti-virus updates and patching is key in proving all reasonable preventive measures were taken.  
+- **Business results**: Incorporating business process metrics into SLAs is increasingly common.  
+
+**What should I consider when selecting metrics for my SLA?**  
+The goal should be an equitable incorporation of best practices and requirements that will maintain service performance and avoid additional costs.  
+
+**Common SLA mistakes do customers make?**  
+Being diligent about service-level agreements (SLAs) has always been important for IT organizations working with IT service and cloud providers. But understanding how to negotiate, structure, manage, measure, and report on these metrics is more crucial than ever.  
+
+**Is there room for negotiation on SLAs with cloud service providers?**  
+Cloud vendors are more reticent about modifying their standard SLAs because their margins are predicated on providing commodity services to many buyers. However, in some cases, customers are able to negotiate terms with their cloud providers.  
+
+**Can I create joint SLAs shared among multiple vendors or service providers?**  
+Customers can create joint metrics for multiple service providers that factor in cross-supplier impacts.  
+
+**If I opt for outcome-based pricing with an IT outsourcer, do I still need SLAs?**  
+Even in outcome-based deals, SLAs serve as important indicators of performance against business outcomes.  
+
+**Can we create SLAs for shadow IT?**  
+IT can harness the power of shadow IT services by applying the same SLA frameworks used for managed services.  
+
+**What happens if a provider doesn’t meet agreed-on service levels?**  
+SLAs include agreed-upon penalties, called service credits, which can be enforced when vendors miss minimum performance standards.  
+
+**What are ‘earn backs’?**  
+Some vendors may ask for the right to "earn back" paid service credits.  
+
+**How often should we revise our SLAs?**  
+As businesses change, so do its service requirements. An SLA should not be viewed as a static document.  
+
+The SLA is a critical part of any supplier agreement, and it will pay off in the long-term if the SLA is properly thought-out and codified at the beginning of a relationship. It protects both parties, and, should disputes arise, will specify remedies and avoid misunderstandings. That can save considerable time and money for both customer and supplier.  
+</Output>

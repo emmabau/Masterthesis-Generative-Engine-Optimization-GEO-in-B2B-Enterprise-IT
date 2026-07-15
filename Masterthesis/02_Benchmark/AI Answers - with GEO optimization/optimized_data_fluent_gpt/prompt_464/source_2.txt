@@ -1,0 +1,23 @@
+<Output>
+Another year of IT budget pressure is emerging due to the relentless growth of data—particularly unstructured data. For large enterprises, storing, backing up, and replicating this data can cost millions annually. Replacing outdated legacy storage systems to meet modern security and processing demands, especially in the AI era, adds to these costs. The Komprise 2024 State of Unstructured Data Management report reveals that 55% of organizations now spend 30% or more of their budgets on data storage.  
+
+Cybersecurity is a major driver of these costs, as unused unstructured data becomes a weak link for ransomware attacks. This forces organizations to maintain redundant data copies, which can be prohibitively expensive for petabyte-scale storage. Gartner forecasts a 23% increase in IT spending on data center systems in 2025, driven largely by AI infrastructure investments and rising costs. IDC predicts worldwide public cloud spending will reach $805 billion in 2024, doubling by 2028, with storage representing a significant portion of this growth.  
+
+While investing in storage infrastructure is critical for business operations, overspending on the same tasks reduces funds for other initiatives like app development, cybersecurity, AI, and employee productivity tools. The goal is to reduce waste and optimize costs.  
+
+Benjamin Henry, Field CTO at Komprise, outlines strategies for balancing cost-cutting with data management:  
+- **Focus on optimization**: Identify and eliminate waste by analyzing storage practices. Most data (80%) is "cold" and unused, yet it consumes expensive storage and backup resources. Offloading this data to cheaper solutions like cloud object storage can save up to 70% in costs.  
+- **Data tiering**: Move infrequently accessed data to cost-effective storage tiers while retaining active data on high-performance systems. File tiering ensures user access remains uninterrupted and reduces ransomware risks.  
+- **Cleanup**: Remove duplicate, orphaned, or obsolete data to free up storage capacity.  
+
+To start, organizations should gain holistic visibility of their data across hybrid cloud environments. Track metrics like data types, storage locations, costs, growth rates, and access patterns. These insights enable data tiering, migration planning, and cross-departmental support for cost-saving initiatives.  
+
+Cloud storage plays a key role in cost reduction through scalability, flexibility, and pay-as-you-go models. However, choosing a storage-agnostic tiering approach avoids rehydration costs—when data must be rehydrated (moved back to primary storage) during vendor transitions, leading to egress fees and additional expenses.  
+
+Cloud providers like AWS, Microsoft, and Google have reduced or eliminated egress fees, but these policies often apply only to intra-region or ecosystem transfers. Cross-cloud or cross-region moves still incur costs. IT leaders should review pricing models, prioritize same-cloud/region workflows, and use deduplication or CDNs to minimize egress.  
+
+Data retention policies help control costs by systematically removing unnecessary data, such as old logs or backups, while complying with regulations. Data lifecycle management (DLM) automates moving data to cheaper tiers as it ages, reducing reliance on expensive primary storage.  
+
+To stay agile, organizations must avoid vendor lock-in by adopting storage-agnostic solutions and monitoring emerging technologies like QLC-Flash and Storage-as-a-Service (STaaS). This ensures flexibility to adapt to new storage innovations without costly migrations.  
+
+By Randy Ferguson

@@ -1,0 +1,29 @@
+**Demystifying Composability on Platforms: Extending Platforms to Business Needs**  
+
+Composable platforms represent a paradigm shift in cloud-native computing, enabling organizations to tailor their technical capabilities to specific business goals. As outlined in the CNCF Platforms White Paper, *"A platform for cloud-native computing is an integrated collection of capabilities defined and presented according to the needs of the platform’s users"* (CNCF, 2023). This definition underscores the core principle of composability: flexibility to combine modular components into a cohesive system that aligns with stakeholder requirements.  
+
+### Key Characteristics of Composable Platforms  
+1. **Flexibility and Adaptability**  
+   Composable platforms allow teams to select and integrate only the components that deliver business value. For instance, one development team might leverage full platform capabilities for building, testing, and storing artifacts, while another may opt for limited functions like build and scan, using external repositories for storage. This "pick-and-choose" approach reduces unnecessary complexity and accelerates time-to-value.  
+
+2. **Interoperability Without Tight Coupling**  
+   While components like build/test and artifact storage can be used independently, composable platforms enhance value when integrated. For example, combining these capabilities enables automated image signing and SBOM generation, as noted in the CNCF document.  
+
+3. **Persona-Centric Design**  
+   The success of a composable platform hinges on understanding the needs of its users, or "personas." These personas—such as Builders, Enablers, Consumers, and End-users—each have distinct requirements and perspectives on platform functionality.  
+
+### Persona-Driven Platform Evolution  
+- **Builders** focus on infrastructure extensibility, ensuring the platform runs seamlessly across on-premise and cloud environments.  
+- **Enablers** prioritize scalability and security, enabling teams to customize configurations and extend platform capabilities to developers and business customers.  
+- **Consumers (Developers)** benefit from tools like observability and database integration, which reduce lead times and boost productivity.  
+- **End-users** indirectly reap rewards through improved reliability, faster time-to-market, and enhanced customer trust.  
+
+### Visualizing Composability  
+The CNCF document includes diagrams (Figures 1–4) illustrating how platforms evolve with different personas. For example, Figure 2 shows infrastructure setup and platform expansion, while Figure 4 highlights the integration of CI/CD pipelines and third-party tools. These visual aids underscore the dynamic, modular nature of composable platforms.  
+
+### Conclusion  
+Composability empowers organizations to align technical capabilities with business objectives, fostering innovation and efficiency. By prioritizing persona-specific needs and leveraging modular components, composable platforms enable stakeholders to achieve competitive advantage. For deeper insights, explore the personas framework here: [CNCF Personas Blog](https://tag-app-delivery.cncf.io/blog/paap-personas/).  
+
+**References**  
+- CNCF Platforms White Paper (2023).  
+- CNCF Blog: [PAAP Personas](https://tag-app-delivery.cncf.io/blog/paap-personas/)

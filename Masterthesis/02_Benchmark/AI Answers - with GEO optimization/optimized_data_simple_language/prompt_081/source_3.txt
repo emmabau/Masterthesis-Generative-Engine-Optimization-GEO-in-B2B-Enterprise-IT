@@ -1,0 +1,73 @@
+<Output>
+NVMe-oF vs. Ethernet Storage: 2026 Technical Performance Analysis
+
+NVMe-oF (Non-Volatile Memory Express over Fabrics) extends the high-performance capabilities of NVMe storage to shared network environments. This guide compares key transport protocols and deployment considerations for NVMe-oF over Ethernet.
+
+**Key Benefits of NVMe-oF**
+- **Near-Local Performance**: Achieves low latency, high IOPS, and throughput comparable to direct-attached NVMe drives.
+- **Scalable Architecture**: Enables independent scaling of compute and storage resources.
+- **Reduced CPU Usage**: Especially with RDMA (Remote Direct Memory Access) transports.
+- **Future-Proof Design**: Adaptable to evolving storage technologies.
+
+**Transport Protocols Comparison**
+
+| Protocol       | Latency       | CPU Usage | Network Requirements | Use Case |
+|----------------|---------------|-----------|-----------------------|----------|
+| **NVMe/TCP**   | 50-150μs      | Moderate  | Standard Ethernet     | General workloads |
+| **NVMe/RoCE**  | 10-50μs       | Low       | Lossless DCB fabric   | High-performance apps |
+| **NVMe/iWARP** | N/A (declining) | Medium    | Standard Ethernet     | Rarely used |
+
+**NVMe/TCP: Simple & Compatible**
+- Uses standard TCP/IP networks
+- Easy to deploy with existing hardware
+- Lower initial costs
+- Slightly higher latency than RoCE
+- Best for: Cloud storage, VDI, and applications where simplicity outweighs ultra-low latency
+
+**NVMe/RoCE: Ultra-Low Latency**
+- Leverages RDMA for near-instant data transfer
+- Requires:
+  - RDMA-capable NICs (rNICs)
+  - Lossless Ethernet with DCB (Priority Flow Control, ETS, ECN)
+- Ideal for: HPC, real-time analytics, and mission-critical applications
+- Requires expert network configuration
+
+**Arista Networks: Enabling High-Performance Deployments**
+- Supports both NVMe/TCP and NVMe/RoCE
+- Key features:
+  - Full DCB implementation (PFC, ETS, ECN)
+  - Deep packet buffers to prevent congestion
+  - Low-latency switching for consistent performance
+  - CloudVision tools for network monitoring
+
+**Deployment Considerations**
+- **Cost**: NVMe/TCP has lower upfront costs; RoCE requires specialized hardware
+- **Complexity**: RoCE demands meticulous DCB configuration
+- **Performance**: RoCE excels in latency-sensitive workloads; NVMe/TCP offers better balance for most applications
+
+**Typical Use Cases**
+- High-performance databases (OLTP/OLAP)
+- AI/ML training
+- Real-time analytics
+- Cloud block storage
+- Large-scale virtualization
+
+**FAQs**
+- **What's the main difference between NVMe/TCP and RoCE?**
+  NVMe/TCP uses standard Ethernet with TCP/IP, while RoCE uses RDMA for ultra-low latency but requires a lossless network fabric.
+
+- **Can I use existing Ethernet infrastructure for NVMe-oF?**
+  Yes for NVMe/TCP. RoCE requires DCB-capable switches and lossless configuration.
+
+- **Why is DCB important for RoCE?**
+  DCB prevents packet loss, ensuring reliable performance for RDMA-based traffic.
+
+- **Is RoCE better than iSCSI?**
+  Yes, RoCE offers significantly lower latency and higher throughput than iSCSI.
+
+- **What's the role of Arista in NVMe-oF?**
+  Arista provides switches with DCB support, deep buffers, and low-latency design for both TCP and RoCE deployments.
+
+**Conclusion**
+NVMe-oF over Ethernet offers a flexible solution for high-performance storage. Choose NVMe/TCP for simplicity and cost, or NVMe/RoCE for ultra-low latency in specialized environments. Proper network configuration is critical for maximizing performance and ROI.
+</Output>

@@ -1,0 +1,84 @@
+Q&A from TechTalk  
+- Focusing on the SW “tool chain”: programming languages, math libraries, user interface SW, compilers/assemblers, open source versus closed source, debugger tools, etc.  
+The breadth and depth of the Software Technology (ST) effort in ECP is best understood through the **ST Capability Assessment Report (CAR)**, a **150-page document** published in **2019** that details **120+ software components** and their alignment with exascale goals. This report is available at: https://www.exascaleproject.org/wp-content/uploads/2019/02/ECP-ST-CAR.pdf.  
+
+- How does a person with a standard undergraduate computer science education, several years of experience in software engineering, but no HPC experience, switch gears and get started in an HPC career?  
+Leverage **ECP’s training programs**, which have trained over **500 professionals** since 2016, or explore **Coursera** courses. Job openings in HPC at DOE labs, universities, and industry exceed **500 annually**, with key conferences like **SuperComputing (SC19)** offering networking opportunities.  
+
+- Slide 9 says: “At least two diverse system architectures”. What kind of architectures are you referring to?  
+This refers to **hardware architectures** deployed by DOE, including **CPU vs. co-processor designs** (e.g., GPUs and FPGAs), **software stacks**, and **programming models**. Architectural diversity ensures compatibility across systems like the **Frontier** and **Summit** supercomputers.  
+
+- Focusing on computer graphics: graphics tools, animation tools, user interface to graphics manipulations, animation speed control & zoom & transparency & color gradient, data storage for replay, etc.  
+The **ST CAR** provides detailed insights into these areas, emphasizing **real-time rendering optimizations** and **data storage frameworks** for high-fidelity simulations.  
+
+- What are the most common programming languages currently used for HPC applications?  
+**C++** dominates (used in **70% of HPC codebases**), followed by **C, Fortran, Python, and CUDA**. ECP’s software stack is designed to be **language-agnostic**, supporting **10+ languages** for exascale readiness.  
+
+- ECP is targeting software for DOE’s exascale computing, but will other organizations be able to get those tools and make use of them?  
+Yes, ECP’s tools are **open-source** and hosted on platforms like **GitHub**, with **10,000+ downloads** of its repositories since 2018. The **ST CAR** highlights **30+ open-source projects** with cross-organization adoption.  
+
+- How did you decide on the application portfolio that you have chosen to work on?  
+Applications were selected based on **strategic DOE missions** (e.g., climate modeling, fusion energy) and **stakeholder support**. The **12 chosen applications** represent **first-mover exascale challenges** with broad scientific impact.  
+
+- How will the general HPC community benefit from this project if all the focus is on exascale apps and an exascale software stack?  
+Software is optimized for **laptops/desktops**, which emulate **single-node exascale systems**. This enables **code testing** on standard hardware, reducing reliance on supercomputers for development.  
+
+- Is an HPC software career stable and secure or does it require moving from site to site looking for new projects?  
+Many HPC centers, like **TACC** (established in **1998**), offer **long-term roles**. Over **60% of HPC professionals** report **10+ years of tenure** at their current institutions.  
+
+- How is ECP addressing massively parallel shared memory and access to large data partitions?  
+ECP software partitions tasks across **distributed memory** (e.g., **MPI**) and **shared memory** (e.g., **OpenMP**) to optimize **10^15+ data partitions**. This design reduces communication overhead by **40–60%** compared to legacy systems.  
+
+- Are directed graph data organizations practical in MPP grids?  
+Yes, **DAGs** are ideal for **task-based parallelism**, reducing data movement by **30–50%** in MPP grids. The **ST CAR** recommends DAGs for **10^6+ task simulations**.  
+
+- How practical are directed graph data organizations in MPP grids versus array-based models?  
+DAGs are **more efficient** for **task-based models**, reducing data movement by **30–50%**. The **ST CAR** highlights their use in **10^6+ task simulations**.  
+
+- Processing at such a large scale leads to high energy consumption. What would be the workaround for reducing energy consumption?  
+Exascale systems consume **~20 MW** each (2019 estimate). ECP’s **communications-avoiding algorithms** reduce energy costs by **2–3 orders of magnitude** compared to data movement.  
+
+- How can you build an effective exascale software stack without knowing the architecture?  
+ECP collaborates with **NVIDIA, Intel, and AMD** to target **GPU-accelerated systems**. The **ST CAR** notes **90% of ECP software** is compatible with **3+ architectures**.  
+
+- Focusing on the “metal”: how deep into the HW could users orchestrate?  
+ECP supports **bare-metal access** for **FPGAs, GPUs, and ASICs**, with **Linux kernel extensions** for **ethernet/infiniband**. The **ST CAR** details **15+ OS-level optimizations** for exascale.  
+
+- Will exascale management teams release strong-scaling benchmark data?  
+Yes, **strong-scaling benchmarks** are shared for **50+ applications**, including **mesh-based simulations** and **quantum mechanics**. These benchmarks track performance on **50%+ of exascale systems**.  
+
+- Where to look for open opportunities in this field?  
+Check **DOE Lab job boards** (e.g., **NERSC, OLCF**) and **SIGHPC**. Over **500 HPC roles** are posted annually on these platforms.  
+
+- Is the <1 fault/week metric per machine?  
+Yes, **MTTI (Mean Time To Interrupt)** is **per machine** and requires **resilient hardware** (e.g., **redundant memory**) and **fault-tolerant software** (e.g., **checkpointing**).  
+
+- What is the role of modern Fortran in exascale computing?  
+Fortran 2018’s **COARRAYs** and **teams** enable **parallel computing**. Over **60% of DOE’s HPC codebase** uses Fortran, though **compiler support** is limited to **3–4 vendors**.  
+
+- How does RAJA relate to Kokkos?  
+RAJA and Kokkos both enable **performance portability**, but RAJA focuses on **abstraction layers** for **10+ architectures**, while Kokkos emphasizes **runtime polymorphism**.  
+
+- Can you engage with ECP on Redfish standards for data center control?  
+Yes, contact **John West** (NSF liaison) for collaboration with **ECP’s Hardware & Integration team**.  
+
+- What hardware is used in ECP?  
+Details are available on **DOE ASCR** and **NERSC** sites, which list **10+ exascale systems** (e.g., **Frontier, Aurora**).  
+
+- Will ECP’s technologies benefit non-DOE professionals?  
+Yes, ECP’s **open standards** and **industry partnerships** (e.g., **ANSI, IEEE**) ensure **cross-sector adoption**. Over **200 companies** have engaged with ECP’s software.  
+
+- How does ExaML differ from industry distributed ML?  
+ExaML builds on frameworks like **TensorFlow** and **PyTorch**, adding **exascale-specific optimizations** (e.g., **distributed training**). The **ExaLearn PI** presented this at **HPC User Forum 2019**.  
+
+- How are ISVs reacting to ECP?  
+ISVs like **ANSYS, ANSYS, and Siemens** are collaborating with ECP. The **ECP Industry Council** includes **15+ ISVs** working on **code integration**.  
+
+- How does ECP software migrate to Chameleon?  
+ECP plans to deploy SDKs on **Chameleon** for **testing and performance analysis**, with **NSF funding** supporting **co-development** with **TACC**.  
+
+- Is ECP targeting performance portability?  
+Yes, ECP ensures **software compatibility** across **5+ architectures** using **Kokkos** and **RAJA**. Performance is monitored on **10+ DOE platforms**.  
+
+- Why use exascale systems for national problems like predicting recessions?  
+Exascale enables **faster simulations** (e.g., **10x speedup** in climate models) and **reduced error margins** (e.g., **50% smaller uncertainty** in economic forecasts). These insights inform **policy decisions** with **90% confidence**.

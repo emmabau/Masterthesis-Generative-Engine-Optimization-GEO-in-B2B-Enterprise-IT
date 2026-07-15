@@ -1,0 +1,23 @@
+<Output>
+High-Speed, Reliable Data Collection and Logging  
+Open Automation Software (OAS) ensures data accuracy by collecting, transporting, and delivering data through robust edge computing solutions. Unlike cloud-based systems, OAS operates as an on-premise edge solution, eliminating reliance on network reliability. This approach guarantees high precision and reliability, even during communication failures.  
+
+OAS functions as an edge computing platform, processing data locally using a first-in-first-out (FIFO) method. This ensures all data samples are transmitted to user interfaces, applications, remote OAS Engines, and databases without loss. By running as an edge solution, OAS maintains data integrity in all failure scenarios, achieving optimal accuracy through secure, high-throughput communication with controllers and applications.  
+
+Controller and Application Communications Failover  
+OAS supports buffered communication to controllers and applications, enabling bulk polling of multiple data samples in a single call. This aligns sampling speeds with controller or application cycles, ensuring minimal data loss during temporary communication failures.  
+
+OAS also provides redundancy through automated failover to backup controllers or applications. This ensures seamless switching between primary and secondary systems. Additionally, OAS can receive data from .NET applications and REST interfaces, updating tag values with timestamps for precise data transfer.  
+
+Handling Remote Network Communications Failures  
+As an edge solution, OAS processes and stores data locally, ensuring reliability during network outages. When transmitting data over networks, OAS sends all value changes since the last successful transfer, not just the latest value. This is critical for building accurate data models.  
+
+All network traffic is encrypted and compressed to minimize packet size. Real-time trend and alarm data is cached locally on the OAS Engine, ensuring 100-nanosecond accuracy when connections are restored. OAS also includes client and server watchdogs to alert applications of network failures.  
+
+For critical real-time access, clients can automate switchover to a backup OAS Engine. Each OAS Engine supports multiple client interfaces, enhancing flexibility. Store-and-forward functionality ensures data retention during temporary network failures.  
+
+Database Performance and Data Buffering  
+OAS includes store-and-forward capabilities to handle database communication failures. If a database connection is lost, OAS buffers data locally and writes it to the database once connectivity is restored. This ensures data is written in the original order, preventing loss or delays.  
+
+Databases can reside on the same system as OAS or remotely, with multiple records inserted in a single call. This eliminates data gaps or lag in updates. OAS can log up to 2,000,000 values per table in SQL Server, ensuring efficient and scalable data storage.  
+</Output>

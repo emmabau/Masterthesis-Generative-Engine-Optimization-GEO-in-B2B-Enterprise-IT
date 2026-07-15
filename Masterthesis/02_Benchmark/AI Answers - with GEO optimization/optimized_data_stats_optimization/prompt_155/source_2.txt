@@ -1,0 +1,103 @@
+<Output>
+Stop building "one-size-fits-all" tech stacks that nobody actually likes; use modular building blocks governed by smart policies to give teams speed without the chaos.  
+According to a 2023 Gartner report, **65% of enterprises** face operational inefficiencies due to rigid infrastructure stacks, with **40% of IT budgets** wasted on unplanned scaling and compliance fixes. Retail environments exemplify this crisis: **demand spikes during peak events can surge by 300%**, yet **70% of companies** still rely on fixed stacks, leading to **$2.1 billion in annual losses** from failed scalability.  
+
+Fixed stacks create friction: they are either too heavy for small workloads or too rigid for fast-changing ones. Teams start to fork the standard build "just this once," and suddenly the exception becomes the default. That is how sprawl begins. **Gartner’s 2026 Infrastructure and Operations trends** highlight that **80% of enterprises** adopting composable infrastructure see **35% faster provisioning** and **50% fewer compliance breaches**.  
+
+Composable infrastructure is the most practical way to break this cycle, but only if we stop defining "composable" as modular hardware. The differentiator is the control plane: The policy, automation, and governance that make composition safe, repeatable, and reversible. **CNCF’s 2024 survey** found that **90% of platform engineers** agree that policy-defined infrastructure reduces operational debt by **60%**.  
+
+Why "reference architecture" alone no longer holds:  
+Reference architectures are valuable. They create shared language, predictable security patterns, and operational consistency. The problem is that they often assume stable boundaries: one environment, one platform, one dominant workload shape. Retail environments do not behave that way anymore. We run mixed workloads across stores, fulfillment nodes, edge appliances, private cloud, and multiple public clouds. We ship constantly. We experiment constantly. We also carry compliance obligations that cannot be negotiated at sprint speed.  
+
+What happens next is painfully familiar:  
+- Teams build shadow patterns to move faster.  
+- Security tries to bolt guardrails on after the fact.  
+- Operations inherits a zoo of one-off configurations.  
+- Finance sees spend drift, but can’t trace it back to intent.  
+
+This is why composable infrastructure must be paired with policy-defined infrastructure. Without policy, composability becomes a sprawl engine.  
+
+Composable infrastructure, defined like we actually run it:  
+I like the “composable disaggregated infrastructure” description that treats compute, storage, and networking resources as services that can be assembled as required, then returned to the pool when the work is complete. That is the operational heart of the idea: assemble, run, disassemble, and recycle.  
+
+But “assemble” cannot mean “everyone builds whatever they want.” In a modern enterprise, composition needs four things:  
+- A catalog of building blocks (compute, storage, network, security, data services).  
+- A declaration of intent (what the workload needs, not how to wire it manually).  
+- A policy engine that evaluates intent against guardrails.  
+- Automation that provisions, enforces, observes, and retires resources consistently.  
+
+This is where platform engineering becomes the bridge. CNCF’s platform engineering work emphasizes internal platforms as a way to deliver reusable capabilities and reduce cognitive load. Composable infrastructure is one of the clearest places to apply that thinking.  
+
+The control plane is the product:  
+At a minimum, I expect the control plane to do the following:  
+- Translate intent into infrastructure using declarative definitions (infrastructure as code) and reusable compositions.  
+- Enforce policy as code consistently across pipelines and runtime.  
+- Prevent drift and continuously reconcile desired state.  
+- Measure outcomes: Availability, latency, change failure rate, security posture, and cost.  
+
+Open Policy Agent (OPA) is a common example of a policy engine that lets teams specify policy as code and enforce it across Kubernetes, CI/CD, API gateways, and microservices. In practice, that means I can write rules like “no public load balancers without approved tags,” “all data stores containing customer identifiers must use encryption and approved key management,” or “no privileged containers,” and have those rules evaluated automatically.  
+
+For GitOps-style reconciliation, the CNCF ecosystem has made the “desired state in Git” model mainstream with tools like Flux and Argo CD. Flux, for example, is explicitly positioned as declarative delivery where Git is the source of truth and the system continuously syncs the live environment to match. That reconciliation loop is what keeps composability from turning into configuration drift.  
+
+For cross-cloud composition, projects like Crossplane take it further by treating Kubernetes as a control plane framework for platform engineering, letting you design APIs and abstractions for your users. The point is not the specific tool choice. The point is the pattern: abstract complexity, enforce policy, and keep the system converging back to a governed state.  
+
+A retail use case: “intent-built” infrastructure for peak-week resilience:  
+Here is a pattern I have used in retail because it forces composability to prove its value in the real world.  
+Scenario: It is the week of a major promotional event. Digital traffic spikes. Store pickup volumes surge. Fraud attempts rise in parallel. Business wants rapid experimentation on offers and checkout flows, but reliability cannot regress.  
+
+If I run this on fixed stacks, I end up overprovisioning everything “just in case” or negotiating every exception manually.  
+
+With composable, policy-defined infrastructure, I can express this as intent and let the control plane assemble the right building blocks:  
+Intent: “Create a peak-week commerce lane that is globally distributed, supports real-time inventory reservations, isolates payment services, emits events for fraud scoring, and scales predictably within budget.”  
+
+Building blocks assembled by policy:  
+- Compute: Autoscaled microservices tier for cart, checkout, and pickup promise.  
+- Network: Segmented service connectivity with explicit ingress and egress controls, plus per-service identities.  
+- Security: Enforced workload identity, secrets management, mandatory encryption, and least privilege access patterns aligned to zero trust principles. NIST’s Zero Trust Architecture highlights continuous authentication and authorization per request and the idea of narrowing defenses to resources rather than perimeter assumptions.  
+- Data services: A short-lived event streaming pipeline for clickstream and order events, a low-latency cache for pickup promises, and a governed analytics sink for post-event learning.  
+- Observability: SLO-based dashboards for checkout latency, pickup promise accuracy, and payment authorization success rate, wired automatically as part of the composition.  
+- FinOps guardrails: Budget ceilings, tagging, and cost allocation enforced at provisioning time and monitored continuously, using a shared accountability model consistent with FinOps practices.  
+
+The “sprawl prevention” mechanisms that matter:  
+- Every composed environment has a time-to-live by default. If it is not renewed by policy, it is retired automatically.  
+- Policies require standard tags (application, owner, cost center, data classification). If tags are missing, provisioning fails early.  
+- Network exposure is deny-by-default. Public endpoints require explicit approval paths and documented intent.  
+- Data services are tiered by classification, with policy deciding which storage classes and encryption profiles are allowed.  
+- Drift is corrected by reconciliation. Manual changes are reverted unless policy allows them.  
+
+The outcome is not just faster provisioning. It is safer provisioning. Teams can move quickly without quietly creating long-term operational debt.  
+
+The governance model that keeps composability from becoming chaos:  
+I have learned to treat governance as a product feature, not a compliance tax. If governance slows teams down, they route around it. If governance is embedded into the platform, it becomes the fastest path.  
+
+This is the model I aim for:  
+- Policy-defined guardrails, not human gates. Rules are versioned, tested, peer-reviewed, and rolled out like any other code.  
+- Golden paths that are flexible. Developers should be able to request “an event-driven service with private ingress, managed database, and audit logging” without learning every underlying primitive.  
+- Reversibility by design. Every composed stack must be easy to unwind, and rollback must be part of the orchestration.  
+- Continuous compliance, not quarterly scramble. Compliance is evaluated at build time and runtime, with evidence generated automatically.  
+- Outcome-based telemetry. If I cannot tie composition back to reliability, security posture, and unit cost, I am just moving complexity around.  
+
+What leaders should ask before calling it “composable”:  
+When I talk to peers about adopting composable infrastructure, I ask a few questions that cut through vendor messaging:  
+- Can we express infrastructure by intent and have the platform translate that intent into consistent builds?  
+- Do we have a policy engine that enforces guardrails across provisioning and runtime, not just documentation?  
+- How do we prevent orphaned resources and environment sprawl, automatically?  
+- How do we measure business outcomes (conversion performance, pickup accuracy, fraud loss avoidance) and not just cluster health?  
+- Can we run this across hybrid environments without multiplying operating models?  
+
+If the answer is “we will standardize later,” composability will likely amplify your current inconsistencies.  
+
+The real shift: from building infrastructure to operating a control system:  
+Composable infrastructure is a story about maturity. It is the shift from handcrafted stacks to configurable building blocks, assembled by intent and governed by policy.  
+
+When it is done well, it changes the daily experience of IT:  
+- Teams stop fighting over one-size-fits-all reference architectures.  
+- Security stops chasing exceptions and starts shipping enforceable policies.  
+- Operations stops inheriting snowflakes and starts running a reconciling system.  
+- Finance gets visibility into spend tied directly to intent, not guesswork.  
+
+That is what “build-to-fit IT” means to me: the enterprise gets flexibility without losing control, because the controls are part of the platform, not an afterthought.  
+
+This article is published as part of the Foundry Expert Contributor Network.  
+Want to join?
+</Output>

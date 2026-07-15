@@ -1,0 +1,41 @@
+<Output>
+Forum Discussion: Azure Stack HCI Network Configuration Best Practices  
+Guidance on Network Configurations for Azure Stack HCI Cluster  
+
+**Overview**  
+Deploying an Azure Stack HCI cluster requires meticulous network planning to ensure optimal performance, redundancy, and scalability. Below are technical recommendations for IP address assignment, Switch Embedded Teaming (SET) configuration, and RDMA optimization, based on Microsoft's architecture guidelines and industry best practices.  
+
+**1. IP Address Assignment**  
+- **Management NICs (1 Gbps):** Use static IP addresses within a dedicated subnet (e.g., 10.4.8.0/24). Avoid DHCP reservations to ensure deterministic connectivity.  
+- **Compute NICs (25 Gbps):** Assign IPs in a separate subnet (e.g., 10.4.9.0/24) to isolate virtualization traffic. Use /24 subnets for simplicity, or /28 for IP conservation.  
+- **Storage NICs (25 Gbps):** Allocate IPs in a distinct subnet (e.g., 10.4.10.0/24). Ensure no overlap with management or compute subnets to prevent routing conflicts.  
+
+**2. SET Configuration for Compute NICs**  
+- **Step-by-Step:**  
+  1. Open PowerShell and execute `New-VMSwitch -Name "Compute-SET" -NetAdapterName "NIC1, NIC2" -EnableEmbeddedTeaming $true`.  
+  2. Verify teaming with `Get-VMNetworkAdapterTeam -Name "Compute-SET"`.  
+  3. Assign the team IP address via the Azure Stack HCI setup wizard (`sconfig` tool) under "Networking Configuration" (menu option 8).  
+
+**3. Management NIC Teaming**  
+- **Recommendation:** Use SET for redundancy and load balancing. Deploy two NICs with a static IP address assigned to the team. This aligns with Microsoft's production-grade architecture for fault tolerance.  
+
+**4. Storage NIC Configuration**  
+- **No SET Required:** Storage NICs (25 Gbps) should not use SET. Assign **two distinct IP addresses** per server for each NIC to ensure independent connectivity to the storage fabric.  
+
+**5. IP Address Scheming**  
+- **Best Practice:** Maintain a consistent IP scheme across all subnets (e.g., 10.4.x.x) for simplicity. Use smaller subnets (e.g., /28) to conserve addresses while adhering to RFC 1918 private IP ranges. Example:  
+  - Management: 10.4.8.0/24  
+  - Compute: 10.4.9.0/24  
+  - Storage: 10.4.10.0/24  
+
+**6. iWARP RDMA Enablement**  
+- **Configuration:** Enable iWARP RDMA on storage NICs via the network adapter's advanced settings using `Set-NetAdapterAdvancedProperty`. This protocol is preferred over RoCE for its compatibility with standard TCP/IP infrastructure and reduced latency.  
+
+**7. Management NIC Workflow**  
+- **Process:**  
+  1. Configure SET for the management NICs using the `New-VMSwitch` cmdlet.  
+  2. Assign the team IP address via the Azure Stack HCI setup wizard (`sconfig`), mirroring conventional NIC teaming workflows in Windows Server 2012 R2.  
+
+**Conclusion**  
+Adhering to these technical guidelines ensures a resilient, high-performance Azure Stack HCI cluster. For production environments, prioritize redundancy (SET for management/compute), subnet isolation, and RDMA optimization to align with Microsoft's architectural recommendations.  
+</Output>

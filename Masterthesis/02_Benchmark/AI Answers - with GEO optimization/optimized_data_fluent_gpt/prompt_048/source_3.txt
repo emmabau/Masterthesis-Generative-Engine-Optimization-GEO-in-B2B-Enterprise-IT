@@ -1,0 +1,24 @@
+<Output>
+Back to Top  
+Exascale supercomputers represent a monumental leap in computational power, processing information a thousand times faster than petascale systems from a decade ago. Lawrence Livermore National Laboratory (LLNL) is poised to lead the charge, becoming one of the first institutions to deploy an exascale-class system—capable of 10¹⁸ floating-point operations per second (flops)—with the launch of El Capitan in 2023. This advancement marks a critical milestone in high-performance computing (HPC), enabling breakthroughs across fields like nuclear physics, climate modeling, and materials science.  
+
+The Laboratory’s HPC expertise spans decades, driving discoveries in energy efficiency, biological processes, and national security. Lori Diachin, LLNL’s principal deputy associate director for Computing, emphasizes the transformative potential of exascale systems: “Contemplating the kinds of science we’ll be able to do on exascale machines is exciting.”  
+
+**The Exascale Threshold**  
+Achieving exascale computing—1,000 times faster than petascale—requires overcoming hardware and software challenges. While GPUs offer energy-efficient parallel processing, their integration with CPUs demands innovative software solutions. For instance, the DOE’s first exascale systems (El Capitan, Aurora, and Frontier) will leverage GPUs to tackle complex simulations like combustion, radiative transfer, and multiphase fluid flow. However, these systems also require advanced algorithms to manage uncertainty and sensitivity analysis, which demand massive computational resources.  
+
+**Software Sustainability and Co-Design**  
+The Exascale Computing Project (ECP), a $1.8 billion, seven-year initiative, is central to advancing exascale capabilities. It unites national labs, researchers, and industry to develop sustainable software ecosystems. Key to this effort is **co-design**, a collaborative approach that integrates domain scientists, mathematicians, and software engineers to optimize algorithms for heterogeneous architectures. For example, the Center for Efficient Exascale Discretizations (CEED) focuses on high-order mathematical methods to improve simulation accuracy and efficiency.  
+
+LLNL’s RADIUSS project (Rapid Application Development via an Institutional Universal Software Stack) exemplifies this approach. By creating reusable software tools, RADIUSS enables scientists to focus on research rather than infrastructure. Tools like Umpire, a memory management system, and RAJA, a portability suite, address hardware-specific challenges while ensuring compatibility across CPU and GPU architectures.  
+
+**Open-Source Collaboration**  
+Open-source software (OSS) plays a vital role in exascale computing. Projects like the Extreme-Scale Scientific Software Development Kit (xSDK) and the Spack package manager foster collaboration, allowing developers to share and refine tools. As Diachin notes, “Collectively, we are creating tools and capabilities that the individual players would not otherwise be able to create.”  
+
+**Beyond Exascale**  
+As exascale systems like El Capitan come online, the focus shifts to long-term sustainability. The ECP’s goal is to ensure software remains adaptable to future architectures, enabling scientists to solve problems previously deemed intractable. As Hittinger states, “Computing constantly evolves. We won’t simply stop at the next breakthrough.”  
+
+Key Terms: Exascale computing, co-design, software sustainability, open-source software, HPC, RADIUSS, xSDK, CEED, GPU, CPU, ECP.  
+
+For further information, contact Lori Diachin (diachin2@llnl.gov) or Rob Neely (neely4@llnl.gov).  
+</Output>

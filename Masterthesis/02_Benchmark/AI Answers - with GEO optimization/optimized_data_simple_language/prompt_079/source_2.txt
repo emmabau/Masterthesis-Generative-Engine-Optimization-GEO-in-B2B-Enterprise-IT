@@ -1,0 +1,28 @@
+<Output>
+Composable platforms are a key innovation in cloud-native computing, enabling organizations to build flexible, scalable systems that align with business goals. Here's a simplified breakdown of how they work and why they matter:
+
+**What is a Composable Platform?**  
+A composable platform is a collection of modular capabilities that can be combined to meet specific technical and business needs. Unlike monolithic systems, these platforms allow teams to pick and choose components (like build tools, artifact storage, or security features) based on their unique requirements. This flexibility ensures teams only invest in what adds value, avoiding unnecessary complexity.
+
+**Why Composability Matters**  
+Composability creates a competitive advantage by:  
+- Enabling teams to customize platforms to their workflows (e.g., developers might use only build and scan tools, while others integrate with external repositories).  
+- Supporting interoperability: Components like build tools and artifact storage can work together seamlessly (e.g., automatic image signing or SBOM generation).  
+- Accelerating time-to-market by reducing setup overhead and improving developer productivity.
+
+**Key Stakeholders (Personas) and Their Roles**  
+1. **Builders**: Focus on infrastructure flexibility. They ensure platforms run on diverse environments (on-premise, cloud) and configure networking/security settings.  
+2. **Enablers**: Expand platform capabilities by integrating tools for developers and business users (e.g., observability tools, databases). They prioritize scalability, resilience, and security.  
+3. **Consumers (Developers)**: Use platform components to build applications. They benefit from streamlined CI/CD pipelines, resource tuning, and access to third-party tools.  
+4. **End-Users (Customers)**: Indirectly benefit from platform improvements. They gain trust through reliability, faster service delivery, and cost efficiency.  
+
+**How Platforms Evolve**  
+- **Infrastructure Layer**: Builders define the foundation, then hand off to Enablers for capability expansion.  
+- **Application Layer**: Developers add tools and workflows, while Enablers ensure governance and security.  
+- **End-User Impact**: Platform enhancements directly improve customer experiences, driving business value.  
+
+**Why This Matters for Businesses**  
+Composable platforms let organizations avoid over-investing in unused features. By aligning technical capabilities with business goals, they reduce complexity, speed up innovation, and create a more adaptable tech ecosystem.  
+
+For deeper insights, explore the personas framework here: [link to blog](https://tag-app-delivery.cncf.io/blog/paap-personas/)  
+</Output>

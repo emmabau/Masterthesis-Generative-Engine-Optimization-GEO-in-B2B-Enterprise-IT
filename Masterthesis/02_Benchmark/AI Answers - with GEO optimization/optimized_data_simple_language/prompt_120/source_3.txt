@@ -1,0 +1,13 @@
+<Output>
+The Exascale Computing Project (ECP) has revolutionized high-performance computing (HPC) by creating a collaborative ecosystem that unites application developers, software experts, and hardware vendors. This partnership, launched in 2016, has enabled breakthroughs in scientific research by leveraging exascale systems—machines capable of performing over a quintillion operations per second. These systems, like Frontier (delivered in 2022) and upcoming systems Aurora and El Capitan, are 1,000 times faster than their petascale predecessors, allowing researchers to simulate complex phenomena with unprecedented detail.
+
+ECP’s success lies in its "shared fate" model, where teams work together from the start to align software, hardware, and applications. This approach avoids the "homesteader" mindset of isolated development, where experts handle everything alone. Instead, teams collaborate to solve challenges like adapting code for heterogeneous architectures (mixes of CPUs and GPUs). GPUs, which are more energy-efficient, now power over 95% of exascale performance, making them critical for future systems.
+
+Key achievements include:
+- **Kokkos and RAJA**: Software libraries that let developers write code once and run it across different hardware, eliminating the need for specialized code for each system.
+- **EQSIM**: A groundbreaking earthquake simulation tool that uses RAJA to model ground motion at high resolution, improving disaster risk assessments.
+- **EXAALT**: An application that achieved over 500x speedup on exascale systems, demonstrating the power of collaborative development.
+- **WarpX**: A plasma simulation tool that won the Gordon Bell Prize for its exascale capabilities, enabling advancements in particle accelerators and medical treatments.
+
+ECP’s co-design centers further integrate application and software development, creating tools like AMReX, which optimizes simulations for exascale systems. These efforts have not only accelerated scientific discovery but also set a new standard for HPC collaboration. As exascale systems become more complex, the ECP model proves that shared expertise and cross-disciplinary teamwork are essential for unlocking the full potential of next-generation computing. This ecosystem is now driving innovations in energy, national security, AI, and more, ensuring the U.S. remains at the forefront of computational science.
+</Output>

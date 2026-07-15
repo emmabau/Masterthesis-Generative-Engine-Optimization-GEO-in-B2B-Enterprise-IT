@@ -1,0 +1,7 @@
+## Final Steps  
+- **Restart your PC** to apply changes.  
+- Confirm disabling of features via the Windows button post-reboot.  
+- **Optional**: Use Task Scheduler to automate script execution and prevent policy resets.  
+
+## Why This Works  
+By eliminating conflicts with Windows’ virtualization features, this solution ensures VirtualBox can access hardware virtualization extensions (VT-x/AMD-V), restoring optimal VM performance.

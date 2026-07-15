@@ -1,0 +1,9 @@
+<Output>
+When deciding whether to compress backup data blocks before storage, it's important to balance CPU usage and bandwidth efficiency. While decompression on the Gateway and Proxy may add CPU overhead, the bandwidth savings from compression (2-3x reduction) often outweigh this cost, especially on 1GbE networks. Veeam's "Optimal" compression uses the LZ4 algorithm, which is designed for high throughput and low CPU usage, even during decompression. This can effectively turn a 10GbE Gateway into one with 20-30Gb of inbound bandwidth. 
+
+However, environments with ample bandwidth or CPU constraints may benefit from disabling compression. The key takeaway is that compression is generally beneficial unless specific bottlenecks exist. 
+
+Regarding inline deduplication with DDBoost: Veeam's dedupe engine minimizes data sent to DDBoost by identifying exact duplicates before transmission. While this slightly reduces CPU and bandwidth usage, the impact is minimal. Disabling dedupe simplifies configurations without significant drawbacks, though it may marginally increase metadata processing during job startup. 
+
+In most cases, leaving dedupe enabled is preferable due to its negligible impact and potential for slight bandwidth savings. The decision should always consider your environment's unique constraints, as "one-size-fits-all" settings rarely apply.
+</Output>

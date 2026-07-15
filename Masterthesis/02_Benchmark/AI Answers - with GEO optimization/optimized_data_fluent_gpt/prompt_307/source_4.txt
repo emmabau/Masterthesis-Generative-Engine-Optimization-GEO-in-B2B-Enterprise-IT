@@ -1,0 +1,26 @@
+<Output>
+I'm a sysadmin at a small company with 60 employees across multiple countries, tasked with upgrading our entire server and network infrastructure over the next year. While I have extensive experience with computers and even run a multi-server lab, this is my first major corporate infrastructure upgrade. I'm seeking expert advice from the Spiceworks community to guide me through this process. Here are my key questions and the insights I've gathered:
+
+**Key Questions:**
+1. What are the best tools to gather server usage statistics to ensure our infrastructure can scale effectively over the next several years?
+2. Should we adopt a VMware virtualized environment, and is VSAN a suitable foundation for hosting Exchange, file servers, and web hosting?
+3. What critical mistakes did you make during your first major server upgrade that you wish you could undo?
+4. Should we deploy Windows Server 2012 R2 or wait for 2016?
+
+**Expert Insights:**
+- **Server Usage Tools:** Rely on your technical expertise and business requirements rather than automated survey tools. Applications and services dictate resource needs, not the OS. For example, a basic file server can function well with minimal resources, while SQL servers require significantly more. Always analyze your critical applications and allocate resources accordingly.
+- **VSAN Considerations:** VSAN is a strong option for high-availability environments, especially for globally networked companies. While it's expensive, it offers enterprise-level features and is well-supported. Alternatives like StarWind Virtual SAN provide cost-effective HA storage solutions with minimal hardware requirements.
+- **Windows Server Choice:** If you're adopting VMware, Windows Server 2016 offers better features without compromising performance. However, if you're migrating to Hyper-V, waiting for 2016 might be beneficial.
+- **Common Pitfalls:** Avoid overcomplicating the setup. Prioritize simplicity and focus on business needs. For instance, buying fewer, more expensive hosts often leads to suboptimal performance compared to using multiple lower-cost hosts with better per-core performance. Always plan for storage expansion, as virtualization consumes significant space for VMs, replicas, and backups.
+- **P2V Strategy:** Consider retiring old physical servers and migrating all workloads to the new virtual environment. This avoids the complexities of hybrid setups and ensures optimal resource allocation.
+- **Cloud vs. On-Premise:** While cloud solutions like Office 365 are gaining traction due to cost and security benefits, many companies prefer on-premise infrastructure for tighter control. A hybrid approach, with gradual cloud migration, is often a practical middle ground.
+- **Lessons Learned:** Always test hardware compatibility before migration. For example, USB dongles or legacy hardware like fax cards can cause unexpected issues. Ensure your hypervisor supports all required hardware functionalities.
+- **Backup Costs:** Don't underestimate backup expenses. In some cases, backup hardware and software can cost 2-3 times the primary storage. Focus on solutions that balance cost and reliability.
+
+**Final Recommendations:**
+- Prioritize business requirements over technology trends.
+- Use a scoring system to evaluate options (must-have, nice-to-have, optional).
+- Leverage your existing VMware experience with vCenter and ESXi for a smoother deployment.
+- Explore alternatives like Scale Computing HC3 for a more cost-effective solution.
+- Plan for scalability and future-proof your infrastructure to avoid frequent overhauls.
+</Output>
